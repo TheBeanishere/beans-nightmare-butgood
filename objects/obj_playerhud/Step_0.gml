@@ -12,7 +12,7 @@ if (obj_player.hp < 16){
 	hpalpha += -(hpalpha - 0.4)/65
 }else if (obj_player.hp < 76){
 	hpalpha += -(hpalpha - 0.25)/65
-}else if (obj_player.hp < 101){
+}else if (obj_player.hp >= 76){
 	hpalpha += -(hpalpha - 0)/65
 }
 

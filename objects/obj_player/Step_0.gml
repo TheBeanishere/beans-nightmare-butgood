@@ -1,5 +1,16 @@
 depth = -y
 
+//debug!!
+if (keyboard_check(vk_up)){
+	hp += 1
+}
+if (keyboard_check(vk_down)){
+	hp -= 1
+}
+if (keyboard_check_pressed(ord("P"))){
+	instance_create_layer(0, 0, "a90", obj_monster_a90)
+}
+
 key_right = keyboard_check(ord("D"))
 key_left = keyboard_check(ord("A"))
 key_up = keyboard_check(ord("W"))
@@ -8,12 +19,7 @@ key_crouch = keyboard_check_pressed(ord("C"))||keyboard_check_pressed(vk_control
 key_run = keyboard_check(vk_shift)
 key_runpress = keyboard_check_pressed(vk_shift)
 
-if (keyboard_check_pressed(vk_up)){
-	hp += 5
-}
-if (keyboard_check_pressed(vk_down)){
-	hp -= 5
-}
+
 
 if (key_crouch){
 	crouched = !crouched

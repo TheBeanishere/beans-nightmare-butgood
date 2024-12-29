@@ -1,5 +1,9 @@
 depth = -y
 
+if (spdY != 0 || spdX != 0){
+	audio_listener_position(x, y, 0)
+}
+
 //debug!!
 if (keyboard_check(vk_up)){
 	hp += 1
@@ -18,8 +22,7 @@ key_down = keyboard_check(ord("S"))
 key_crouch = keyboard_check_pressed(ord("C"))||keyboard_check_pressed(vk_control)
 key_run = keyboard_check(vk_shift)
 key_runpress = keyboard_check_pressed(vk_shift)
-
-
+key_taunt = keyboard_check_pressed(ord("E"))
 
 if (key_crouch){
 	crouched = !crouched
@@ -57,6 +60,27 @@ if (((spdX != 0) || (spdY != 0)) && key_run && !winded){
 }
 
 stamina = clamp(stamina, 0, staminamax)
+
+if (key_taunt && !taunt){
+	scr_loudnoise()
+	instance_create_layer(x, y, "player", obj_tauntflash)
+	taunt = true
+	taunttime = 270
+	image_speed = 0
+	randomize()
+	image_index = irandom_range(0, 4)
+	audio_play_sound(sfx_taunt, 1, false)
+}
+
+if (taunttime <= 0){
+	taunt = false
+}
+
+taunttime -= 1
+
+if (taunttime < 241){
+	image_speed = 1
+}
 
 if(!crouched){
 	if (place_meeting(x + spdX, y, obj_solid_crouch)){
@@ -103,7 +127,9 @@ if (spdY > 0){
 	facedir = "back"
 }
 
-if ((spdX != 0) || (spdY != 0)){
+if (taunttime > 240){
+	sprite_index = spr_beanie_taunt
+}else if ((spdX != 0) || (spdY != 0)){
 	if (crouched){	
 		sprite_index = asset_get_index("spr_beanie_" + facedir + "_crawl")
 	}else if (key_run && stamina > 0 && !winded){

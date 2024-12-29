@@ -35,10 +35,18 @@ if (timer = 61){
 if (timer = 66){
 	drawface = 0
 	drawstatic = 0
-	if (obj_player.spdX = 0 && obj_player.spdY = 0){
-		instance_destroy(self)
-	}else if (!obj_player.crouched){
-		kill = true
+	if (move = 0){
+		if (obj_player.spdX = 0 && obj_player.spdY = 0){
+			instance_destroy(self)
+		}else{
+			kill = true
+		}
+	}else if (move = 1){
+		if (obj_player.spdX != 0 || obj_player.spdY != 0){
+			instance_destroy(self)
+		}else{
+			kill = true
+		}
 	}
 }
 if (timer = 71){
@@ -55,6 +63,9 @@ if (timer = 71){
 }
 if (kill && timer = 120){
 	obj_player.hp -= 90
+	if (obj_game.MOD_a90stamina){
+		obj_player.stamina = 0
+	}
 	instance_create_layer(0, 0, "whitepain", obj_whiteflash)
 	instance_destroy(self)
 }

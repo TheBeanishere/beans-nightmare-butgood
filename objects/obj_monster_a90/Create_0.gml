@@ -13,3 +13,8 @@ xoffset = 0
 yoffset = 0
 drawx = 0
 drawy = -64
+if (obj_game.MOD_a90blue){
+	move = choose(0,1)
+}else{
+	move = 0
+}

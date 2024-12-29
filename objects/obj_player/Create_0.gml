@@ -1,6 +1,9 @@
 image_xscale = 0.25
 image_yscale = 0.25
 
+audio_listener_position(x, y, 0)
+audio_listener_set_orientation(0, 0, 0, 1, 0, -1, 0)
+
 spdX = 0
 spdY = 0
 movespeed = 3.5
@@ -9,8 +12,10 @@ crawlspeed = 1.25
 
 crouched = false
 facedir = "front"
+taunt = false
+taunttime = 0
 
-staminamax = 300
+staminamax = 450
 stamina = staminamax
 winded = false
 

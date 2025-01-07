@@ -37,14 +37,18 @@ if (timer = 66){
 	drawstatic = 0
 	if (move = 0){
 		if (obj_player.spdX = 0 && obj_player.spdY = 0){
+			global.danger -= 1.25
 			instance_destroy(self)
 		}else{
+			global.danger += 0.75
 			kill = true
 		}
 	}else if (move = 1){
 		if (obj_player.spdX != 0 || obj_player.spdY != 0){
+			global.danger -= 1.25
 			instance_destroy(self)
 		}else{
+			global.danger += 0.75
 			kill = true
 		}
 	}
@@ -63,9 +67,11 @@ if (timer = 71){
 }
 if (kill && timer = 120){
 	obj_player.hp -= 90
+	scr_loudnoise()
 	if (obj_game.MOD_a90stamina){
 		obj_player.stamina = 0
 	}
 	instance_create_layer(0, 0, "whitepain", obj_whiteflash)
+	global.danger -= 2
 	instance_destroy(self)
 }

@@ -1,25 +1,25 @@
 {
   "$GMSprite":"",
   "%Name":"spr_beanie_back_crouch",
-  "bboxMode":0,
-  "bbox_bottom":538,
-  "bbox_left":100,
-  "bbox_right":440,
-  "bbox_top":273,
+  "bboxMode":2,
+  "bbox_bottom":475,
+  "bbox_left":200,
+  "bbox_right":349,
+  "bbox_top":323,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"9043f440-763a-41bc-b980-7048e0303e86","name":"9043f440-763a-41bc-b980-7048e0303e86","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"e77a342e-597b-445a-ad2a-16968df8205b","name":"e77a342e-597b-445a-ad2a-16968df8205b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":550,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"6b36f48e-a700-4968-a510-cfb2ac805d59","blendMode":0,"displayName":"default","isLocked":false,"name":"6b36f48e-a700-4968-a510-cfb2ac805d59","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"26900438-bdd9-4333-8ec3-d1132f0f6fcf","blendMode":0,"displayName":"default","isLocked":false,"name":"26900438-bdd9-4333-8ec3-d1132f0f6fcf","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_beanie_back_crouch",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9043f440-763a-41bc-b980-7048e0303e86","path":"sprites/spr_beanie_back_crouch/spr_beanie_back_crouch.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c66db8a6-316b-48f6-b382-f54e35461356","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e77a342e-597b-445a-ad2a-16968df8205b","path":"sprites/spr_beanie_back_crouch/spr_beanie_back_crouch.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"6bfe49fa-313d-4353-aeb6-c75ba00dab73","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

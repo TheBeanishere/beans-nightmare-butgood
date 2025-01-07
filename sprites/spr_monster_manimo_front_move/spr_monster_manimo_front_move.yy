@@ -28,7 +28,7 @@
   ],
   "name":"spr_monster_manimo_front_move",
   "nineSlice":null,
-  "origin":4,
+  "origin":7,
   "parent":{
     "name":"manimo",
     "path":"folders/Sprites/monsters/manimo.yy",
@@ -96,7 +96,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":300,
-    "yorigin":300,
+    "yorigin":600,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

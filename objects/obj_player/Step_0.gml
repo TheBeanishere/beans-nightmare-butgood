@@ -1,5 +1,3 @@
-depth = -y
-
 if (spdY != 0 || spdX != 0){
 	audio_listener_position(x, y, 0)
 }
@@ -53,7 +51,7 @@ if (stamina = 1){
 if (stamina >= ((staminamax/100) *25)){
 	winded = false
 }
-if (((spdX != 0) || (spdY != 0)) && key_run && !winded){
+if (((spdX != 0) || (spdY != 0)) && key_run && !winded && !crouched){
 	stamina -= 1
 }else{
 	stamina += 1
@@ -119,6 +117,44 @@ if (spdX < 0){
 	image_xscale = -0.25
 }else if (spdX > 0){
 	image_xscale = 0.25
+}
+
+if (crouched){
+	if (floor(image_index) = 3||floor(image_index) = 1){	
+		if (!stepped){
+			stepped = true
+			randomize()
+			var _pitch = random_range(0.95, 1.05)
+			foot = choose(sfx_beanie_step_1, sfx_beanie_step_2, sfx_beanie_step_3)
+			audio_play_sound_at(foot, x, y, 0, 600, 1200, 1, false, 1, 0.025, 0, _pitch)
+		}
+	}else{
+		stepped = false
+	}
+}else if (stamina > 0 && !winded && key_run){
+	if (floor(image_index) = 3||floor(image_index) = 8){	
+		if (!stepped){
+			stepped = true
+			randomize()
+			var _pitch = random_range(0.95, 1.05)
+			foot = choose(sfx_beanie_step_1, sfx_beanie_step_2, sfx_beanie_step_3)
+			audio_play_sound_at(foot, x, y, 0, 600, 1200, 1, false, 1, 0.225, 0, _pitch)
+		}
+	}else{
+		stepped = false
+	}
+}else{
+	if (floor(image_index) = 1||floor(image_index) = 4){	
+		if (!stepped){
+			stepped = true
+			randomize()
+			var _pitch = random_range(0.95, 1.05)
+			foot = choose(sfx_beanie_step_1, sfx_beanie_step_2, sfx_beanie_step_3)
+			audio_play_sound_at(foot, x, y, 0, 600, 1200, 1, false, 1, 0.125, 0, _pitch)
+		}
+	}else{
+		stepped = false
+	}
 }
 
 if (spdY > 0){

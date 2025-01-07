@@ -21,3 +21,7 @@ winded = false
 
 hpmax = 100
 hp = hpmax
+
+randomize()
+stepped = false
+foot = choose(sfx_beanie_step_1, sfx_beanie_step_2, sfx_beanie_step_3)

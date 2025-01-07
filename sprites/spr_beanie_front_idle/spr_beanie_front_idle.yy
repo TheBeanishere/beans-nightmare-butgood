@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_beanie_front_idle",
   "bboxMode":2,
-  "bbox_bottom":475,
+  "bbox_bottom":534,
   "bbox_left":200,
   "bbox_right":349,
   "bbox_top":323,

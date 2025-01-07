@@ -4,6 +4,11 @@ if (obj_player.winded){
 	windedalpha += -(windedalpha - 0)/15
 }
 
+dangersize += -(dangersize - (2.5 - (global.danger * 1.5)))/75
+dangeralpha += -(dangeralpha - (0 + global.danger))/75
+
+dangersize = clamp(dangersize, 1, 2.5)
+
 if (obj_player.hp < 16){
 	hpalpha += -(hpalpha - 0.85)/65
 }else if (obj_player.hp < 26){

@@ -24,6 +24,7 @@ x_target = poi.x
 y_target = poi.y
 
 stepped = false
+voice = sfx_monster_manimo_step_1
 foot = choose(sfx_monster_manimo_step_1, sfx_monster_manimo_step_2, sfx_monster_manimo_step_3)
 
 mp_grid_path(global.mp_gridcrouch, path, x, y, x_target, y_target, true)

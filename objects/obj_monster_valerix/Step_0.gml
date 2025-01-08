@@ -4,7 +4,7 @@ if (pathdelay <= 0){
 	if (state != "scared"){
 		if (!place_meeting(obj_player.x, obj_player.y, obj_solid_crouch)){
 			x_target = (round(obj_player.x/TS))*32
-			y_target =  (round(obj_player.y/TS))*32
+			y_target =  (round((obj_player.y + 64)/TS))*32
 		}else{
 			var _goto = instance_nearest(obj_player.x, obj_player.y, obj_crouch_poi)
 			x_target = (round(_goto.x/TS))*32
@@ -51,7 +51,7 @@ if (state = "stare"){
 		global.danger += 1.5
 		state = "hunt"
 		x_target = (round(obj_player.x/TS))*32
-		y_target =  (round(obj_player.y/TS))*32
+		y_target =  (round((obj_player.y + 64)/TS))*32
 		mp_grid_path(global.mp_gridcrouch, path, x, y, x_target, y_target, true)
 		path_start(path, chasespeed, path_action_stop, true)
 		pathdelay = 4 + irandom_range(-2, 2)
@@ -93,8 +93,10 @@ if (direction > 0 && direction < 181){
 //	}
 //}
 
-if (state != "stare"){	
+if (state = "hunt"||state = "scared"){	
 	sprite_index = asset_get_index("spr_monster_valerix_" + facedir + "_move")
+}else if (state = "stalk"){
+	sprite_index = asset_get_index("spr_monster_valerix_" + facedir + "_stalk")
 }else{
 	sprite_index = asset_get_index("spr_monster_valerix_" + facedir + "_idle")
 }

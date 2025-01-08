@@ -1,0 +1,24 @@
+Damage:
+Instakill - Manimo/Mimic, Valerix/Equine, Mathi/Brute, Sports/Umpire, Ava/Lookout, Joetube/Monster, Father/Maestro, Lydia/Doubt, Coconut/Chef, Wicked/Bile, and Fusion/Doll
+35 HP - DJ/Seer
+55 HP - Pravi/Pawn
+90 HP - A-90/Faulter
+--------------------------------------------
+Manimo/Mimic - Basic Chaser
+Valerix/Equine - Stalker
+Mathi/Brute - Bullrusher
+Sports/Umpire - Blind but amazing hearing
+Ava/Lookout - Slow, Deaf great sight and alerts other after seeing
+Pravi/Pawn - Rapidly runs after you, exploding, blinding you, respawns after a bit
+Joetube/Monster - Basic chaser, worse eyesight, can fit in crawl spaces
+DJ/Seer - If you go near her she'll rapidly home in on you, if she succeeds she'll cover your screen in eyes, if she succeeds 3 times you'll die
+Father/Maestro - Slowly homes in on your location, always chasing
+--------------------------------------------
+Lydia/Doubt - Rapidly chases upon spotting, if goes too long without finding player, sets down Timothy-Traps to ensnare the player and alert other monsters. Can create a single temporary clone of a chaser monster to assist her
+--------------------------------------------
+A-90/Faulter - Randomly appears, forcing you to stop moving or it'll deal heavy damage
+Coconut/Chef - Deaf, Uses vents to quickly move around the map
+Wicked/Bile - Basic chaser, slow, leaves pile of goo around that if stepped in slow the player and alert Wicked to your location
+Fusion/Doll - Flies above the map, casting a small shadow where they are, dropping down and giving quick chase
+
+

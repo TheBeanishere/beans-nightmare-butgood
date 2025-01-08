@@ -1,0 +1,26 @@
+1 Mockery - Die to the Mimic
+2 Horse meal - Die to the Equine
+3 Gored - Die to the Brute
+4 Striked out - Die to the Umpire
+5 All Seeing - Die to the Lookout
+6 Shrapnel - Die to the Pawn
+7 Mangled and Deformed - Die to the Monster
+8 Foretold - Die to the Seer
+9 Sour Note - Die to the Maestro
+10 Who's to say - Die to yourself
+
+24 RED LIGHT - Die to the Faulter
+
+11 Folly - Escape the Attic
+12 Harvest - Escape the Wheatfield
+13 The End? - Escape the Stronghold
+14 Contained - Escape the Storage Facility
+15 Awful Service - Escape the Hotel
+16 Deforestation - Escape the Forest
+17 You're Home - Beat the main campaign
+18 Cat Nap - Beat the main campaign quickly
+19 Bruxism - Beat the main campaign on hard mode
+20 Insomnia - Beat the main campaign on hard quickly
+21 I am myself - Beat Repressed mode
+22 I am enough - Beat some modifier mode
+23 I am normal - Beat all modifier mode

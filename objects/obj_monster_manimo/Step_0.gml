@@ -8,7 +8,7 @@ if (pathdelay <= 0){
 	if ((collision_circle(x, y, awareness, obj_player, false, true)&& !collision_line(x, y, obj_player.x, obj_player.y, obj_solid, false, true))||(point_distance(x, y, obj_player.x, obj_player.y) < eyesight && !collision_line(x, y, obj_player.x, obj_player.y, obj_solid, false, true))){
 		if (!place_meeting(obj_player.x, obj_player.y, obj_solid_crouch)){
 			x_target = (round(obj_player.x/TS))*32
-			y_target =  (round(obj_player.y/TS))*32
+			y_target =  (round((obj_player.y + 64)/TS))*32
 		}else{
 			var _goto = instance_nearest(obj_player.x, obj_player.y, obj_crouch_poi)
 			x_target = (round(_goto.x/TS))*32

@@ -7,12 +7,12 @@ if (pathdelay <= 0){
 	var _y2 = lengthdir_y(eyesight, direction + 55)
 	if ((collision_circle(x, y, awareness, obj_player, false, true)&& !collision_line(x, y, obj_player.x, obj_player.y, obj_solid, false, true))||(point_distance(x, y, obj_player.x, obj_player.y) < eyesight && !collision_line(x, y, obj_player.x, obj_player.y, obj_solid, false, true))){
 		if (!place_meeting(obj_player.x, obj_player.y, obj_solid_crouch)){
-			x_target = (round(obj_player.x/TS))*32
-			y_target =  (round((obj_player.y + 64)/TS))*32
+			x_target = obj_player.x
+			y_target =  obj_player.y + 16
 		}else{
 			var _goto = instance_nearest(obj_player.x, obj_player.y, obj_crouch_poi)
-			x_target = (round(_goto.x/TS))*32
-			y_target = (round(_goto.x/TS))*32
+			x_target = _goto.x
+			y_target = _goto.y
 		}
 		if (state != "aggro"){
 			if (audio_is_playing(voice)){
@@ -95,12 +95,12 @@ if (state = "idle"){
 
 if (state = "aggro"){
 	if (!place_meeting(obj_player.x, obj_player.y, obj_solid_crouch)){
-		x_target = (round(obj_player.x/TS))*32
-		y_target =  (round(obj_player.y/TS))*32
+		x_target = obj_player.x
+		y_target =  obj_player.y + 16
 	}else{
 		var _goto = instance_nearest(obj_player.x, obj_player.y, obj_crouch_poi)
-		x_target = (round(_goto.x/TS))*32
-		y_target = (round(_goto.x/TS))*32
+		x_target = _goto.x
+		y_target = _goto.y
 		
 	}
 	attention -= 1

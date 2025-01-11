@@ -24,7 +24,7 @@ if (room = MENU_achieve){
 	achievescroll = clamp(achievescroll, -700, 0)
 }
 if (room = initroom){
-	room_goto(LEVEL_attic)
+	room_goto(MENU_main)
 }
 
 if (global.danger > 0){

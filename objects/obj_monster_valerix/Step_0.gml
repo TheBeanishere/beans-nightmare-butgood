@@ -3,16 +3,16 @@ pathdelay -= 1
 if (pathdelay <= 0){
 	if (state != "scared"){
 		if (!place_meeting(obj_player.x, obj_player.y, obj_solid_crouch)){
-			x_target = (round(obj_player.x/TS))*32
-			y_target =  (round((obj_player.y + 64)/TS))*32
+			x_target = obj_player.x
+			y_target =  obj_player.y + 32
 		}else{
 			var _goto = instance_nearest(obj_player.x, obj_player.y, obj_crouch_poi)
-			x_target = (round(_goto.x/TS))*32
-			y_target = (round(_goto.x/TS))*32
+			x_target = _goto.x
+			y_target = _goto.y
 		}
 	}else{
-		x_target = (round(nest.x/TS))*32
-		y_target = (round(nest.y/TS))*32
+		x_target = (nest.x/TS)*32
+		y_target = (nest.y/TS)*32
 	}
 	mp_grid_path(global.mp_gridcrouch, path, x, y, x_target, y_target, true)
 	if (state = "hunt"){	
@@ -51,8 +51,8 @@ if (state = "stare"){
 		global.danger += 1.5
 		audio_play_sound(mus_chasetrans, 1, false)
 		state = "hunt"
-		x_target = (round(obj_player.x/TS))*32
-		y_target =  (round((obj_player.y + 64)/TS))*32
+		x_target = obj_player.x
+		y_target =  obj_player.y + 32
 		mp_grid_path(global.mp_gridcrouch, path, x, y, x_target, y_target, true)
 		path_start(path, chasespeed, path_action_stop, true)
 		pathdelay = 4 + irandom_range(-2, 2)
@@ -81,18 +81,18 @@ if (direction > 0 && direction < 181){
 	facedir = "front"
 }
 
-//if (sprite_index != asset_get_index("spr_monster_valerix_" + facedir + "_idle")){
-//	if (floor(image_index) = 4||floor(image_index) = 1){	
-//		if (!stepped){
-//			stepped = true
-//			randomize()
-//			foot = choose(sfx_monster_valerix_step_1, sfx_monster_valerix_step_2, sfx_monster_valerix_step_3)
-//			audio_play_sound_at(foot, x, y, 0, 600, 1200, 1, false, 1, 0.7)
-//		}
-//	}else{
-//		stepped = false
-//	}
-//}
+if (sprite_index != asset_get_index("spr_monster_valerix_" + facedir + "_idle")){
+	if (floor(image_index) = 4||floor(image_index) = 1){	
+		if (!stepped){
+			stepped = true
+			randomize()
+			foot = sfx_monster_valerix_step
+			audio_play_sound_at(foot, x, y, 0, 600, 1200, 1, false, 1, 0.7)
+		}
+	}else{
+		stepped = false
+	}
+}
 
 if (state = "hunt"||state = "scared"){	
 	sprite_index = asset_get_index("spr_monster_valerix_" + facedir + "_move")

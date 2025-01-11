@@ -1,11 +1,15 @@
+if (!obj_game.MOD_valerix){
+	instance_destroy(self)
+}
+
 image_xscale = 0.25
 image_yscale = 0.25
 
 randomize()
 
-movespeed = 1
+movespeed = 2
 chasespeed = 4
-fleespeed = 7
+fleespeed = 9
 
 //states are stare, stalk hunt, and scared
 state = "stalk"
@@ -18,7 +22,7 @@ x_target = obj_player.x
 y_target = obj_player.y
 
 stepped = false
-foot = choose(sfx_monster_manimo_step_1, sfx_monster_manimo_step_2, sfx_monster_manimo_step_3)
+foot = sfx_monster_valerix_step
 
 mp_grid_path(global.mp_gridcrouch, path, x, y, x_target, y_target, true)
 path_start(path, 1, path_action_stop, true)

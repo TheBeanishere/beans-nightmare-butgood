@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_repression_chase",
+  "audioGroupId":{
+    "name":"music",
+    "path":"audiogroups/music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":24.935057,
+  "name":"mus_repression_chase",
+  "parent":{
+    "name":"music",
+    "path":"folders/Sounds/music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_repression_chase.wav",
+  "type":1,
+  "volume":1.0,
+}

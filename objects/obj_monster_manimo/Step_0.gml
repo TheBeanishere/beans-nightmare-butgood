@@ -22,6 +22,7 @@ if (pathdelay <= 0){
 			voice = choose(sfx_monster_manimo_aggro_1, sfx_monster_manimo_aggro_2, sfx_monster_manimo_aggro_3)
 			audio_play_sound_at(voice, x, y, 0, 1000, 2000, 1, false, 1, 0.7)	
 			global.danger += 1.5
+			
 		}
 		state = "aggro"
 		attention = aggrotime
@@ -149,4 +150,16 @@ if (state = "aggro"){
 	sprite_index = asset_get_index("spr_monster_manimo_" + facedir + "_move")
 }else if (state = "idle"){	
 	sprite_index = asset_get_index("spr_monster_manimo_" + facedir + "_idle")
+}
+
+if (place_meeting(x, y, obj_player)){
+	if (!obj_game.ACHIEVE_death_manimo){
+		ini_open("savedata.ini")
+		ini_write_real("achieves", "death_manimo", 1)
+		obj_game.ACHIEVE_death_manimo = ini_read_real("achieves", "death_manimo", 0)
+		ini_close()
+	}
+	global.screentype = "gameover"
+	obj_game.killedby = "manimo"
+	room_goto(KILL_manimo)
 }

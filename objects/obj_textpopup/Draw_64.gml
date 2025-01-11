@@ -1,0 +1,5 @@
+draw_set_font(Big)
+draw_set_halign(fa_center)
+draw_set_alpha(drawalpha)
+draw_text(640, 712 - (32 * amount), textsay)
+draw_set_halign(fa_left)

@@ -61,7 +61,15 @@ if (timer = 71){
 		if ((obj_player.hp - 90) > 0){
 			audio_play_sound(sfx_monster_a90_fail, 1, false)
 		}else{
-			audio_play_sound(sfx_monster_a90_kill, 1, false)
+			if (!obj_game.ACHIEVE_death_a90){
+				ini_open("savedata.ini")
+				ini_write_real("achieves", "death_a90", 1)
+				obj_game.ACHIEVE_death_a90 = ini_read_real("achieves", "death_a90", 0)
+				ini_close()
+			}
+			global.screentype = "gameover"
+			obj_game.killedby = "a90"
+			room_goto(KILL_a90)
 		}
 	}
 }

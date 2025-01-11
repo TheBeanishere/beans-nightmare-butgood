@@ -49,6 +49,7 @@ if (state = "stare"){
 	direction = point_direction(x, y, obj_player.x, obj_player.y)
 	if (staretime <= 0){
 		global.danger += 1.5
+		audio_play_sound(mus_chasetrans, 1, false)
 		state = "hunt"
 		x_target = (round(obj_player.x/TS))*32
 		y_target =  (round((obj_player.y + 64)/TS))*32
@@ -80,12 +81,12 @@ if (direction > 0 && direction < 181){
 	facedir = "front"
 }
 
-//if (sprite_index != asset_get_index("spr_monster_manimo_" + facedir + "_idle")){
+//if (sprite_index != asset_get_index("spr_monster_valerix_" + facedir + "_idle")){
 //	if (floor(image_index) = 4||floor(image_index) = 1){	
 //		if (!stepped){
 //			stepped = true
 //			randomize()
-//			foot = choose(sfx_monster_manimo_step_1, sfx_monster_manimo_step_2, sfx_monster_manimo_step_3)
+//			foot = choose(sfx_monster_valerix_step_1, sfx_monster_valerix_step_2, sfx_monster_valerix_step_3)
 //			audio_play_sound_at(foot, x, y, 0, 600, 1200, 1, false, 1, 0.7)
 //		}
 //	}else{
@@ -99,4 +100,16 @@ if (state = "hunt"||state = "scared"){
 	sprite_index = asset_get_index("spr_monster_valerix_" + facedir + "_stalk")
 }else{
 	sprite_index = asset_get_index("spr_monster_valerix_" + facedir + "_idle")
+}
+
+if (place_meeting(x, y, obj_player) && state = "hunt"){
+	if (!obj_game.ACHIEVE_death_valerix){
+		ini_open("savedata.ini")
+		ini_write_real("achieves", "death_valerix", 1)
+		obj_game.ACHIEVE_death_valerix = ini_read_real("achieves", "death_valerix", 0)
+		ini_close()
+	}
+	global.screentype = "gameover"
+	obj_game.killedby = "valerix"
+	room_goto(KILL_valerix)
 }

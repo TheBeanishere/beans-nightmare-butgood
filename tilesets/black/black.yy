@@ -1,0 +1,42 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"black",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":6,
+    "SerialiseWidth":11,
+    "TileCompressedData":[
+      -11,0,22,2,3,0,4,5,0,16,17,0,6,7,10,11,0,12,13,0,24,25,0,14,15,-11,0,8,22,23,0,20,21,0,18,19,-3,0,5,
+      30,31,0,28,29,-6,0,
+    ],
+    "TileDataFormat":1,
+  },
+  "name":"black",
+  "out_columns":11,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Tile Sets",
+    "path":"folders/Tile Sets.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"spr_attic",
+    "path":"sprites/spr_attic/spr_attic.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":32,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":32,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":128,
+}

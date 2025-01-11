@@ -2,13 +2,6 @@ if (spdY != 0 || spdX != 0){
 	audio_listener_position(x, y, 0)
 }
 
-//debug!!
-if (keyboard_check(vk_up)){
-	hp += 1
-}
-if (keyboard_check(vk_down)){
-	hp -= 1
-}
 if (keyboard_check_pressed(ord("P"))){
 	instance_create_layer(0, 0, "a90", obj_monster_a90)
 }
@@ -48,7 +41,7 @@ if ((key_right && key_up) || (key_right && key_down) || (key_left && key_down) |
 if (stamina = 1){
 	winded = true
 }
-if (stamina >= ((staminamax/100) *25)){
+if (stamina >= ((staminamax/100) *35)){
 	winded = false
 }
 if (((spdX != 0) || (spdY != 0)) && key_run && !winded && !crouched){

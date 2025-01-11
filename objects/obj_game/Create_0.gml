@@ -1,12 +1,18 @@
 audio_group_load(sfx)
+audio_group_load(music)
 audio_falloff_set_model(audio_falloff_linear_distance)
 #macro TS 32
 var _w = ceil(room_width/TS)
 var _h = ceil(room_height/TS)
 
+killedby = noone
 achievescroll = 0
+chasemusic = noone
+calmmusic = noone
 
 ini_open("savedata.ini")
+musicvolume = ini_read_real("settings", "music", 1)
+sfxvolume = ini_read_real("settings", "sfx", 1)
 ACHIEVE_death_manimo = ini_read_real("achieves", "death_manimo", 0)
 ACHIEVE_death_valerix = ini_read_real("achieves", "death_valerix", 0)
 ACHIEVE_death_mathi = ini_read_real("achieves", "death_mathi", 0)
@@ -33,11 +39,13 @@ ACHIEVE_complete_somemods = ini_read_real("achieves", "complete_somemods", 0)
 ACHIEVE_complete_allmods = ini_read_real("achieves", "complete_allmods", 0)
 ini_close()
 
+global.objective = "None"
 global.debug = false
 global.death = noone
 global.danger = 0
 global.mp_grid = mp_grid_create(0, 0, _w, _h, TS, TS)
 global.mp_gridcrouch = mp_grid_create(0, 0, _w, _h, TS, TS)
+global.screentype = "ingame"
 
 mp_grid_add_instances(global.mp_grid, obj_solid, false)
 mp_grid_add_instances(global.mp_gridcrouch, obj_solid, false)

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_dead",
+  "audioGroupId":{
+    "name":"music",
+    "path":"audiogroups/music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":24.0,
+  "name":"mus_dead",
+  "parent":{
+    "name":"sfx",
+    "path":"folders/Sounds/sfx.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_dead.wav",
+  "type":1,
+  "volume":1.0,
+}

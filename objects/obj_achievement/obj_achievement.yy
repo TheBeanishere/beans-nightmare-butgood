@@ -35,6 +35,7 @@
     {"$GMObjectProperty":"v1","%Name":"LOCKED_desc","filters":[],"listItems":[],"multiselect":false,"name":"LOCKED_desc","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Didn't load right :3 Which means I can write whatever the FUCK I wanna write here!!\"","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"COMPLETE_name","filters":[],"listItems":[],"multiselect":false,"name":"COMPLETE_name","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Huh\"","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"COMPLETE_desc","filters":[],"listItems":[],"multiselect":false,"name":"COMPLETE_desc","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"How??\"","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"flavour","filters":[],"listItems":[],"multiselect":false,"name":"flavour","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"I don't get it\"","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

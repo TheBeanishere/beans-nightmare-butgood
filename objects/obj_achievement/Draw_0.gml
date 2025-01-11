@@ -11,7 +11,16 @@ if (completed){
 	draw_set_font(Big)
 	draw_text(x + 110, y, COMPLETE_name)
 	draw_set_font(Medium)
-	draw_text_ext(x + 110, y + 35, COMPLETE_desc, 15, 250)
+	draw_set_alpha(0.65)
+	if (achieveID = 19||achieveID = 20){
+		draw_text_ext(x + 110, y + 35, COMPLETE_desc + "\n" + flavour, 15, 250)
+		draw_set_alpha(1)
+		draw_text_ext(x + 110, y + 35, COMPLETE_desc, 15, 250)
+	}else{
+		draw_text_ext(x + 110, y + 35, COMPLETE_desc + "\n \n" + flavour, 15, 250)
+		draw_set_alpha(1)
+		draw_text_ext(x + 110, y + 35, COMPLETE_desc, 15, 250)
+	}
 }else{
 	draw_set_font(Big)
 	draw_text(x + 110, y, LOCKED_name)

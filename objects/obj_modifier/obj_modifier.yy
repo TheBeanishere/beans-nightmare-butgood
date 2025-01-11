@@ -3,6 +3,8 @@
   "%Name":"obj_modifier",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_modifier",
@@ -28,7 +30,7 @@
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"modifierID","filters":[],"listItems":[],"multiselect":false,"name":"modifierID","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"modname","filters":[],"listItems":[],"multiselect":false,"name":"modname","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"FUCK\"","varType":2,},
-    {"$GMObjectProperty":"v1","%Name":"moddesc","filters":[],"listItems":[],"multiselect":false,"name":"moddesc","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"MESSED UP\"","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"moddesc","filters":[],"listItems":[],"multiselect":false,"name":"moddesc","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"MESSED UP SOMETHING IDIOT\"","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

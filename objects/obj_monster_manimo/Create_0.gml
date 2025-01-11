@@ -5,6 +5,12 @@ movespeed = 2
 chasespeed = 4
 investspeed = 3
 
+if (obj_game.MOD_fastmanimo){
+	movespeed = 3
+	chasespeed = 6
+	investspeed = 8
+}
+
 //states are idle, wander, investigate, and aggro
 state = "idle"
 attention = 0

@@ -2,8 +2,10 @@ if (spdY != 0 || spdX != 0){
 	audio_listener_position(x, y, 0)
 }
 
-if (keyboard_check_pressed(ord("P"))){
-	instance_create_layer(0, 0, "a90", obj_monster_a90)
+if (global.debug){
+	if (keyboard_check_pressed(ord("P"))){
+		instance_create_layer(0, 0, "a90", obj_monster_a90)
+	}
 }
 
 key_right = keyboard_check(ord("D"))
@@ -45,7 +47,11 @@ if (stamina >= ((staminamax/100) *35)){
 	winded = false
 }
 if (((spdX != 0) || (spdY != 0)) && key_run && !winded && !crouched){
-	stamina -= 1
+	if (obj_game.MOD_fastmanimo){	
+		stamina -= 0.2
+	}else{
+		stamina -= 1
+	}
 }else{
 	stamina += 1
 }

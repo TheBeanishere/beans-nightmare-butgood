@@ -10,6 +10,13 @@ achievescroll = 0
 chasemusic = noone
 calmmusic = noone
 
+a90spawn = irandom_range(900, 1200)
+
+ini_open("playtestdata.ini")
+VICTORY_normal = ini_read_real("save", "normal", 0)
+VICTORY_modifier = ini_read_real("save", "modifier", 0)
+ini_close()
+
 ini_open("savedata.ini")
 musicvolume = ini_read_real("settings", "music", 1)
 sfxvolume = ini_read_real("settings", "sfx", 1)

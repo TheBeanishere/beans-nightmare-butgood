@@ -9,6 +9,13 @@ if (shake){
 	y = 360
 }
 
+if (round(image_index) = 0){
+	if (!audio_is_playing(mus_jumpingscare)){
+		audio_play_sound(mus_deathsting, 1, false, 1.25)
+		audio_play_sound(mus_jumpingscare, 1, false, 0.75)
+	}
+}
+
 lifetime += 1
 
 if (lifetime > 60){

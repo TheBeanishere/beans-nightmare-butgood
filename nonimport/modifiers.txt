@@ -1,0 +1,35 @@
+Mani-more - Multiple Mimics can spawn +5
+Mani-move - The Mimic is faster +10
+
+Seethrough - The Equine stares from further away +5
+Skittish - The Equine has a smaller area of taunting +10
+
+Scurvy - The Brute is quieter +5
+
+Lioness - The Lookout is faster +10
+
+C4 - The Pawn is lethal +10
+Clusterbomb - Multiple Pawns can exist +15
+
+Rare Candy - The Monster can see better, and is faster +10
+
+Overseer - The Seer is lethal +10
+Every detail - The Seer's eyes stay on screen much longer +5
+
+Irish anger - The Maestro is faster +5
+Mezzo-forte - The Maestro gains a small speed boost from loud noises +5
+
+Doubtful - The Doubt appears more +10
+Self Loathing - The Doubt places more traps +5
+
+Traffic Light - The Faulter will sometimes require movement +5
+Speed trap - The Faulter is lethal +10
+
+Cracked - The Chef is faster +5
+Flexible - The Chef almost instantly travels through vents +10
+
+Squelchy - The Bile's goo piles now alert everyone +10
+Low Viscousity - The Bile is faster +5
+
+Strung up - The Doll starts attacking much faster
+

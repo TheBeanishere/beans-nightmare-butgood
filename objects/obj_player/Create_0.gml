@@ -1,6 +1,11 @@
 image_xscale = 0.25
 image_yscale = 0.25
 
+flashlight = false
+jammed = false
+flicker = 1
+battery = 0
+
 audio_listener_position(x, y, 0)
 audio_listener_set_orientation(0, 0, 0, 1, 0, -1, 0)
 

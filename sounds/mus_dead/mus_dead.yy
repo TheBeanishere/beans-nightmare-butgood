@@ -12,8 +12,8 @@
   "duration":24.0,
   "name":"mus_dead",
   "parent":{
-    "name":"sfx",
-    "path":"folders/Sounds/sfx.yy",
+    "name":"music",
+    "path":"folders/Sounds/music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"mus_dead.wav",
   "type":1,
-  "volume":1.0,
+  "volume":0.72,
 }

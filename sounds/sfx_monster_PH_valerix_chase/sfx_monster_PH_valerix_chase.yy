@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.395828,
+  "duration":4.575896,
   "name":"sfx_monster_PH_valerix_chase",
   "parent":{
     "name":"sfx",

@@ -3,10 +3,10 @@
 function scr_loudnoise(){
 	if (instance_exists(obj_monster_manimo)){
 		obj_monster_manimo.alerted = true
-		obj_monster_manimo.poi.x = (round(obj_player.x/TS))*32
-		obj_monster_manimo.poi.y = (round(obj_player.y/TS))*32
-		obj_monster_manimo.x_target = (round(obj_player.x/TS))*32
-		obj_monster_manimo.y_target = (round(obj_player.y/TS))*32
+		obj_monster_manimo.poi.x = obj_player.x
+		obj_monster_manimo.poi.y = obj_player.y
+		obj_monster_manimo.x_target = obj_player.x
+		obj_monster_manimo.y_target = obj_player.y
 	}
 	if (instance_exists(obj_monster_valerix) && distance_to_object(obj_monster_valerix) < 270){
 		if (obj_monster_valerix.state = "hunt"){
@@ -14,6 +14,21 @@ function scr_loudnoise(){
 			obj_monster_valerix.nest = instance_furthest(obj_monster_valerix.x, obj_monster_valerix.y, obj_valerix_nest)
 			obj_monster_valerix.state = "scared"
 			obj_monster_valerix.chasespeed = 4
+			randomize()
+			obj_monster_valerix.voice = choose(sfx_monster_PH_valerix_scare_1, sfx_monster_PH_valerix_scare_2)
+			audio_play_sound_at(obj_monster_valerix.voice, obj_monster_valerix.x, obj_monster_valerix.y, 0, 1000, 2000, 1, false, 1, 0.7)	
+		}
+	}
+	if (instance_exists(obj_monster_valerix_corn) && distance_to_object(obj_monster_valerix_corn) < 270){
+		if (obj_monster_valerix_corn.state = "hunt"){
+			global.danger -= 1.5
+			obj_monster_valerix_corn.scaredcounter += 1
+			obj_monster_valerix_corn.nest = instance_furthest(obj_monster_valerix_corn.x, obj_monster_valerix_corn.y, obj_valerix_nest)
+			obj_monster_valerix_corn.state = "scared"
+			obj_monster_valerix_corn.chasespeed = 4
+			randomize()
+			obj_monster_valerix_corn.voice = choose(sfx_monster_PH_valerix_scare_1, sfx_monster_PH_valerix_scare_2)
+			audio_play_sound_at(obj_monster_valerix_corn.voice, obj_monster_valerix_corn.x, obj_monster_valerix_corn.y, 0, 1000, 2000, 1, false, 1, 0.7)	
 		}
 	}
 }

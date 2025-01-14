@@ -69,10 +69,14 @@ if (state = "wander"){
 		idletime = 120
 		poi.touched = true
 	}
+	if (!mp_grid_path(global.mp_gridcrouch, path, x, y, x_target, y_target, true)){
+		poi.y = y
+		poi.x = x
+	}
 }
 
 if (state = "investigate"){
-	if (x = poi.x && y = poi.y){
+	if (x >= poi.x - 5 && y >= poi.y - 5 && x <= poi.x + 5 && y <= poi.y + 5){
 		state = "idle"
 		facedir = "front"
 		idletime = 180
@@ -88,7 +92,7 @@ if (state = "idle"){
 		x_target = poi.x
 		y_target = poi.y
 		mp_grid_path(global.mp_gridcrouch, path, x, y, x_target, y_target, true)
-		path_start(path, chasespeed, path_action_stop, true)
+		path_start(path, movespeed, path_action_stop, true)
 		pathdelay = 4 + irandom_range(-2, 2)
 	}
 }
@@ -152,7 +156,7 @@ if (state = "aggro"){
 	sprite_index = asset_get_index("spr_monster_manimo_" + facedir + "_idle")
 }
 
-if (place_meeting(x, y, obj_player)){
+if (place_meeting(x, y, obj_player) && state = "aggro"){
 	if (!obj_game.ACHIEVE_death_manimo){
 		ini_open("savedata.ini")
 		ini_write_real("achieves", "death_manimo", 1)
@@ -161,5 +165,6 @@ if (place_meeting(x, y, obj_player)){
 	}
 	global.screentype = "gameover"
 	obj_game.killedby = "manimo"
+	global.level = room
 	room_goto(KILL_manimo)
 }

@@ -29,6 +29,7 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"textsay","filters":[],"listItems":[],"multiselect":false,"name":"textsay","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Hi this is an error\"","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"lifetimereduce","filters":[],"listItems":[],"multiselect":false,"name":"lifetimereduce","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

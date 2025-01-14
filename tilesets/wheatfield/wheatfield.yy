@@ -1,0 +1,42 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"wheatfield",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":9,
+    "SerialiseWidth":15,
+    "TileCompressedData":[
+      -17,0,32,6,7,0,2,3,0,32,33,0,13,0,0,40,0,14,20,21,0,16,17,0,46,47,0,27,0,0,54,0,0,34,35,-13,0,11,48,
+      49,0,22,23,0,30,31,0,10,11,-7,0,8,36,37,0,44,45,0,24,25,-7,0,2,50,51,-19,0,2,38,39,-13,0,4,52,53,0,0,
+    ],
+    "TileDataFormat":1,
+  },
+  "name":"wheatfield",
+  "out_columns":7,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Tile Sets",
+    "path":"folders/Tile Sets.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"spr_wheatfield",
+    "path":"sprites/spr_wheatfield/spr_wheatfield.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":64,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":64,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":56,
+}

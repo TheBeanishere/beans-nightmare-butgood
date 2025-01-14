@@ -2,12 +2,6 @@ if (spdY != 0 || spdX != 0){
 	audio_listener_position(x, y, 0)
 }
 
-if (global.debug){
-	if (keyboard_check_pressed(ord("P"))){
-		instance_create_layer(0, 0, "a90", obj_monster_a90)
-	}
-}
-
 key_right = keyboard_check(ord("D"))
 key_left = keyboard_check(ord("A"))
 key_up = keyboard_check(ord("W"))
@@ -16,6 +10,7 @@ key_crouch = keyboard_check_pressed(ord("C"))||keyboard_check_pressed(vk_control
 key_run = keyboard_check(vk_shift)
 key_runpress = keyboard_check_pressed(vk_shift)
 key_taunt = keyboard_check_pressed(ord("E"))
+key_flashlight = keyboard_check_pressed(ord("F"))||mouse_check_button_pressed(mb_left)
 
 if (key_crouch){
 	crouched = !crouched
@@ -23,6 +18,36 @@ if (key_crouch){
 if (key_runpress){
 	crouched = false
 }
+if (key_flashlight && !jammed){
+	flashlight = !flashlight
+}
+
+if (flashlight){
+	battery += 1
+}else{
+	battery -= 1.75
+}
+if (battery >= 1799){
+	flashlight = false
+	jammed = true
+}
+if (battery >= 1450){
+	var _flicker = irandom_range(1,100)
+	if (_flicker < 16){
+		flicker = 0
+	}else{
+		flicker = 1
+	}
+	randomize()
+}else{
+	flicker = 1
+}
+
+if (battery <= 1450){
+	jammed = false
+}
+
+battery = clamp(battery, 0, 1800)
 
 if (crouched){
 	spdX = (key_right - key_left) * crawlspeed
@@ -93,6 +118,12 @@ if (place_meeting(x + spdX, y, obj_solid)){
 	}
 	spdX = 0
 }
+if (place_meeting(x + spdX, y, obj_solidcorn)){
+	while !place_meeting(x + spdX, y, obj_solidcorn){
+		x += sign(spdX)
+	}
+	spdX = 0
+}
 
 x += spdX
 if (!crouched){
@@ -105,6 +136,12 @@ if (!crouched){
 }
 if (place_meeting(x, y + spdY, obj_solid)){
 	while !place_meeting(x, y + spdY, obj_solid){
+		y += sign(spdY)
+	}
+	spdY = 0
+}
+if (place_meeting(x, y + spdY, obj_solidcorn)){
+	while !place_meeting(x, y + spdY, obj_solidcorn){
 		y += sign(spdY)
 	}
 	spdY = 0

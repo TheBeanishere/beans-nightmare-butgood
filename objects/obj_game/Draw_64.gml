@@ -4,10 +4,18 @@ if (global.screentype = "ingame"){
 	draw_text(0, 0, global.objective)
 }
 
+if (room = MENU_palette){
+	draw_text(0, 0, "[ESC.] for main menu")
+}
+
 if (room = MENU_main){
 	draw_set_font(Big)
 	draw_set_alpha(1)
-	draw_text(25, 360, "Enter to play the Attic level with Manimo")
-	draw_text(25, 390, "Hold Q and M to reset data.")
-	draw_text_ext(960, 120, "[W][S][A][D] - Move \n[E] - Taunt, Alerts enemies \n[SHIFT] - Sprint, Uses stamina \n[CONTROL] or [C] - Crouch", 28, 290)
+	draw_text(25, 330, "[P] for Palette room!")
+	draw_text(25, 360, "1. Attic")
+	if (VICTORY_normal){
+		draw_text(25, 390, "2. Wheatfield")
+	}
+	draw_text(25, 200, "Hold Q and M to reset data.")
+	draw_text_ext(960, 120, "[W][S][A][D] - Move \n[E] - Taunt, Alerts enemies \n[F] - Flashlight, battery in top left\n[SHIFT] - Sprint, Uses stamina \n[CONTROL] or [C] - Crouch\n[f11] - Fullscreen", 28, 290)
 }

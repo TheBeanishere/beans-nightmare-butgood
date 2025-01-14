@@ -9,6 +9,7 @@ drawstatic = 0
 drawsign = 1
 drawface = false
 kill = false
+death = false
 xoffset = 0
 yoffset = 0
 drawx = 0

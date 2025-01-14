@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_repercussions_calm",
+  "audioGroupId":{
+    "name":"music",
+    "path":"audiogroups/music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":32.0,
+  "name":"mus_repercussions_calm",
+  "parent":{
+    "name":"music",
+    "path":"folders/Sounds/music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_repercussions_calm.wav",
+  "type":1,
+  "volume":0.72,
+}

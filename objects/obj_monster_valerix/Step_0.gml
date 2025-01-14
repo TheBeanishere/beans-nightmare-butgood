@@ -11,8 +11,8 @@ if (pathdelay <= 0){
 			y_target = _goto.y
 		}
 	}else{
-		x_target = (nest.x/TS)*32
-		y_target = (nest.y/TS)*32
+		x_target = nest.x
+		y_target = nest.y
 	}
 	mp_grid_path(global.mp_gridcrouch, path, x, y, x_target, y_target, true)
 	if (state = "hunt"){	
@@ -110,6 +110,7 @@ if (place_meeting(x, y, obj_player) && state = "hunt"){
 		ini_close()
 	}
 	global.screentype = "gameover"
+	global.level = room
 	obj_game.killedby = "valerix"
 	room_goto(KILL_valerix)
 }

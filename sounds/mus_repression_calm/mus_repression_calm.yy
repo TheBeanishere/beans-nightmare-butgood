@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":24.0,
+  "duration":24.935057,
   "name":"mus_repression_calm",
   "parent":{
     "name":"music",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"mus_repression_calm.wav",
   "type":1,
-  "volume":1.0,
+  "volume":0.72,
 }

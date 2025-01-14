@@ -1,4 +1,4 @@
-lifetime += 1
+lifetime += lifetimereduce
 if (lifetime > 90){
 	drawalpha -= 0.025
 }

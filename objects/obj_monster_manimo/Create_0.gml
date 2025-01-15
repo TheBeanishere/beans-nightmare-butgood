@@ -3,7 +3,7 @@ image_yscale = 0.25
 
 movespeed = 2
 chasespeed = 4
-investspeed = 3
+investspeed = 8
 
 if (obj_game.MOD_fastmanimo){
 	movespeed = 3

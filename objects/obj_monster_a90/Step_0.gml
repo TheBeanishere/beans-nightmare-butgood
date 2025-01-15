@@ -79,7 +79,7 @@ if (kill && timer = 120){
 			ini_close()
 		}
 		global.screentype = "gameover"
-		obj_game.killedby = "a90"
+		obj_game.killedby = "A-90"
 		global.level = room
 		room_goto(KILL_a90)
 	}else{

@@ -1,8 +1,11 @@
 if (room = MENU_gameover){
 	draw_set_font(Big)
-	draw_text(320, 360, "Gameover placeholder")
-	draw_text(320, 400, "Enter to retry")
-	draw_text(320, 440, "Escape to return to menu")
+	pal_swap_set(spr_palette_beanie, global.palettebeanie, false)
+	draw_sprite(spr_gameover, 0, 640, 360)
+	pal_swap_reset()
+	draw_text(640, 360, "You died to " + killedby)
+	draw_text(640, 400, "Enter to retry")
+	draw_text(640, 440, "Escape to return to menu")
 }
 
 if (room = MENU_palette){
@@ -80,7 +83,7 @@ if (room = MENU_palette){
 			}else if (global.palettebeanie = 12){
 				draw_text(320, 360, "DJ Mist")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 390, "Shhhhh", 25, 250)
+				draw_text_ext(320, 390, "Shhhhh...", 25, 250)
 			}else if (global.palettebeanie = 13){
 				draw_text(320, 360, "STOPSIGN")
 				draw_set_color(c_grey)
@@ -96,7 +99,7 @@ if (room = MENU_palette){
 			}else if (global.palettebeanie = 16){
 				draw_text(320, 360, "Fusion-esqe paint job")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 390, "Music talent and cool voice not included", 25, 250)
+				draw_text_ext(320, 390, "Crumpet munchers smh", 25, 250)
 			}else if (global.palettebeanie = 17){
 				draw_text(320, 360, "Trans")
 				draw_set_color(c_grey)

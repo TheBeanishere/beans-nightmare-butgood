@@ -4,7 +4,7 @@ if (pathdelay <= 0){
 	if (state != "scared" && state != "retreat"){
 		if (!place_meeting(obj_player.x, obj_player.y, obj_solid_crouch)){
 			x_target = obj_player.x
-			y_target =  obj_player.y + 32
+			y_target =  obj_player.y + 64
 		}else{
 			var _goto = instance_nearest(obj_player.x, obj_player.y, obj_crouch_poi)
 			x_target = _goto.x
@@ -70,7 +70,7 @@ if (state = "stare"){
 		audio_play_sound_on(soundemitter, voice, true, 1, 1, 0, 1)	
 		state = "hunt"
 		x_target = obj_player.x
-		y_target =  obj_player.y + 32
+		y_target =  obj_player.y + 64
 		mp_grid_path(global.mp_gridcorn, path, x, y, x_target, y_target, true)
 		path_start(path, chasespeed, path_action_stop, true)
 		pathdelay = 4 + irandom_range(-2, 2)
@@ -144,6 +144,6 @@ if (place_meeting(x, y, obj_player) && (state = "hunt"||state = "aggro")){
 	}
 	global.screentype = "gameover"
 	global.level = room
-	obj_game.killedby = "valerix"
+	obj_game.killedby = "Valerix"
 	room_goto(KILL_valerix)
 }

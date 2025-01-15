@@ -12,14 +12,12 @@ if (room = MENU_gameover){
 			roomdes = global.level
 		}
 		global.screentype = "ingame"
-		killedby = noone
 	}
 	if (keyboard_check_pressed(vk_escape)){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = MENU_main
 		}
 		global.screentype = "menu"
-		killedby = noone
 	}
 }
 
@@ -171,7 +169,7 @@ if (room = MENU_main){
 	}
 	if (keyboard_check_pressed(ord("1"))){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = LEVEL_attic
+			roomdes = LEVEL_test
 		}
 		global.screentype = "ingame"
 		killedby = noone

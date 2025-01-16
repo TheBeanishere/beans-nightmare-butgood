@@ -16,6 +16,7 @@ if (pathdelay = 0){
 			if (state != "aggro"){
 				global.danger += 1.5
 				randomize()
+				audio_play_sound(mus_chasetrans, 1, false)
 				voice = choose(sfx_monster_manimo_aggro_1, sfx_monster_manimo_aggro_2, sfx_monster_manimo_aggro_3)
 				audio_play_sound_at(voice, x, y, 0, 1000, 2000, 1, false, 1, 0.7)	
 			}

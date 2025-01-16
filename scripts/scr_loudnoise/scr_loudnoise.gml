@@ -4,9 +4,6 @@ function scr_loudnoise(){
 	if (instance_exists(obj_monster_manimo)){
 		obj_monster_manimo.alerted = true
 	}
-	if (instance_exists(obj_monster_mathi)){
-		obj_monster_mathi.alerted = true
-	}
 	if (instance_exists(obj_monster_valerix) && distance_to_object(obj_monster_valerix) < 270){
 		if (obj_monster_valerix.state = "hunt"){
 			global.danger -= 1.5

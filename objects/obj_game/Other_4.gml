@@ -19,6 +19,7 @@ if (room = MENU_achieve){
 	achievescroll = 0
 }
 if (room = MENU_gameover){
+	audio_play_sound(sfx_die, 1, false, 1.3)
 	audio_play_sound(mus_dead, 1, true)
 }
 if (room = MENU_palette){

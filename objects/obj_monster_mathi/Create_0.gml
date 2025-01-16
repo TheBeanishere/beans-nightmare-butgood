@@ -3,17 +3,18 @@ image_yscale = 0.25
 
 movespeed = 2
 chasespeed = 6
-investspeed = 4
+chargespeed = 15
 
 
-//states are idle, wander, investigate, and aggro
+//states are idle, wander, charge, recover, wind, and aggro
 state = "idle"
 attention = 0
-aggrotime = 240
+aggrotime = 90
 idletime = 120
 alerted = false
+windtime = 90
 
-eyesight = 420
+eyesight = 512
 path = path_add()
 poi = instance_create_depth(x, y, 50, obj_monster_poi)
 with (poi){

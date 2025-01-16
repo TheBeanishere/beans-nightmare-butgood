@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sfx_splat",
+  "audioGroupId":{
+    "name":"sfx",
+    "path":"audiogroups/sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":6.857143,
+  "name":"sfx_splat",
+  "parent":{
+    "name":"sfx",
+    "path":"folders/Sounds/sfx.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_splat.wav",
+  "type":1,
+  "volume":1.0,
+}

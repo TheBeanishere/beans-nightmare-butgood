@@ -10,12 +10,14 @@ if (room = MENU_gameover){
 	if (keyboard_check_pressed(vk_enter)){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = global.level
+			screentypechange = "ingame"
 		}
 		global.screentype = "ingame"
 	}
 	if (keyboard_check_pressed(vk_escape)){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = MENU_main
+			screentypechange = "menu"
 		}
 		global.screentype = "menu"
 	}
@@ -31,8 +33,8 @@ if (room = MENU_palette){
 	if (keyboard_check_pressed(vk_escape)){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = MENU_main
+			screentypechange = "menu"
 		}
-		global.screentype = "menu"
 		killedby = noone
 	}
 	if (keyboard_check_pressed(vk_right)){
@@ -162,32 +164,44 @@ if (room = MENU_main){
 	if (keyboard_check_pressed(ord("P"))){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = MENU_palette
+			screentypechange = "menu"
 		}
-		global.screentype = "menu"
 		killedby = noone
 		palettechoose = 0
 	}
 	if (keyboard_check_pressed(ord("1"))){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = LEVEL_test
+			roomdes = LEVEL_attic
+			screentypechange = "ingame"
 		}
-		global.screentype = "ingame"
 		killedby = noone
 	}
 	if (keyboard_check_pressed(ord("2")) && VICTORY_normal){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = LEVEL_wheatfield
+			screentypechange = "ingame"
 		}
-		global.screentype = "ingame"
+		
 		killedby = noone
 	}
+	if (keyboard_check_pressed(ord("3")) && VICTORY_wheatfield){
+		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+			roomdes = LEVEL_stronghold
+			screentypechange = "ingame"
+		}
+		
+		killedby = noone
+	}
+	
 	if (keyboard_check(ord("Q")) && keyboard_check(ord("M"))){
 		ini_open("playtestdata.ini")
 		ini_write_real("save", "normal", 0)
 		ini_write_real("save", "wheatfield", 0)
+		ini_write_real("save", "stronghold", 0)
 		ini_write_real("save", "modifier", 0)
 		VICTORY_normal = ini_read_real("save", "normal", 0)
 		VICTORY_wheatfield = ini_read_real("save", "wheatfield", 0)
+		VICTORY_stronghold = ini_read_real("save", "stronghold", 0)
 		VICTORY_modifier = ini_read_real("save", "modifier", 0)
 		ini_close()
 		room_goto(MENU_main)

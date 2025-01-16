@@ -29,6 +29,7 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"roomdes","filters":[],"listItems":[],"multiselect":false,"name":"roomdes","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"MENU_main","path":"rooms/MENU_main/MENU_main.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"MENU_main","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"screentypechange","filters":[],"listItems":[],"multiselect":false,"name":"screentypechange","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"menu\"","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

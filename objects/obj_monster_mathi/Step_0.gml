@@ -46,6 +46,8 @@ if (place_meeting(obj_player.x, obj_player.y, obj_enemyunreachable) && (state = 
 }
 
 if (state = "aggro"){
+	x_target = obj_player.x
+	y_target = obj_player.y + 48
 	attention -= 1
 	if (collision_circle(x, y, 250, obj_player, false, true) || collision_rectangle(bbox_right, bbox_bottom, bbox_left, bbox_top, obj_player, false, true)){
 		state = "wind"

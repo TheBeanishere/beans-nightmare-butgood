@@ -55,6 +55,8 @@ if (alerted){
 
 if (state = "aggro"){
 	attention -= 1
+	x_target = obj_player.x
+	y_target = obj_player.y + 32
 	if (attention <= 0 || collision_circle(x_target, y_target, 5, self, false, false)){
 		global.danger -= 1.5
 		randomize()

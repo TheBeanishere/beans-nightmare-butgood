@@ -19,6 +19,7 @@ ini_open("playtestdata.ini")
 VICTORY_normal = ini_read_real("save", "normal", 0)
 VICTORY_wheatfield = ini_read_real("save", "wheatfield", 0)
 VICTORY_stronghold = ini_read_real("save", "stronghold", 0)
+VICTORY_storagefacility = ini_read_real("save", "storagefacility", 0)
 VICTORY_modifier = ini_read_real("save", "modifier", 0)
 ini_close()
 

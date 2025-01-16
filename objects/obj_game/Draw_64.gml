@@ -19,6 +19,9 @@ if (room = MENU_main){
 	if (VICTORY_wheatfield){
 		draw_text(25, 420, "3. Stronghold")
 	}
+	if (VICTORY_stronghold){
+		draw_text(25, 420, "4. Storage Facility")
+	}
 	draw_text(25, 200, "Hold Q and M to reset data.")
 	draw_text_ext(960, 120, "[W][S][A][D] - Move \n[E] - Taunt, Alerts enemies \n[F] - Flashlight, battery in top left\n[SHIFT] - Sprint, Uses stamina \n[CONTROL] or [C] - Crouch\n[f11] - Fullscreen", 28, 290)
 }

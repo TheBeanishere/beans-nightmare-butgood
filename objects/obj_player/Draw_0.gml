@@ -12,7 +12,7 @@ if (flashlight){
 		draw_sprite_ext(spr_overlay_darkness, 0, x - 16, y, 0.75, 0.75, 0, c_white, battery/5400)
 	}
 }else{
-	draw_sprite_ext(spr_overlay_darkness, 0, x - 16, y, 0.75, 0.75, 0, c_white, 1)
+	//draw_sprite_ext(spr_overlay_darkness, 0, x - 16, y, 0.75, 0.75, 0, c_white, 1)
 }
 if (global.debug){
 	draw_rectangle(bbox_right, bbox_top, bbox_left, bbox_bottom, true)

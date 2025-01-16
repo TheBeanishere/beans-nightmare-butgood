@@ -2,23 +2,18 @@ image_xscale = 0.25
 image_yscale = 0.25
 
 movespeed = 2
-chasespeed = 4
-investspeed = 7
+chasespeed = 6
+investspeed = 4
 
-if (obj_game.MOD_fastmanimo){
-	movespeed = 3
-	chasespeed = 6
-	investspeed = 8
-}
 
 //states are idle, wander, investigate, and aggro
 state = "idle"
 attention = 0
-aggrotime = 180
+aggrotime = 240
 idletime = 120
 alerted = false
 
-eyesight = 650
+eyesight = 420
 path = path_add()
 poi = instance_create_depth(x, y, 50, obj_monster_poi)
 with (poi){

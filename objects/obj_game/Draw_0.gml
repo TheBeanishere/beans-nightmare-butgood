@@ -186,3 +186,9 @@ if (room = MENU_palette){
 	draw_set_halign(fa_left)
 	draw_set_color(c_white)
 }
+
+if (global.debug && global.screentype = "ingame"){
+	draw_set_alpha(0.2)
+	mp_grid_draw(global.mp_gridcrouch)
+	draw_set_alpha(1)
+}

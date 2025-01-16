@@ -13,10 +13,8 @@ if (collision_circle(x, y + 32, 40, obj_player, false, true) && !interacted){
 	}else{
 		if (instance_exists(obj_monster_manimo)){
 			obj_monster_manimo.alerted = true
-			obj_monster_manimo.poi.x = obj_player.x
-			obj_monster_manimo.poi.y = obj_player.y
-			obj_monster_manimo.x_target = obj_player.x
-			obj_monster_manimo.y_target = obj_player.y
+			obj_monster_manimo.x_target = x
+			obj_monster_manimo.y_target = y + 32
 		}
 		interacted = true
 		audio_play_sound(sfx_leverflip, 1, false, 1.3)

@@ -6,7 +6,7 @@ randomize()
 
 movespeed = 2
 chasespeed = 4
-fleespeed = 9
+fleespeed = 11
 
 //states are stare, stalk hunt, and scared
 state = "stalk"

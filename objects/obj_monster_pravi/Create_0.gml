@@ -13,6 +13,7 @@ repeat (instance_number(obj_pravipoint)){
 	var _point = instance_nearest(x, y, obj_pravipoint)
 	ds_list_add(respawnlocations, _point.x)
 	ds_list_add(respawnlocations, _point.y)
+	_point.checked = true
 }
 
 //states are idle, aggro, return, explode and respawn

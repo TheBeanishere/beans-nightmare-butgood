@@ -112,8 +112,6 @@
     {"name":"inst_4F7855A0","path":"rooms/LEVEL_stronghold/LEVEL_stronghold.yy",},
     {"name":"inst_4EC505F3","path":"rooms/LEVEL_stronghold/LEVEL_stronghold.yy",},
     {"name":"inst_6B65A6E0","path":"rooms/LEVEL_stronghold/LEVEL_stronghold.yy",},
-    {"name":"inst_36B683E4","path":"rooms/LEVEL_stronghold/LEVEL_stronghold.yy",},
-    {"name":"inst_38FAE498","path":"rooms/LEVEL_stronghold/LEVEL_stronghold.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -166,8 +164,6 @@
         {"$GMRInstance":"v1","%Name":"inst_6B65A6E0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6B65A6E0","objectId":{"name":"obj_monsterspawner_1","path":"objects/obj_monsterspawner_1/obj_monsterspawner_1.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_monsterspawner_1","path":"objects/obj_monsterspawner_1/obj_monsterspawner_1.yy",},"propertyId":{"name":"monstertype","path":"objects/obj_monsterspawner_1/obj_monsterspawner_1.yy",},"resource":{"name":"obj_monster_mathi","path":"objects/obj_monster_mathi/obj_monster_mathi.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"obj_monster_mathi",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2080.0,"y":992.0,},
-        {"$GMRInstance":"v1","%Name":"inst_36B683E4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_36B683E4","objectId":{"name":"obj_interact_stronghold","path":"objects/obj_interact_stronghold/obj_interact_stronghold.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5,"scaleY":0.5,"x":4800.0,"y":512.0,},
-        {"$GMRInstance":"v1","%Name":"inst_38FAE498","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_38FAE498","objectId":{"name":"obj_interact_stronghold","path":"objects/obj_interact_stronghold/obj_interact_stronghold.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5,"scaleY":0.5,"x":4672.0,"y":512.0,},
       ],"layers":[],"name":"player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"interacts","depth":800,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_7CC64879","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7CC64879","objectId":{"name":"obj_door_stronghold","path":"objects/obj_door_stronghold/obj_door_stronghold.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":4864.0,"y":208.0,},

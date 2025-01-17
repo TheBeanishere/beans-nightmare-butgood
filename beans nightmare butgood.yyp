@@ -76,6 +76,7 @@
     {"id":{"name":"obj_interact_attic","path":"objects/obj_interact_attic/obj_interact_attic.yy",},},
     {"id":{"name":"obj_interact_stronghold","path":"objects/obj_interact_stronghold/obj_interact_stronghold.yy",},},
     {"id":{"name":"obj_interact_wheatfield","path":"objects/obj_interact_wheatfield/obj_interact_wheatfield.yy",},},
+    {"id":{"name":"obj_interactable","path":"objects/obj_interactable/obj_interactable.yy",},},
     {"id":{"name":"obj_interactspawn","path":"objects/obj_interactspawn/obj_interactspawn.yy",},},
     {"id":{"name":"obj_kill_a90","path":"objects/obj_kill_a90/obj_kill_a90.yy",},},
     {"id":{"name":"obj_kill_manimo","path":"objects/obj_kill_manimo/obj_kill_manimo.yy",},},

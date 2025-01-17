@@ -3,8 +3,11 @@ if (room = MENU_gameover){
 	pal_swap_set(spr_palette_beanie, global.palettebeanie, false)
 	draw_sprite(spr_gameover, 0, 640, 360)
 	pal_swap_reset()
-	draw_text(640, 360, "You died to " + killedby)
-	draw_text(640, 400, "Enter to retry")
+	draw_set_color(c_grey)
+	draw_text_ext(640, 320, global.deathline, 28, 600)
+	draw_set_color(c_white)
+	draw_text(640, 280, "You died to " + killedby)
+	draw_text(640, 410, "Enter to retry")
 	draw_text(640, 440, "Escape to return to menu")
 }
 

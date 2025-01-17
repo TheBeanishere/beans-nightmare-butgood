@@ -164,8 +164,10 @@ if (room = MENU_main){
 	if (keyboard_check_pressed(ord("P"))){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = MENU_palette
+			alphagain = 1/90
 			screentypechange = "menu"
 		}
+		audio_play_sound(mus_skibidistart, 1, false)
 		killedby = noone
 		palettechoose = 0
 	}
@@ -176,7 +178,7 @@ if (room = MENU_main){
 		}
 		killedby = noone
 	}
-	if (keyboard_check_pressed(ord("2")) && VICTORY_normal){
+	if (keyboard_check_pressed(ord("3")) && VICTORY_normal){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = LEVEL_wheatfield
 			screentypechange = "ingame"
@@ -184,7 +186,7 @@ if (room = MENU_main){
 		
 		killedby = noone
 	}
-	if (keyboard_check_pressed(ord("3")) && VICTORY_wheatfield){
+	if (keyboard_check_pressed(ord("2")) && VICTORY_wheatfield){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = LEVEL_stronghold
 			screentypechange = "ingame"

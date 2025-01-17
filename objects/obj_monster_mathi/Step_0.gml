@@ -183,6 +183,8 @@ if (collision_circle(x, y, 75, obj_player, false, true) && state = "charge"){
 	}
 	global.screentype = "gameover"
 	obj_game.killedby = "Mathi"
+	randomize()
+	global.deathline = choose("Run away when he stops to ready his charge.", "He loses interest quickly, break line of sight as fast as you can.", "Listen for his loud footsteps to avoid him ever seeing you.")
 	global.level = room
 	room_goto(KILL_mathi)
 }

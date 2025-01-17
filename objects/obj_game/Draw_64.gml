@@ -14,10 +14,10 @@ if (room = MENU_main){
 	draw_text(25, 330, "[P] for Palette room!")
 	draw_text(25, 360, "1. Attic")
 	if (VICTORY_normal){
-		draw_text(25, 390, "2. Wheatfield")
+		draw_text(25, 390, "2. Stronghold")
 	}
 	if (VICTORY_wheatfield){
-		draw_text(25, 420, "3. Stronghold")
+		draw_text(25, 420, "3. Wheatfield")
 	}
 	if (VICTORY_stronghold){
 		draw_text(25, 420, "4. Storage Facility")

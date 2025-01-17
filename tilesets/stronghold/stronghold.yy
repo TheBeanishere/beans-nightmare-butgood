@@ -1,0 +1,43 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"stronghold",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":9,
+    "SerialiseWidth":18,
+    "TileCompressedData":[
+      -19,0,14,22,23,0,2,3,16,0,0,4,5,0,0,8,9,-7,0,2,18,19,-3,0,22,20,21,0,0,24,25,0,44,45,0,48,49,0,34,35,
+      0,36,37,0,0,38,39,-3,0,2,60,61,-4,0,9,50,51,0,52,53,0,0,54,55,-3,0,4,12,13,30,31,-7,0,2,40,41,-5,0,2,
+      28,29,-9,0,2,56,57,-13,0,2,42,43,-4,0,6,10,11,0,0,44,45,-6,0,2,58,59,-4,0,6,26,27,0,0,28,29,
+    ],
+    "TileDataFormat":1,
+  },
+  "name":"stronghold",
+  "out_columns":8,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Tile Sets",
+    "path":"folders/Tile Sets.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"spr_stronghold",
+    "path":"sprites/spr_stronghold/spr_stronghold.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":64,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":64,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":64,
+}

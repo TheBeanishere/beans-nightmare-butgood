@@ -19,7 +19,7 @@ if (global.debug){
 	draw_line(x_target, y_target, x_target, y_target - 64)
 	draw_rectangle(bbox_right, bbox_top, bbox_left, bbox_bottom, true)
 	draw_path(path, x, y, true)
-	draw_circle(x, y, 65, true)
+	draw_circle(x, y - 45, 45, true)
 	var _x = lengthdir_x(eyesight, point_direction(x, y, obj_player.x, obj_player.y))
 	var _y = lengthdir_y(eyesight, point_direction(x, y, obj_player.x, obj_player.y))
 	draw_line(x, y, x + _x, y + _y)

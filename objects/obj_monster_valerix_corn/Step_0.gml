@@ -144,6 +144,8 @@ if (place_meeting(x, y, obj_player) && (state = "hunt"||state = "aggro")){
 	}
 	global.screentype = "gameover"
 	global.level = room
+	randomize()
+	global.deathline = choose("Don't back yourself into a corner, he can go through the field's walls.", "He doesn't gain speed when he's chasing you for the second time", "He runs off, listen for the music cue to tell you when to start making distance.", "Scare him off before he outpaces you.", "Running won't work, he will eventually become faster than you", "Time your taunt, there's a cool down.")
 	obj_game.killedby = "Valerix"
 	room_goto(KILL_valerix)
 }

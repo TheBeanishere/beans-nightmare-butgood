@@ -15,6 +15,11 @@ repeat (instance_number(obj_pravipoint)){
 	ds_list_add(respawnlocations, _point.y)
 	instance_destroy(_point)
 }
+respawntime = irandom_range(1500, 2100)
+x = ds_list_find_value(respawnlocations, choose(0, 2, 4, 6, 8, 10))
+y = ds_list_find_value(respawnlocations, choose(1, 3, 5, 7, 9, 11))
+respawnx = x
+respawny = y
 
 //states are idle, aggro, return, explode and respawn
 state = "idle"

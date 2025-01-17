@@ -1,7 +1,7 @@
 pathdelay -= 1
 
 if (pathdelay = 0){
-	mp_grid_path(global.mp_gridcrouch, path, x, y, x_target, y_target, true)
+	mp_grid_path(global.mp_grid, path, x, y, x_target, y_target, true)
 	randomize()
 	pathdelay = 4 + irandom_range(-2, 2)
 	if (state !="aggro" && state != "return"){
@@ -35,18 +35,12 @@ if (pathdelay = 0){
 	}
 }
 
-if (place_meeting(obj_player.x, obj_player.y, obj_enemyunreachable) && (state = "aggro")){
-	state = "return"
-	global.danger -= 1.5
-	x_target = respawnx
-	y_target = respawny
-}
-
 if (state = "explode"){
 	audio_emitter_position(soundemitter, x, y, 0)
 	if (round(image_index) = 39 && !exploded){
 		audio_play_sound_at(sfx_monster_pravi_explode, x, y, 0, 1400, 3000, 1, false, 1, 1)	
 		exploded = true
+		scr_loudnoise()
 		if (collision_circle(x, y, 250, obj_player, false, true)){
 			if ((obj_player.hp - 55) < 0){
 				if (!obj_game.ACHIEVE_death_pravi){
@@ -57,6 +51,8 @@ if (state = "explode"){
 				}
 				global.screentype = "gameover"
 				obj_game.killedby = "Pravi"
+				randomize()
+				global.deathline = choose("Book it from him if he chases, he'll eventually go back to his original spot.", "Maybe try to bait out his fuse.", "His explosion is very loud, try to avoid having him explode.")
 				global.level = room
 				room_goto(KILL_pravi)
 			}else{
@@ -76,7 +72,7 @@ if (state = "explode"){
 
 if (state = "aggro"){
 	attention -= 1
-	if (collision_circle(x, y, 90, obj_player, false, true)){
+	if (collision_circle(x, y, 60, obj_player, false, true)){
 		state = "explode"
 		image_index = 0
 		audio_play_sound_on(soundemitter, sfx_monster_pravi_hiss_normal, false, 1)

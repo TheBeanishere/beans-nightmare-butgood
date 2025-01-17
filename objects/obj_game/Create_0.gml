@@ -55,6 +55,7 @@ ini_close()
 global.objective = "None"
 global.debug = false
 global.death = noone
+global.deathline = noone
 global.danger = 0
 global.level = noone
 global.mp_grid = mp_grid_create(0, 0, _w, _h, TS, TS)

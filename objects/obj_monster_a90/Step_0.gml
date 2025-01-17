@@ -80,6 +80,8 @@ if (kill && timer = 120){
 		}
 		global.screentype = "gameover"
 		obj_game.killedby = "A-90"
+		randomize()
+		global.deathline = choose("Listen to it's command when it's face appears", "It'll stop the other monsters too, don't worry about them.", "He gives you 1 chance if you're at full health, don't waste it.")
 		global.level = room
 		room_goto(KILL_a90)
 	}else{

@@ -13,6 +13,9 @@ state = "stalk"
 staretime = 0
 nest = noone
 
+soundemitter = audio_emitter_create()
+audio_emitter_falloff(soundemitter, 1250, 2500, 1)
+
 x_target = obj_player.x
 y_target = obj_player.y
 

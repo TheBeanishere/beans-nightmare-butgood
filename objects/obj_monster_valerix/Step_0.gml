@@ -50,20 +50,24 @@ if (state = "stare"){
 	if (staretime <= 0){
 		global.danger += 1.5
 		audio_play_sound(mus_chasetrans, 1, false)
+		voice = sfx_monster_PH_valerix_chase
+		audio_play_sound_on(soundemitter, voice, true, 1, 1, 0, 1)	
 		state = "hunt"
 		x_target = obj_player.x
 		y_target =  obj_player.y + 64
-		mp_grid_path(global.mp_gridcrouch, path, x, y, x_target, y_target, true)
+		mp_grid_path(global.mp_gridcorn, path, x, y, x_target, y_target, true)
 		path_start(path, chasespeed, path_action_stop, true)
 		pathdelay = 4 + irandom_range(-2, 2)
 	}
 }
 
 if (state = "hunt"){
+	audio_emitter_position(soundemitter, x, y, 0)
 	chasespeed += 0.05
 }
 
 if (state = "scared"){
+	audio_stop_sound(sfx_monster_PH_valerix_chase)
 	if (x = nest.x && y = nest.y){
 		state = "stalk"
 	}
@@ -111,6 +115,8 @@ if (place_meeting(x, y, obj_player) && state = "hunt"){
 	}
 	global.screentype = "gameover"
 	global.level = room
+	randomize()
+	global.deathline = choose("Scare him off before he outpaces you.", "Running won't work, he will eventually become faster than you", "Time your taunt, there's a cool down.")
 	obj_game.killedby = "Valerix"
 	room_goto(KILL_valerix)
 }

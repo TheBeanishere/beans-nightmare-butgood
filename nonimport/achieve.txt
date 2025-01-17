@@ -50,7 +50,7 @@ Repressed mode deaths
 
 Tasks
 -------------------------------------------
-38 Never worth the risk - Beat the Attic with the Mimic never chasing you
+38 Never worth the risk - Beat the Attic with the Mimic chasing you the whole level, only losing track of you once
 39 Defusal expert - Beat the Stronghold without having the Pawn explode
 40 Anger management - Beat the Stronghold without having the Brute charge
 41 All Figured Out - Beat the Storage Facility without the Umpire ever chasing you

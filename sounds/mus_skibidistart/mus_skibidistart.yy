@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_skibidistart",
+  "audioGroupId":{
+    "name":"music",
+    "path":"audiogroups/music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.802086,
+  "name":"mus_skibidistart",
+  "parent":{
+    "name":"music",
+    "path":"folders/Sounds/music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_skibidistart.wav",
+  "type":1,
+  "volume":1.0,
+}

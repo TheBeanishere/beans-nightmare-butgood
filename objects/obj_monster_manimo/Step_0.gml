@@ -142,7 +142,7 @@ if (state = "aggro"){
 	sprite_index = asset_get_index("spr_monster_manimo_" + facedir + "_idle")
 }
 
-if (collision_circle(x, y, 65, obj_player, false, true) && state = "aggro"){
+if (collision_circle(x, y - 45, 45, obj_player, false, true) && state = "aggro"){
 	if (!obj_game.ACHIEVE_death_manimo){
 		ini_open("savedata.ini")
 		ini_write_real("achieves", "death_manimo", 1)
@@ -151,6 +151,8 @@ if (collision_circle(x, y, 65, obj_player, false, true) && state = "aggro"){
 	}
 	global.screentype = "gameover"
 	obj_game.killedby = "Manimo"
+	randomize()
+	global.deathline = choose("He can hear when you find an objective object.", "He runs much quicker when he hears something than when he's chasing you.", "Don't wind yourself, run in bursts.")
 	global.level = room
 	room_goto(KILL_manimo)
 }

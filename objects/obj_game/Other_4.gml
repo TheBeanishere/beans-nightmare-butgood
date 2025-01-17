@@ -24,6 +24,7 @@ if (room = MENU_gameover){
 }
 if (room = MENU_palette){
 	palettechoose = 0
+	audio_play_sound(mus_hawktuhy, 1, true)
 }
 
 if (global.screentype = "win"){
@@ -52,6 +53,19 @@ if (room = LEVEL_wheatfield){
 		_spawninteract.spawned = true
 	}
 	global.objective = "Find a way through the gate."
+}
+
+if (room = LEVEL_stronghold){
+	//chasemusic = mus_repercussions_chase
+	//calmmusic = mus_repercussions_calm
+	//audio_play_sound(chasemusic, 1, true, musicvolume - 0.225)
+	//audio_play_sound(calmmusic, 1, true, musicvolume - 0.225)
+	randomize()
+	repeat (4) {
+		var _spawninteract = instance_find(obj_interactspawn, (irandom_range(0, instance_number(obj_interactspawn)-1)))
+		_spawninteract.spawned = true
+	}
+	global.objective = "Unlock the gate."
 }
 
 if (instance_exists(obj_monsterspawner_1)){

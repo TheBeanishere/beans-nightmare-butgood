@@ -1,3 +1,5 @@
+Normal deaths
+-------------------------------------------
 1 Mockery - Die to the Mimic
 2 Horse meal - Die to the Equine
 3 Gored - Die to the Brute
@@ -9,18 +11,55 @@
 9 Sour Note - Die to the Maestro
 10 Who's to say - Die to yourself
 
-24 RED LIGHT - Die to the Faulter
-
+Main Campaign
+-------------------------------------------
 11 Folly - Escape the Attic
-12 Harvest - Escape the Wheatfield
+12 A burning rooftop - Escape the Attic with all modifiers enabled
 13 The End? - Escape the Stronghold
-14 Contained - Escape the Storage Facility
-15 Awful Service - Escape the Hotel
-16 Deforestation - Escape the Forest
-17 You're Home - Beat the main campaign
-18 Cat Nap - Beat the main campaign quickly
-19 Bruxism - Beat the main campaign on hard mode
-20 Insomnia - Beat the main campaign on hard quickly
-21 I am myself - Beat Repressed mode
-22 I am enough - Beat some modifier mode
-23 I am normal - Beat all modifier mode
+14 A destroyed compound - Escape the Stronghold with all modifiers enabled
+15 Contained - Escape the Storage Facility
+16 A deserted encampment - Escape the Storage Facility with all modifiers enabled
+17 Harvest - Escape the Wheatfield
+18 A razed barn - Escape the Wheatfield with all modifiers enabled
+19 Hell Hotel? - Escape the Hotel
+20 An empty place - Escape the Hotel with all modifiers enabled
+21 Deforestation - Escape the Forest
+22 A scorched earth - Escape the Forest with all modifiers enabled
+23 You're Home - Beat the main campaign
+24 Cat Nap - Beat the main campaign quickly
+25 Bruxism - Beat the main campaign with all modifiers
+26 Insomnia - Beat the main campaign with all modifiers quickly
+27 [F]ucking [F]ailure - Get a Rank F
+28 I am the [H] - Get a Rank H
+
+Repressed mode
+-------------------------------------------
+29 I am myself - Beat Repressed mode
+30 I am enough - Beat some modifier mode
+31 I am normal - Beat all modifier mode
+32 A Saving Grace - Find the Faerie
+33 Stock up - Find all Faeries in Repressed mode and beat it without using any of them
+
+Repressed mode deaths
+-------------------------------------------
+34 RED LIGHT - Die to the Faulter
+35 Roasted - Die to the Chef
+36 *emulcified - Die to the Bile
+37 Strung up - Die to the Doll
+
+
+Tasks
+-------------------------------------------
+38 Never worth the risk - Beat the Attic with the Mimic never chasing you
+39 Defusal expert - Beat the Stronghold without having the Pawn explode
+40 Anger management - Beat the Stronghold without having the Brute charge
+41 All Figured Out - Beat the Storage Facility without the Umpire ever chasing you
+42 Take a Breather - Beat the Storage Facility without being spotted by the Lookout
+43 Horse tamer - Beat the Wheatfield with the Equine giving chase a max of 4 times
+44 Keep away - Beat the Hotel without aggrevating the Seer
+45 Distant Father - Beat the Hotel without getting close to the Maestro
+46 Aura avoider - Beat the Forest with the Monster never giving chase
+47 Better than yourself - Beat the Fake Home without triggering any of the Doubt's traps
+48 :3 - You smug asshole
+49 Full plushie shelf - Collect all plushies
+50 German infighting - Make the Pawn explode on the Brute

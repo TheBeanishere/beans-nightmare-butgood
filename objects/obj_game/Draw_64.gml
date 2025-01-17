@@ -5,7 +5,7 @@ if (global.screentype = "ingame"){
 }
 
 if (room = MENU_palette){
-	draw_text(0, 0, "[ESC.] for main menu")
+	draw_text(0, 0, "[ESC.] for main menu \nUp and Down arrow keys to change palettes\nRight and Left arrows keys to change characters")
 }
 
 if (room = MENU_main){

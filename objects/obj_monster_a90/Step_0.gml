@@ -72,12 +72,12 @@ if (kill && timer = 120){
 	instance_create_layer(0, 0, "whitepain", obj_whiteflash)
 	global.danger -= 2
 	if (death){
-		if (!obj_game.ACHIEVE_death_a90){
-			ini_open("savedata.ini")
-			ini_write_real("achieves", "death_a90", 1)
-			obj_game.ACHIEVE_death_a90 = ini_read_real("achieves", "death_a90", 0)
-			ini_close()
-		}
+		//if (!obj_game.ACHIEVE_death_a90){
+		//	ini_open("savedata.ini")
+		//	ini_write_real("achieves", "death_a90", 1)
+		//	obj_game.ACHIEVE_death_a90 = ini_read_real("achieves", "death_a90", 0)
+		//	ini_close()
+		//}
 		global.screentype = "gameover"
 		obj_game.killedby = "A-90"
 		randomize()

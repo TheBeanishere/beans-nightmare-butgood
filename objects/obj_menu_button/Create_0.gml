@@ -4,6 +4,6 @@ textoffset = 0
 originx = x
 offsetx = 0
 
-if (menuchange = "palette"){
-	locked = true
-}
+//if (menuchange = "palette"){
+//	locked = true
+//}

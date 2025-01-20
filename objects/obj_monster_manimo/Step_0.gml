@@ -143,12 +143,12 @@ if (state = "aggro"){
 }
 
 if (collision_circle(x, y - 45, 45, obj_player, false, true) && state = "aggro"){
-	if (!obj_game.ACHIEVE_death_manimo){
-		ini_open("savedata.ini")
-		ini_write_real("achieves", "death_manimo", 1)
-		obj_game.ACHIEVE_death_manimo = ini_read_real("achieves", "death_manimo", 0)
-		ini_close()
-	}
+	//if (!obj_game.ACHIEVE_death_manimo){
+	//	ini_open("savedata.ini")
+	//	ini_write_real("achieves", "death_manimo", 1)
+	//	obj_game.ACHIEVE_death_manimo = ini_read_real("achieves", "death_manimo", 0)
+	//	ini_close()
+	//}
 	global.screentype = "gameover"
 	obj_game.killedby = "Manimo"
 	randomize()

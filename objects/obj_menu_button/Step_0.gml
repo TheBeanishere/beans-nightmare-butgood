@@ -1,6 +1,31 @@
 x = originx + offsetx
 if (keyboard_check_pressed(vk_escape)){
-	global.screentype = "main"
+	switch (global.screentype){
+		case "new":
+			global.screentype = "game"
+		break;
+		case "continue":
+			global.screentype = "game"
+		break;
+		case "levelselect":
+			global.screentype = "game"
+		break;
+		case "game":
+			global.screentype = "play"
+		break;
+		case "repressed":
+			global.screentype = "play"
+		break;
+		case "endless":
+			global.screentype = "play"
+		break;
+		case "lucid":
+			global.screentype = "play"
+		break;
+		default:
+			global.screentype = "main"
+		break;
+	}
 }
 if (global.screentype != submenu){
 	if (submenu = "main"){
@@ -12,7 +37,7 @@ if (global.screentype != submenu){
 	if (submenu = "main"){
 		offsetx += (-(offsetx - 0))/15
 	}else{
-		offsetx += (-(offsetx + 256))/15
+		offsetx += (-(offsetx - 256))/15
 	}
 }
 if (collision_point(mouse_x, mouse_y, self, false, false)){
@@ -22,7 +47,7 @@ if (collision_point(mouse_x, mouse_y, self, false, false)){
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 				roomdes = MENU_palette
 				alphagain = 1/90
-				screentypechange = "menu"
+				screentypechange = "palette"
 			}
 			audio_play_sound(mus_skibidistart, 1, false)
 			obj_game.killedby = noone

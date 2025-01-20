@@ -14,7 +14,7 @@ if (room = MENU_main){
 		}
 		killedby = noone
 	}
-	if (keyboard_check_pressed(ord("3")) && VICTORY_stronghold){
+	if (keyboard_check_pressed(ord("3"))){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = LEVEL_storagefacility
 			screentypechange = "ingame"
@@ -22,7 +22,7 @@ if (room = MENU_main){
 		
 		killedby = noone
 	}
-	if (keyboard_check_pressed(ord("4")) && VICTORY_storagefacility){
+	if (keyboard_check_pressed(ord("4"))){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = LEVEL_wheatfield
 			screentypechange = "ingame"
@@ -30,7 +30,7 @@ if (room = MENU_main){
 		
 		killedby = noone
 	}
-	if (keyboard_check_pressed(ord("2")) && VICTORY_normal){
+	if (keyboard_check_pressed(ord("2"))){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = LEVEL_stronghold
 			screentypechange = "ingame"
@@ -51,9 +51,9 @@ if (room = MENU_gameover){
 	if (keyboard_check_pressed(vk_escape)){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = MENU_main
-			screentypechange = "menu"
+			screentypechange = "main"
 		}
-		global.screentype = "menu"
+		global.screentype = "main"
 	}
 }
 

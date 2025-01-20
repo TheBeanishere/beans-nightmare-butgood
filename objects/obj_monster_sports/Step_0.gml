@@ -35,12 +35,12 @@ if (pathdelay = 0){
 		state = "aggro"
 	}
 	if (collision_circle(x, y, 90, obj_player, false, true) && (obj_player.spdX != 0 || obj_player.spdY != 0)){
-		if (!obj_game.ACHIEVE_death_sports){
-			ini_open("savedata.ini")
-			ini_write_real("achieves", "death_sports", 1)
-			obj_game.ACHIEVE_death_sports = ini_read_real("achieves", "death_sports", 0)
-			ini_close()
-		}
+		//if (!obj_game.ACHIEVE_death_sports){
+		//	ini_open("savedata.ini")
+		//	ini_write_real("achieves", "death_sports", 1)
+		//	obj_game.ACHIEVE_death_sports = ini_read_real("achieves", "death_sports", 0)
+		//	ini_close()
+		//}
 		global.screentype = "gameover"
 		obj_game.killedby = "Sports"
 		randomize()
@@ -70,12 +70,12 @@ if (place_meeting(obj_player.x, obj_player.y, obj_enemyunreachable) && (state = 
 
 if (alerted){
 	if (collision_circle(x, y, 90, obj_player, false, true)){
-		if (!obj_game.ACHIEVE_death_sports){
-			ini_open("savedata.ini")
-			ini_write_real("achieves", "death_sports", 1)
-			obj_game.ACHIEVE_death_sports = ini_read_real("achieves", "death_sports", 0)
-			ini_close()
-		}
+		//if (!obj_game.ACHIEVE_death_sports){
+		//	ini_open("savedata.ini")
+		//	ini_write_real("achieves", "death_sports", 1)
+		//	obj_game.ACHIEVE_death_sports = ini_read_real("achieves", "death_sports", 0)
+		//	ini_close()
+		//}
 		global.screentype = "gameover"
 		obj_game.killedby = "Sports"
 		randomize()
@@ -197,12 +197,12 @@ if (state != "idle"){
 }
 
 if (collision_circle(x, y - 75, 80, obj_player, false, true) && state = "aggro"){
-	if (!obj_game.ACHIEVE_death_sports){
-		ini_open("savedata.ini")
-		ini_write_real("achieves", "death_sports", 1)
-		obj_game.ACHIEVE_death_sports = ini_read_real("achieves", "death_sports", 0)
-		ini_close()
-	}
+	//if (!obj_game.ACHIEVE_death_sports){
+	//	ini_open("savedata.ini")
+	//	ini_write_real("achieves", "death_sports", 1)
+	//	obj_game.ACHIEVE_death_sports = ini_read_real("achieves", "death_sports", 0)
+	//	ini_close()
+	//}
 	global.screentype = "gameover"
 	obj_game.killedby = "Sports"
 	randomize()

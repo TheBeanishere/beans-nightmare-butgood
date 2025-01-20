@@ -120,12 +120,12 @@ if (state != "idle"){
 }
 
 if (collision_circle(x, y - 45, 60, obj_player, false, true) && state = "aggro"){
-	if (!obj_game.ACHIEVE_death_ava){
-		ini_open("savedata.ini")
-		ini_write_real("achieves", "death_ava", 1)
-		obj_game.ACHIEVE_death_ava = ini_read_real("achieves", "death_ava", 0)
-		ini_close()
-	}
+	//if (!obj_game.ACHIEVE_death_ava){
+	//	ini_open("savedata.ini")
+	//	ini_write_real("achieves", "death_ava", 1)
+	//	obj_game.ACHIEVE_death_ava = ini_read_real("achieves", "death_ava", 0)
+	//	ini_close()
+	//}
 	global.screentype = "gameover"
 	obj_game.killedby = "Ava"
 	randomize()

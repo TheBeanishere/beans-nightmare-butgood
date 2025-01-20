@@ -107,12 +107,12 @@ if (state = "hunt"||state = "scared"){
 }
 
 if (place_meeting(x, y, obj_player) && state = "hunt"){
-	if (!obj_game.ACHIEVE_death_valerix){
-		ini_open("savedata.ini")
-		ini_write_real("achieves", "death_valerix", 1)
-		obj_game.ACHIEVE_death_valerix = ini_read_real("achieves", "death_valerix", 0)
-		ini_close()
-	}
+	//if (!obj_game.ACHIEVE_death_valerix){
+	//	ini_open("savedata.ini")
+	//	ini_write_real("achieves", "death_valerix", 1)
+	//	obj_game.ACHIEVE_death_valerix = ini_read_real("achieves", "death_valerix", 0)
+	//	ini_close()
+	//}
 	global.screentype = "gameover"
 	global.level = room
 	randomize()

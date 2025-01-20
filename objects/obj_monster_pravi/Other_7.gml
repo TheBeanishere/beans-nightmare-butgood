@@ -7,8 +7,9 @@ if (state = "explode"){
 	image_alpha = 0
 	randomize()
 	respawntime = irandom_range(1500, 2100)
-	x = ds_list_find_value(respawnlocations, choose(0, 2, 4, 6, 8, 10))
-	y = ds_list_find_value(respawnlocations, choose(1, 3, 5, 7, 9, 11))
+	var _place = choose(0, 2, 4, 6, 8, 10)
+	x = ds_list_find_value(respawnlocations, _place)
+	y = ds_list_find_value(respawnlocations, _place + 1)
 	respawnx = x
 	respawny = y
 }

@@ -74,12 +74,12 @@ if (state = "wind"){
 	y_target = obj_player.y + 48 + obj_player.spdY
 	if (windtime >= 90){
 		if (collision_circle(x, y, 75, obj_player, false, true)||collision_rectangle(bbox_right, bbox_bottom, bbox_left, bbox_top, obj_player, false, true)){
-			if (!obj_game.ACHIEVE_death_mathi){
-				ini_open("savedata.ini")
-				ini_write_real("achieves", "death_mathi", 1)
-				obj_game.ACHIEVE_death_mathi = ini_read_real("achieves", "death_mathi", 0)
-				ini_close()
-			}
+			//if (!obj_game.ACHIEVE_death_mathi){
+			//	ini_open("savedata.ini")
+			//	ini_write_real("achieves", "death_mathi", 1)
+			//	obj_game.ACHIEVE_death_mathi = ini_read_real("achieves", "death_mathi", 0)
+			//	ini_close()
+			//}
 			global.screentype = "gameover"
 			obj_game.killedby = "Mathi"
 			global.deathline = choose("Run away when he stops to ready his charge.", "He loses interest quickly, break line of sight as fast as you can.", "Listen for his loud footsteps to avoid him ever seeing you.")
@@ -176,12 +176,12 @@ if (state != "idle" && state != "recover" && state != "wind"){
 }
 
 if (collision_circle(x, y, 75, obj_player, false, true) && state = "charge"){
-	if (!obj_game.ACHIEVE_death_mathi){
-		ini_open("savedata.ini")
-		ini_write_real("achieves", "death_mathi", 1)
-		obj_game.ACHIEVE_death_mathi = ini_read_real("achieves", "death_mathi", 0)
-		ini_close()
-	}
+	//if (!obj_game.ACHIEVE_death_mathi){
+	//	ini_open("savedata.ini")
+	//	ini_write_real("achieves", "death_mathi", 1)
+	//	obj_game.ACHIEVE_death_mathi = ini_read_real("achieves", "death_mathi", 0)
+	//	ini_close()
+	//}
 	global.screentype = "gameover"
 	obj_game.killedby = "Mathi"
 	randomize()

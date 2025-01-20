@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_rusting_calm",
+  "audioGroupId":{
+    "name":"music",
+    "path":"audiogroups/music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":118.65,
+  "name":"mus_rusting_calm",
+  "parent":{
+    "name":"music",
+    "path":"folders/Sounds/music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_rusting_calm.wav",
+  "type":1,
+  "volume":0.72,
+}

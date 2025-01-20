@@ -38,7 +38,7 @@ if (pathdelay = 0){
 if (state = "explode"){
 	audio_emitter_position(soundemitter, x, y, 0)
 	if (round(image_index) = 39 && !exploded){
-		audio_play_sound_at(sfx_monster_pravi_explode, x, y, 0, 1400, 3000, 1, false, 1, 1)	
+		audio_play_sound_at(sfx_monster_pravi_explode, x, y, 0, 1400, 3000, 1, false, 1, 0.45)	
 		exploded = true
 		scr_loudnoise()
 		if (collision_circle(x, y, 250, obj_player, false, true)){
@@ -106,9 +106,20 @@ if (state = "respawn"){
 		audio_play_sound_at(voice, x, y, 0, 1250, 2500, 1, false, 1, 1.25)	
 	}
 }
-		
+
+if (waittime >= 2400){
+	if (state = "idle" || state = "return" || state = "respawn"){
+		randomize()
+	x = ds_list_find_value(respawnlocations, choose(0, 2, 4, 6, 8, 10))
+	y = ds_list_find_value(respawnlocations, choose(1, 3, 5, 7, 9, 11))
+	respawnx = x
+	respawny = y
+	waittime = 0
+	}
+}
 
 if (state = "idle"){
+	waittime += 1
 	path_end()
 }
 

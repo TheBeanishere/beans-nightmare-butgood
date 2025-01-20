@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_jumpscare_mathi_1",
-    "path":"sprites/spr_jumpscare_mathi_1/spr_jumpscare_mathi_1.yy",
+    "name":"spr_jumpscare_pravi",
+    "path":"sprites/spr_jumpscare_pravi/spr_jumpscare_pravi.yy",
   },
   "spriteMaskId":null,
   "visible":true,

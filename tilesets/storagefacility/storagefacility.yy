@@ -1,0 +1,42 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"storagefacility",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":9,
+    "SerialiseWidth":12,
+    "TileCompressedData":[
+      -55,0,5,8,9,0,42,43,-7,0,5,24,25,0,58,59,-7,0,2,268435457,1,-10,0,5,46,47,0,44,45,-7,0,5,62,63,0,60,
+      61,
+    ],
+    "TileDataFormat":1,
+  },
+  "name":"storagefacility",
+  "out_columns":8,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Tile Sets",
+    "path":"folders/Tile Sets.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"spr_storagefacility",
+    "path":"sprites/spr_storagefacility/spr_storagefacility.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":64,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":64,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":64,
+}

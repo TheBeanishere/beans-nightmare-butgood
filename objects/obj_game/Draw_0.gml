@@ -19,17 +19,32 @@ if (room = MENU_palette){
 		case 1:
 			pal_swap_set(spr_palette_manimo, global.palettemanimo, false)
 		break;
-		case 2:
+		case 6:
 			pal_swap_set(spr_palette_valerix, global.palettevalerix, false)
 		break;
-		case 3:
+		case 2:
 			pal_swap_set(spr_palette_mathi, global.palettemathi, false)
 		break;
-		case 4:
+		case 3:
 			pal_swap_set(spr_palette_pravi, global.palettepravi, false)
 		break;
+		case 4:
+			pal_swap_set(spr_palette_sports, global.palettesports, false)
+		break;
+		case 5:
+			pal_swap_set(spr_palette_ava, global.paletteava, false)
+		break;
+		case 7:
+			pal_swap_set(spr_palette_dj, global.palettedj, false)
+		break;
+		case 8:
+			pal_swap_set(spr_palette_father, global.palettefather, false)
+		break;
+		case 9:
+			pal_swap_set(spr_palette_joetube, global.palettejoetube, false)
+		break;
 	}
-	draw_sprite_ext(spr_palette_choose, palettechoose, 925, 565, 1 + palettesizeshift, 1 - palettesizeshift, 0, c_white, 1)
+	draw_sprite_ext(spr_palette_choose, palettechoose, 925, 565, 1, 1, 0, c_white, 1)
 	pal_swap_reset()
 	draw_set_halign(fa_center)
 	draw_set_font(Big)
@@ -128,7 +143,7 @@ if (room = MENU_palette){
 				draw_text_ext(320, 390, "Nothing's worth this risk", 25, 250)
 			}
 		break;
-		case 2:
+		case 6:
 			if (global.palettevalerix = 0){
 				draw_text(320, 360, "Cannibal Horse")
 				draw_set_color(c_grey)
@@ -147,7 +162,7 @@ if (room = MENU_palette){
 				draw_text_ext(320, 390, "Chester from Brawlstars by Supercell", 25, 250)
 			}
 		break;
-		case 3:
+		case 2:
 			if (global.palettemathi = 0){
 				draw_text(320, 360, "Orange")
 				draw_set_color(c_grey)
@@ -163,10 +178,10 @@ if (room = MENU_palette){
 			}else if (global.palettemathi = 3){
 				draw_text(320, 360, "Blue Guy")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 390, "Roguelite? No. \nRogueheavy", 25, 250)
+				draw_text_ext(320, 390, "A prototype that can't really be named.", 25, 250)
 			}
 		break;
-		case 4:
+		case 3:
 			if (global.palettepravi = 0){
 				draw_text(320, 360, "Pink Ball")
 				draw_set_color(c_grey)
@@ -176,13 +191,108 @@ if (room = MENU_palette){
 				draw_set_color(c_grey)
 				draw_text_ext(320, 390, "Snugged up in her stolen, charred hair", 25, 250)
 			}else if (global.palettepravi = 3){
-				draw_text(320, 360, "Inverted")
+				draw_text(320, 360, "Radioactive")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 390, "Stable, musically unskilled, and a lot cancerous", 25, 250)
+				draw_text_ext(320, 390, "Cancer premium", 25, 250)
 			}else if (global.palettepravi = 2){
 				draw_text(320, 360, "Furniture")
 				draw_set_color(c_grey)
 				draw_text_ext(320, 390, "Comes with instructions on reassembly", 25, 250)
+			}
+		break;
+		case 4:
+			if (global.palettesports = 0){
+				draw_text(320, 360, "Fancy Suit")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Snazzy!", 25, 250)
+			}else if (global.palettesports = 1){
+				draw_text(320, 360, "Beanie Suit")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Golden perfection", 25, 250)
+			}else if (global.palettesports = 2){
+				draw_text(320, 360, "Warriordan's Threads")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Hater of generators and enjoyer of Yakuza", 25, 250)
+			}else if (global.palettesports = 3){
+				draw_text(320, 360, "In his prime")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Thy gore shall GLISTEN before the temples of Man", 25, 250)
+			}
+		break;
+		case 5:
+			if (global.paletteava = 0){
+				draw_text(320, 360, "Lunyan")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "An alien from a far off planet \nI think.", 25, 250)
+			}else if (global.paletteava = 1){
+				draw_text(320, 360, "Beanie fursuit")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Someone pissed in this, too.", 25, 250)
+			}else if (global.paletteava = 2){
+				draw_text(320, 360, "Mirror self")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Does this one ring a bell?", 25, 250)
+			}else if (global.paletteava = 3){
+				draw_text(320, 360, "Perfect Species")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Gnarp gnarp", 25, 250)
+			}
+		break;
+		case 7:
+			if (global.palettedj = 4){
+				draw_text(320, 360, "Ruined dreamer")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "What a folly, thinking that YOU mattered", 25, 250)
+			}else if (global.palettedj = 1){
+				draw_text(320, 360, "Dark shroud")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Shush. No one likes a begger", 25, 250)
+			}else if (global.palettedj = 2){
+				draw_text(320, 360, "Beanie's eyes")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Had to finagle them out with a spoon", 25, 250)
+			}else if (global.palettedj = 3){
+				draw_text(320, 360, "The Impostor from amoang us?")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "is this the Impostor from Amoang Us?", 25, 250)
+			}
+		break;
+		case 8:
+			if (global.palettefather = 0){
+				draw_text(320, 360, "Casual wear")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "An asshole often wears these while making really rude jokes", 25, 250)
+			}else if (global.palettefather = 1){
+				draw_text(320, 360, "Yellow Mockery")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Stop fucking mumbling", 25, 250)
+			}else if (global.palettefather = 2){
+				draw_text(320, 360, "Hardcore")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Often confused for a lad named Calvin", 25, 250)
+			}else if (global.palettefather = 3){
+				draw_text(320, 360, "Black knight")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Worse than a flesh wound", 25, 250)
+			}
+		break;
+		case 9:
+			if (global.palettejoetube = 4){
+				draw_text(320, 360, "Destruction Worker")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "HE'S GONNA BLAST THEM INTO TEENY TINY LITTLE PIECES!!", 25, 250)
+			}else if (global.palettejoetube = 1){
+				draw_text(320, 360, "Pocket Monster")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Weak to Fire, Fighting and Ground", 25, 250)
+			}else if (global.palettejoetube = 2){
+				draw_text(320, 360, "Beanie Fur")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "I'm running out of ideas for descriptions lmao", 25, 250)
+			}else if (global.palettejoetube = 3){
+				draw_text(320, 360, "V1")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Watch out! \nHe might ultra kill you!", 25, 250)
 			}
 		break;
 	}

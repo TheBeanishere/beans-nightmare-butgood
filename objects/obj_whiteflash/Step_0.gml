@@ -1,5 +1,5 @@
 image_alpha -= alphareduce
-drawalpha -= alpahreduce/2
+drawalpha -= alphareduce/2
 x = obj_player.x
 y = obj_player.y
 x = clamp(x, 640, room_width-640)

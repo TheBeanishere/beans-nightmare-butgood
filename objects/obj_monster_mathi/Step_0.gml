@@ -12,7 +12,7 @@ if (pathdelay = 0){
 		x_target = poi.x
 		y_target = poi.y
 	}
-	if (state != "recover" && state != "charge" && state != "wind"){
+	if (state != "recover" && state != "charge" && state != "wind" && !(place_meeting(obj_player.x, obj_player.y, obj_enemyunreachable))){
 		if (!collision_line(x, y, obj_player.x, obj_player.y + 32, obj_solid, false, true)){
 			if (distance_to_object(obj_player) < eyesight){
 				x_target = obj_player.x
@@ -38,7 +38,7 @@ if (pathdelay = 0){
 	}
 }
 
-if (place_meeting(obj_player.x, obj_player.y, obj_enemyunreachable) && (state = "investigate"||state = "aggro")){
+if (place_meeting(obj_player.x, obj_player.y, obj_enemyunreachable) && (state = "charge" || state = "wind" ||state = "aggro")){
 	state = "wander"
 	poi.touched = true
 	x_target = poi.x
@@ -82,6 +82,7 @@ if (state = "wind"){
 			}
 			global.screentype = "gameover"
 			obj_game.killedby = "Mathi"
+			global.deathline = choose("Run away when he stops to ready his charge.", "He loses interest quickly, break line of sight as fast as you can.", "Listen for his loud footsteps to avoid him ever seeing you.")
 			global.level = room
 			room_goto(KILL_mathi)
 		}

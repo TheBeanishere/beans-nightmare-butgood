@@ -1,6 +1,7 @@
 image_xscale = 0.25
 image_yscale = 0.25
 
+waittime = 0
 chasespeed = 6.5
 
 exploded = false

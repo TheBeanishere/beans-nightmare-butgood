@@ -36,7 +36,7 @@ if (timer = 66){
 	drawface = 0
 	drawstatic = 0
 	if (move = 0){
-		if (obj_player.spdX = 0 && obj_player.spdY = 0){
+		if (obj_player.spdX = 0 && obj_player.spdY = 0 && speed = 0){
 			global.danger -= 1.25
 			instance_destroy(self)
 		}else{

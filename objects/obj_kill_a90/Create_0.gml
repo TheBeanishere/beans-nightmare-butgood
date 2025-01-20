@@ -1,4 +1,5 @@
 audio_stop_all()
+np_setpresence("Killed by the Faulter", "Dead", "icon", "")
 x = 640
 y = 360
 image_xscale = 1.15

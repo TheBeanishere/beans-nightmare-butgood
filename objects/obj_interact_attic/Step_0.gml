@@ -11,11 +11,7 @@ if (collision_circle(x, y + 32, 40, obj_player, false, true) && !interacted){
 			global.objective = "Get to the exit."
 		}
 	}else{
-		if (instance_exists(obj_monster_manimo)){
-			obj_monster_manimo.alerted = true
-			obj_monster_manimo.x_target = x
-			obj_monster_manimo.y_target = y + 32
-		}
+		scr_loudnoise()
 		interacted = true
 		audio_play_sound(sfx_leverflip, 1, false, 1.3)
 		obj_door_attic.progress += 1

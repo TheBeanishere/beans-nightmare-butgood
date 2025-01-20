@@ -1,6 +1,17 @@
 image_xscale = 0.25
 image_yscale = 0.25
 
+scr_playerinput()
+
+if (global.controller){
+	gamepad_set_axis_deadzone(global.gamepad[0], 0.25)
+}
+
+_mx = mouse_x
+_my = mouse_y
+
+flashlightdirection = 0
+
 flashlight = false
 jammed = false
 flicker = 1
@@ -20,7 +31,7 @@ facedir = "front"
 taunt = false
 taunttime = 0
 
-staminamax = 450
+staminamax = 650
 stamina = staminamax
 winded = false
 

@@ -2,18 +2,14 @@ if (spdY != 0 || spdX != 0){
 	audio_listener_position(x, y, 0)
 }
 
-key_right = keyboard_check(ord("D"))
-key_left = keyboard_check(ord("A"))
-key_up = keyboard_check(ord("W"))
-key_down = keyboard_check(ord("S"))
-key_crouch = keyboard_check_pressed(ord("C"))||keyboard_check_pressed(vk_control)
-key_run = keyboard_check(vk_shift)
-key_runpress = keyboard_check_pressed(vk_shift)
-key_taunt = keyboard_check_pressed(ord("E"))
-key_flashlight = keyboard_check_pressed(ord("F"))||mouse_check_button_pressed(mb_left)
+scr_playerinput()
 
 if (key_crouch){
-	crouched = !crouched
+	if (crouched && place_meeting(x, y, obj_solid_crouch)){
+		
+	}else{
+		crouched = !crouched
+	}
 }
 if (key_runpress){
 	crouched = false
@@ -49,20 +45,45 @@ if (battery <= 1450){
 
 battery = clamp(battery, 0, 1800)
 
-if (crouched){
-	spdX = (key_right - key_left) * crawlspeed
-	spdY = (key_down - key_up) * crawlspeed
-}else if (key_run && stamina > 0 && !winded){
-	spdX = (key_right - key_left) * runspeed
-	spdY = (key_down - key_up) * runspeed
+if (axis_horz = 0 && axis_vert = 0){
+	speed = 0
+	if (crouched){
+		spdX = (key_right - key_left) * crawlspeed
+		spdY = (key_down - key_up) * crawlspeed
+	}else if (key_run && stamina > 0 && !winded){
+		spdX = (key_right - key_left) * runspeed
+		spdY = (key_down - key_up) * runspeed
+	}else{
+		spdX = (key_right - key_left) * movespeed
+		spdY = (key_down - key_up) * movespeed
+	}
 }else{
-	spdX = (key_right - key_left) * movespeed
-	spdY = (key_down - key_up) * movespeed
+	direction = point_direction(x, y, x + axis_horz, y + axis_vert)
+	if (axis_horz != 0 || axis_vert != 0){
+		if (crouched){
+			speed = crawlspeed
+		}else if (key_run && stamina > 0 && !winded){
+			speed = runspeed
+		}else{
+			speed = movespeed
+		}
+	}else{
+		speed = 0
+	}
 }
 
 if ((key_right && key_up) || (key_right && key_down) || (key_left && key_down) || (key_left && key_up)){
 	spdY /= sqrt(2)
 	spdX /= sqrt(2)
+}
+
+if (_mx != mouse_x || _my != mouse_y){
+	flashlightdirection = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y)
+}
+if (global.controller){
+	if (gamepad_axis_value(global.gamepad[0], gp_axisrh) != 0 || gamepad_axis_value(global.gamepad[0], gp_axisrv) != 0){
+		flashlightdirection = point_direction(obj_player.x - gamepad_axis_value(global.gamepad[0], gp_axisrh), obj_player.y, obj_player.x, obj_player.y + gamepad_axis_value(global.gamepad[0], gp_axisrv))
+	}
 }
 
 if (stamina = 1){
@@ -71,14 +92,14 @@ if (stamina = 1){
 if (stamina >= ((staminamax/100) *35)){
 	winded = false
 }
-if (((spdX != 0) || (spdY != 0)) && key_run && !winded && !crouched){
-	if (obj_game.MOD_fastmanimo){	
-		stamina -= 0.2
-	}else{
-		stamina -= 1
-	}
+if (((spdX != 0) || (spdY != 0) || speed != 0) && key_run && !winded && !crouched){
+	stamina -= 1
 }else{
-	stamina += 1
+	if (winded){
+		stamina += 1
+	}else{
+		stamina += 2
+	}
 }
 
 stamina = clamp(stamina, 0, staminamax)
@@ -124,8 +145,29 @@ if (place_meeting(x + spdX, y, obj_solidcorn)){
 	}
 	spdX = 0
 }
+if(!crouched){
+	if (place_meeting(x + hspeed, y, obj_solid_crouch)){
+		while !place_meeting(x + hspeed, y, obj_solid_crouch){
+			x += sign(hspeed)
+		}
+		hspeed = 0
+	}
+}
+if (place_meeting(x + hspeed, y, obj_solid)){
+	while !place_meeting(x + hspeed, y, obj_solid){
+		x += sign(hspeed)
+	}
+	hspeed = 0
+}
+if (place_meeting(x + hspeed, y, obj_solidcorn)){
+	while !place_meeting(x + hspeed, y, obj_solidcorn){
+		x += sign(hspeed)
+	}
+	hspeed = 0
+}
 
 x += spdX
+
 if (!crouched){
 	if (place_meeting(x, y + spdY, obj_solid_crouch)){
 		while !place_meeting(x, y + spdY, obj_solid_crouch){
@@ -147,11 +189,33 @@ if (place_meeting(x, y + spdY, obj_solidcorn)){
 	spdY = 0
 }
 
+if (!crouched){
+	if (place_meeting(x, y + vspeed, obj_solid_crouch)){
+		while !place_meeting(x, y + vspeed, obj_solid_crouch){
+			y += sign(vspeed)
+		}
+		vspeed = 0
+	}
+}
+if (place_meeting(x, y + vspeed, obj_solid)){
+	while !place_meeting(x, y + vspeed, obj_solid){
+		y += sign(vspeed)
+	}
+	vspeed = 0
+}
+if (place_meeting(x, y + vspeed, obj_solidcorn)){
+	while !place_meeting(x, y + vspeed, obj_solidcorn){
+		y += sign(vspeed)
+	}
+	vspeed = 0
+}
+
+
 y += spdY
 
-if (spdX < 0){
+if (spdX < 0 || hspeed < 0){
 	image_xscale = -0.25
-}else if (spdX > 0){
+}else if (spdX > 0 || hspeed > 0){
 	image_xscale = 0.25
 }
 
@@ -193,15 +257,15 @@ if (crouched){
 	}
 }
 
-if (spdY > 0){
+if (spdY > 0|| vspeed > 0){
 	facedir = "front"
-}else if (spdY < 0){
+}else if (spdY < 0 || vspeed < 0){
 	facedir = "back"
 }
 
 if (taunttime > 240){
 	sprite_index = spr_beanie_taunt
-}else if ((spdX != 0) || (spdY != 0)){
+}else if ((spdX != 0) || (spdY != 0) || speed != 0){
 	if (crouched){	
 		sprite_index = asset_get_index("spr_beanie_" + facedir + "_crawl")
 	}else if (key_run && stamina > 0 && !winded){

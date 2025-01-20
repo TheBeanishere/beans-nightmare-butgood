@@ -1,0 +1,5 @@
+draw_set_alpha(1)
+draw_set_color(c_white)
+gpu_set_blendmode(bm_normal)
+draw_healthbar(x - 56, y - 21, x - 32, y + 47, ((fill/100)*100), c_black, c_green, c_green, 3, true, false)
+draw_self()

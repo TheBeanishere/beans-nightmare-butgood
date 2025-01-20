@@ -17,6 +17,7 @@ mp_grid_add_instances(global.mp_gridcorn, obj_solid_crouch, false)
 
 if (room = MENU_achieve){
 	achievescroll = 0
+	np_setpresence("Looking at achievements", "Idling", "icon", "")
 }
 if (room = MENU_gameover){
 	audio_play_sound(sfx_die, 1, false, 1.3)
@@ -25,6 +26,7 @@ if (room = MENU_gameover){
 if (room = MENU_palette){
 	palettechoose = 0
 	audio_play_sound(mus_hawktuhy, 1, true)
+	np_setpresence("In the main menu", "Idling", "icon", "")
 }
 
 if (global.screentype = "win"){
@@ -32,17 +34,19 @@ if (global.screentype = "win"){
 }
 
 if (room = LEVEL_attic){
+	np_setpresence("In the Attic", "Sleeping", "icon", "")
 	chasemusic = mus_repression_chase
 	calmmusic = mus_repression_calm
 	audio_play_sound(calmmusic, 1, true, musicvolume)
 	audio_play_sound(chasemusic, 1, true, musicvolume)
-	global.objective = "Find all 5 Levers"
+	global.objective = "Open the door"
 	if (MOD_switches){
 		global.objective = "Find all 9 Levers"
 	}
 }
 
 if (room = LEVEL_wheatfield){
+	np_setpresence("In the Wheatfield", "Sleeping", "icon", "")
 	chasemusic = mus_repercussions_chase
 	calmmusic = mus_repercussions_calm
 	audio_play_sound(chasemusic, 1, true, musicvolume - 0.225)
@@ -56,10 +60,10 @@ if (room = LEVEL_wheatfield){
 }
 
 if (room = LEVEL_stronghold){
-	//chasemusic = mus_repercussions_chase
-	//calmmusic = mus_repercussions_calm
-	//audio_play_sound(chasemusic, 1, true, musicvolume - 0.225)
-	//audio_play_sound(calmmusic, 1, true, musicvolume - 0.225)
+	chasemusic = mus_repetition_chase
+	calmmusic = mus_repetition_calm
+	audio_play_sound(chasemusic, 1, true, musicvolume - 0.225)
+	audio_play_sound(calmmusic, 1, true, musicvolume - 0.225)
 	randomize()
 	repeat (4) {
 		var _spawninteract = instance_find(obj_interactspawn, (irandom_range(0, instance_number(obj_interactspawn)-1)))
@@ -67,6 +71,16 @@ if (room = LEVEL_stronghold){
 	}
 	global.objective = "Unlock the gate."
 }
+
+if (room = LEVEL_storagefacility){
+	chasemusic = mus_rusting_chase
+	calmmusic = mus_rusting_calm
+	audio_play_sound(chasemusic, 1, true, musicvolume - 0.225)
+	audio_play_sound(calmmusic, 1, true, musicvolume - 0.225)
+	randomize()
+	global.objective = "Power the gate."
+}
+
 
 if (instance_exists(obj_monsterspawner_1)){
 	randomize()

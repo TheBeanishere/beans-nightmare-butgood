@@ -6,6 +6,50 @@ if (keyboard_check_pressed(vk_f11)){
 	window_set_fullscreen(!window_get_fullscreen())
 }
 
+if (room = MENU_main){
+	if (keyboard_check_pressed(ord("P"))){
+		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+			roomdes = MENU_palette
+			alphagain = 1/90
+			screentypechange = "menu"
+		}
+		audio_play_sound(mus_skibidistart, 1, false)
+		killedby = noone
+		palettechoose = 0
+	}
+	if (keyboard_check_pressed(ord("1"))){
+		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+			roomdes = LEVEL_attic
+			screentypechange = "ingame"
+		}
+		killedby = noone
+	}
+	if (keyboard_check_pressed(ord("3")) && VICTORY_stronghold){
+		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+			roomdes = LEVEL_storagefacility
+			screentypechange = "ingame"
+		}
+		
+		killedby = noone
+	}
+	if (keyboard_check_pressed(ord("4")) && VICTORY_storagefacility){
+		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+			roomdes = LEVEL_wheatfield
+			screentypechange = "ingame"
+		}
+		
+		killedby = noone
+	}
+	if (keyboard_check_pressed(ord("2")) && VICTORY_normal){
+		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+			roomdes = LEVEL_stronghold
+			screentypechange = "ingame"
+		}
+		killedby = noone
+	}
+	
+}
+
 if (room = MENU_gameover){
 	if (keyboard_check_pressed(vk_enter)){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
@@ -43,7 +87,7 @@ if (room = MENU_palette){
 	if (keyboard_check_pressed(vk_left)){
 		palettechoose -= 1
 	}
-	palettechoose = clamp(palettechoose, 0, 4)
+	palettechoose = clamp(palettechoose, 0, 9)
 	switch (palettechoose){
 		case 0:
 			if (keyboard_check_pressed(vk_up)){
@@ -81,7 +125,7 @@ if (room = MENU_palette){
 				}
 			}
 		break;
-		case 2:
+		case 6:
 			if (keyboard_check_pressed(vk_up)){
 				palettesizeshift = -0.2
 				if (global.palettevalerix > 0){	
@@ -99,7 +143,7 @@ if (room = MENU_palette){
 				}
 			}
 		break;
-		case 3:
+		case 2:
 			if (keyboard_check_pressed(vk_up)){
 				palettesizeshift = -0.2
 				if (global.palettemathi > 0){	
@@ -117,7 +161,7 @@ if (room = MENU_palette){
 				}
 			}
 		break;
-		case 4:
+		case 3:
 			if (keyboard_check_pressed(vk_up)){
 				palettesizeshift = -0.2
 				if (global.palettepravi > 0){	
@@ -132,6 +176,96 @@ if (room = MENU_palette){
 					global.palettepravi += 1
 				}else{
 					global.palettepravi = 0
+				}
+			}
+		break;
+		case 4:
+			if (keyboard_check_pressed(vk_up)){
+				palettesizeshift = -0.2
+				if (global.palettesports > 0){	
+					global.palettesports -= 1
+				}else{
+					global.palettesports = 3
+				}
+			}
+			if (keyboard_check_pressed(vk_down)){
+				palettesizeshift = 0.2
+				if (global.palettesports < 3){	
+					global.palettesports += 1
+				}else{
+					global.palettesports = 0
+				}
+			}
+		break;
+		case 5:
+			if (keyboard_check_pressed(vk_up)){
+				palettesizeshift = -0.2
+				if (global.paletteava > 0){	
+					global.paletteava -= 1
+				}else{
+					global.paletteava = 3
+				}
+			}
+			if (keyboard_check_pressed(vk_down)){
+				palettesizeshift = 0.2
+				if (global.paletteava < 3){	
+					global.paletteava += 1
+				}else{
+					global.paletteava = 0
+				}
+			}
+		break;
+		case 7:
+			if (keyboard_check_pressed(vk_up)){
+				palettesizeshift = -0.2
+				if (global.palettedj > 1){	
+					global.palettedj -= 1
+				}else{
+					global.palettedj = 4
+				}
+			}
+			if (keyboard_check_pressed(vk_down)){
+				palettesizeshift = 0.2
+				if (global.palettedj < 4){	
+					global.palettedj += 1
+				}else{
+					global.palettedj = 1
+				}
+			}
+		break;
+		case 8:
+			if (keyboard_check_pressed(vk_up)){
+				palettesizeshift = -0.2
+				if (global.palettefather > 0){	
+					global.palettefather -= 1
+				}else{
+					global.palettefather = 3
+				}
+			}
+			if (keyboard_check_pressed(vk_down)){
+				palettesizeshift = 0.2
+				if (global.palettefather < 3){	
+					global.palettefather += 1
+				}else{
+					global.palettefather = 0
+				}
+			}
+		break;
+		case 9:
+			if (keyboard_check_pressed(vk_up)){
+				palettesizeshift = -0.2
+				if (global.palettejoetube > 1){	
+					global.palettejoetube -= 1
+				}else{
+					global.palettejoetube = 4
+				}
+			}
+			if (keyboard_check_pressed(vk_down)){
+				palettesizeshift = 0.2
+				if (global.palettejoetube < 4){	
+					global.palettejoetube += 1
+				}else{
+					global.palettejoetube = 1
 				}
 			}
 		break;
@@ -156,58 +290,8 @@ if (room = MENU_achieve){
 	}
 	achievescroll = clamp(achievescroll, -700, 0)
 }
-if (room = initroom){
+if (room = initroom && objNekoPresenceDemo.ready){
 	room_goto(MENU_main)
-}
-
-if (room = MENU_main){
-	if (keyboard_check_pressed(ord("P"))){
-		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = MENU_palette
-			alphagain = 1/90
-			screentypechange = "menu"
-		}
-		audio_play_sound(mus_skibidistart, 1, false)
-		killedby = noone
-		palettechoose = 0
-	}
-	if (keyboard_check_pressed(ord("1"))){
-		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = LEVEL_attic
-			screentypechange = "ingame"
-		}
-		killedby = noone
-	}
-	if (keyboard_check_pressed(ord("3")) && VICTORY_normal){
-		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = LEVEL_wheatfield
-			screentypechange = "ingame"
-		}
-		
-		killedby = noone
-	}
-	if (keyboard_check_pressed(ord("2")) && VICTORY_wheatfield){
-		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = LEVEL_stronghold
-			screentypechange = "ingame"
-		}
-		
-		killedby = noone
-	}
-	
-	if (keyboard_check(ord("Q")) && keyboard_check(ord("M"))){
-		ini_open("playtestdata.ini")
-		ini_write_real("save", "normal", 0)
-		ini_write_real("save", "wheatfield", 0)
-		ini_write_real("save", "stronghold", 0)
-		ini_write_real("save", "modifier", 0)
-		VICTORY_normal = ini_read_real("save", "normal", 0)
-		VICTORY_wheatfield = ini_read_real("save", "wheatfield", 0)
-		VICTORY_stronghold = ini_read_real("save", "stronghold", 0)
-		VICTORY_modifier = ini_read_real("save", "modifier", 0)
-		ini_close()
-		room_goto(MENU_main)
-	}
 }
 
 if (global.danger > 0){

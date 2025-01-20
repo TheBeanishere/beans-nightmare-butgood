@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":5.142857,
+  "duration":5.25,
   "name":"sfx_key_pickup",
   "parent":{
     "name":"sfx",

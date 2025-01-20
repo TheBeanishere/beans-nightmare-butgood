@@ -13,4 +13,6 @@ if (ev_type == "DiscordReady")
 	
 	// passing a URL will add this sprite asynchronously via *internets*
 	sprite_add(np_get_avatar_url(async_load[? "user_id"], async_load[? "avatar"]), 1, false, false, 0, 0);
+}else{
+	ready = true
 }

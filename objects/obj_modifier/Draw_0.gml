@@ -1,8 +1,0 @@
-draw_set_alpha(image_alpha)
-draw_set_color(c_white)
-gpu_set_blendmode(bm_normal)
-draw_self()
-draw_set_font(Medium)
-draw_text(x + 72, y, modname)
-draw_set_font(Medium)
-draw_text_ext(x + 72, y + 30, moddesc, 18, 150)

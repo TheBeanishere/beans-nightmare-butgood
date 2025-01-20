@@ -5,6 +5,8 @@ audio_falloff_set_model(audio_falloff_linear_distance)
 #macro TS 8
 var _w = ceil(room_width/TS)
 var _h = ceil(room_height/TS)
+nekowait = 0
+nekofail = false
 
 killedby = noone
 achievescroll = 0
@@ -31,7 +33,7 @@ global.danger = 0
 global.level = noone
 global.mp_grid = mp_grid_create(0, 0, _w, _h, TS, TS)
 global.mp_gridcrouch = mp_grid_create(0, 0, _w, _h, TS, TS)
-global.screentype = "menu"
+global.screentype = "main"
 global.palettebeanie = 0
 global.palettemanimo = 0
 global.palettevalerix = 0

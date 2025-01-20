@@ -7,16 +7,6 @@ if (keyboard_check_pressed(vk_f11)){
 }
 
 if (room = MENU_main){
-	if (keyboard_check_pressed(ord("P"))){
-		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = MENU_palette
-			alphagain = 1/90
-			screentypechange = "menu"
-		}
-		audio_play_sound(mus_skibidistart, 1, false)
-		killedby = noone
-		palettechoose = 0
-	}
 	if (keyboard_check_pressed(ord("1"))){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = LEVEL_attic
@@ -77,7 +67,7 @@ if (room = MENU_palette){
 	if (keyboard_check_pressed(vk_escape)){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = MENU_main
-			screentypechange = "menu"
+			screentypechange = "main"
 		}
 		killedby = noone
 	}
@@ -291,7 +281,17 @@ if (room = MENU_achieve){
 	achievescroll = clamp(achievescroll, -700, 0)
 }
 if (room = initroom && objNekoPresenceDemo.ready){
+	show_debug_message("Main menu")
 	room_goto(MENU_main)
+}
+if (room = initroom){
+	nekowait += 1
+	if (nekofail && keyboard_check_pressed(vk_enter)){
+		room_goto(MENU_main)
+	}
+	if (nekowait >= 450){
+		nekofail = true
+	}
 }
 
 if (global.danger > 0){

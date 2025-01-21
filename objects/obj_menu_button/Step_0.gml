@@ -22,9 +22,9 @@ if (keyboard_check_pressed(vk_escape)){
 		case "lucid":
 			global.screentype = "play"
 		break;
-		default:
-			global.screentype = "main"
-		break;
+		//default:
+		//	global.screentype = "main"
+		//break;
 	}
 }
 if (global.screentype != submenu){

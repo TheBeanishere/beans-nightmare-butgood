@@ -122,6 +122,54 @@ if (room = MENU_palette){
 				draw_text(320, 360, "Trans")
 				draw_set_color(c_grey)
 				draw_text_ext(320, 390, "Pride!! Yippee!!", 25, 250)
+			}else if (global.palettebeanie = 18){
+				draw_text(320, 360, "Monochrome")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "I'm dead.", 25, 250)
+			}else if (global.palettebeanie = 19){
+				draw_text(320, 360, "Technicolour")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Old school, you fossil", 25, 250)
+			}else if (global.palettebeanie = 20){
+				draw_text(320, 360, "Zom-Bean")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Grrrggg...\nBrainz", 25, 250)
+			}else if (global.palettebeanie = 21){
+				draw_text(320, 360, "Edd-head")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Lover of DR. PEPPER NOT FUCKING COLA", 25, 250)
+			}else if (global.palettebeanie = 22){
+				draw_text(320, 360, "Nevadian")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "What's this madness, starting all this combat", 25, 250)
+			}else if (global.palettebeanie = 23){
+				draw_text(320, 360, "White")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Coloniser", 25, 250)
+			}else if (global.palettebeanie = 24){
+				draw_text(320, 360, "Goopy")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Unmasked, and lemon-flavoured", 25, 250)
+			}else if (global.palettebeanie = 25){
+				draw_text(320, 360, "Wolf in sheep's clothing")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Snug n cozy \nLovely", 25, 250)
+			}else if (global.palettebeanie = 26){
+				draw_text(320, 360, "Some schmo")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "Joeseph Robert Schmo, \nfriends with a puppet, mutant, alien and hybrid", 25, 250)
+			}else if (global.palettebeanie = 27){
+				draw_text(320, 360, "Eye bleeding")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "OW WHAT THE FUCK", 25, 250)
+			}else if (global.palettebeanie = 28){
+				draw_text(320, 360, "Blue tarp")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "The women's bathroom", 25, 250)
+			}else if (global.palettebeanie = 29){
+				draw_text(320, 360, "Green piss")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 390, "The men's bathroom", 25, 250)
 			}
 		break;
 		case 1:

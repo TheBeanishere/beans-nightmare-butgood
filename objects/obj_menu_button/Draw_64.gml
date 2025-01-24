@@ -1,1 +1,0 @@
-draw_text(720, 360, global.screentype)

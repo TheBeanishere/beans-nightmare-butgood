@@ -52,6 +52,8 @@ if (collision_point(mouse_x, mouse_y, self, false, false)){
 			audio_play_sound(mus_skibidistart, 1, false)
 			obj_game.killedby = noone
 			obj_game.palettechoose = 0
+		}else if(menuchange = "gamekill"){
+			game_end()
 		}else{
 			global.screentype = menuchange
 		}

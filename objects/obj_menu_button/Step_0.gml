@@ -1,32 +1,4 @@
 x = originx + offsetx
-if (keyboard_check_pressed(vk_escape)){
-	switch (global.screentype){
-		case "new":
-			global.screentype = "game"
-		break;
-		case "continue":
-			global.screentype = "game"
-		break;
-		case "levelselect":
-			global.screentype = "game"
-		break;
-		case "game":
-			global.screentype = "play"
-		break;
-		case "repressed":
-			global.screentype = "play"
-		break;
-		case "endless":
-			global.screentype = "play"
-		break;
-		case "lucid":
-			global.screentype = "play"
-		break;
-		//default:
-		//	global.screentype = "main"
-		//break;
-	}
-}
 if (global.screentype != submenu){
 	if (submenu = "main"){
 		offsetx += (-(offsetx + 256))/15

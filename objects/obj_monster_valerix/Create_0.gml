@@ -21,6 +21,7 @@ y_target = obj_player.y
 
 stepped = false
 foot = sfx_monster_valerix_step
+voice = sfx_monster_valerix_step
 
 mp_grid_path(global.mp_gridcrouch, path, x, y, x_target, y_target, true)
 path_start(path, 1, path_action_stop, true)

@@ -8,6 +8,34 @@ if (dark){
 }else{
 	sprite_index = spr_menu_bg
 }
+if (keyboard_check_pressed(vk_escape)){
+	switch (global.screentype){
+		case "new":
+			global.screentype = "game"
+		break;
+		case "continue":
+			global.screentype = "game"
+		break;
+		case "levelselect":
+			global.screentype = "game"
+		break;
+		case "game":
+			global.screentype = "play"
+		break;
+		case "repressed":
+			global.screentype = "play"
+		break;
+		case "endless":
+			global.screentype = "play"
+		break;
+		case "lucid":
+			global.screentype = "play"
+		break;
+		default:
+			global.screentype = "main"
+		break;
+	}
+}
 
 image_blend = choose(#FFFFFF, #FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF, #EEEEEE, #FFFFFF, #EEEEEE, #FFFFFF, #EEEEEE, #AAAAAA)
 

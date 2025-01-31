@@ -4,6 +4,15 @@ if (spdY != 0 || spdX != 0){
 
 scr_playerinput()
 
+if (key_scream){
+	screamtime -= 1
+	if (!audio_is_playing(sfx_scream)){
+		audio_play_sound(sfx_scream, 1, true)
+	}
+}else{
+	audio_stop_sound(sfx_scream)
+}
+
 if (key_crouch){
 	if (crouched && place_meeting(x, y, obj_solid_crouch)){
 		

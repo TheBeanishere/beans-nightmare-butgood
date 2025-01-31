@@ -8,6 +8,9 @@ if (global.controller){
 	gamepad_set_axis_deadzone(global.gamepad[0], 0.25)
 }
 
+screamframe = choose(0,1,2,4)
+screamtime = 3
+
 _mx = mouse_x
 _my = mouse_y
 

@@ -1,0 +1,48 @@
+1Normal - Default
+2Trans - Unlocked at start
+
+---LEVELS---
+3Eddhead - Complete the Attic
+4Nevadian - Complete the Stronghold
+5Some Schmo - Complete the Storage Facility
+6Prismatic - Complete the Wheatfield
+7Eye bleeding - Complete the Halls
+8Technicolour - Complete the Hotel
+9Cotton Candy - Complete the Forest
+
+---OTHER---
+10Motherly Dress - Beat a level with all modifiers
+11Pants' Pants - Beat all max modifier levels
+12White - Turn the volume to max and get jumpscared
+13Goopy - Beat the game
+14The H-Factor - Get an [S] rank
+15Timothy - Get an [F] rank
+16Strange plushie - Collect all Plushies
+17Weird Mascot - Collect all cereals
+18Fastest bitch - Get Catnap achievement
+19Logan Watkins - Get the :3 Achievement
+20Extra Normal - Beat repressed mode
+21Tree Hugging Rock Kisser - Beat all modifiers repressed mode
+22Wolf in sheep's clothing - Get a Faerie
+23Pastel Perfection - Get all Faeries and beat repressed mode without using one
+24Bloodied - Complete a lucid dream with all monsters active with More to do, Runner, and Persistence enabled
+
+---DEATHS---
+25Manimo's Fit - Die to Manimo
+26Mathi Zentai - Die to Mathi
+27Pravi Paint - Die to Pravi
+28Sports' Tux - Die to Sports
+29Ava Fursuit - Die to Ava
+30Valerix Skin Suit - Die to Valerix
+31DJ Mist - Die to DJ
+32Fatherly Suit - Die to Father
+33Joetube Jeans - Die to Joetube
+34STOPSIGN - Die to A-90
+35Coconut's Apron - Die to Coconut
+36Fusion esqe paint job - Die to Fusion
+37Inverse - Die to Lydia
+38Monochrome - Die in everyway possible
+39Zombean - Die 35 times
+
+40Genuine DJ - 100% the game
+

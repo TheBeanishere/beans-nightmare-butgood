@@ -85,12 +85,12 @@ if (room = MENU_palette){
 				if (global.palettebeanie > 0){	
 					global.palettebeanie -= 1
 				}else{
-					global.palettebeanie = 29
+					global.palettebeanie = 39
 				}
 			}
 			if (keyboard_check_pressed(vk_down)){
 				palettesizeshift = 0.2
-				if (global.palettebeanie < 29){	
+				if (global.palettebeanie < 39){	
 					global.palettebeanie += 1
 				}else{
 					global.palettebeanie = 0
@@ -211,12 +211,12 @@ if (room = MENU_palette){
 				if (global.palettedj > 1){	
 					global.palettedj -= 1
 				}else{
-					global.palettedj = 4
+					global.palettedj = 5
 				}
 			}
 			if (keyboard_check_pressed(vk_down)){
 				palettesizeshift = 0.2
-				if (global.palettedj < 4){	
+				if (global.palettedj < 5){	
 					global.palettedj += 1
 				}else{
 					global.palettedj = 1
@@ -266,7 +266,7 @@ if (global.screentype = "ingame" && MOD_a90){
 	a90spawn -= 1
 	if (a90spawn <= 0 && global.screentype = "ingame"){
 		randomize()
-		a90spawn = irandom_range(900, 1200)
+		a90spawn = irandom_range(120, 120)
 		instance_create_layer(0, 0, "a90", obj_monster_a90)
 	}
 }

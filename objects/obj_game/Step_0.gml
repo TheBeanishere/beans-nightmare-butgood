@@ -77,7 +77,7 @@ if (room = MENU_palette){
 	if (keyboard_check_pressed(vk_left)){
 		palettechoose -= 1
 	}
-	palettechoose = clamp(palettechoose, 0, 9)
+	palettechoose = clamp(palettechoose, 0, 16)
 	switch (palettechoose){
 		case 0:
 			if (keyboard_check_pressed(vk_up)){
@@ -103,12 +103,12 @@ if (room = MENU_palette){
 				if (global.palettemanimo > 0){	
 					global.palettemanimo -= 1
 				}else{
-					global.palettemanimo = 3
+					global.palettemanimo = 4
 				}
 			}
 			if (keyboard_check_pressed(vk_down)){
 				palettesizeshift = 0.2
-				if (global.palettemanimo < 3){	
+				if (global.palettemanimo < 4){	
 					global.palettemanimo += 1
 				}else{
 					global.palettemanimo = 0
@@ -121,12 +121,12 @@ if (room = MENU_palette){
 				if (global.palettevalerix > 0){	
 					global.palettevalerix -= 1
 				}else{
-					global.palettevalerix = 3
+					global.palettevalerix = 4
 				}
 			}
 			if (keyboard_check_pressed(vk_down)){
 				palettesizeshift = 0.2
-				if (global.palettevalerix < 3){	
+				if (global.palettevalerix < 4){	
 					global.palettevalerix += 1
 				}else{
 					global.palettevalerix = 0
@@ -139,12 +139,12 @@ if (room = MENU_palette){
 				if (global.palettemathi > 0){	
 					global.palettemathi -= 1
 				}else{
-					global.palettemathi = 3
+					global.palettemathi = 4
 				}
 			}
 			if (keyboard_check_pressed(vk_down)){
 				palettesizeshift = 0.2
-				if (global.palettemathi < 3){	
+				if (global.palettemathi < 4){	
 					global.palettemathi += 1
 				}else{
 					global.palettemathi = 0
@@ -157,12 +157,12 @@ if (room = MENU_palette){
 				if (global.palettepravi > 0){	
 					global.palettepravi -= 1
 				}else{
-					global.palettepravi = 3
+					global.palettepravi = 4
 				}
 			}
 			if (keyboard_check_pressed(vk_down)){
 				palettesizeshift = 0.2
-				if (global.palettepravi < 3){	
+				if (global.palettepravi < 4){	
 					global.palettepravi += 1
 				}else{
 					global.palettepravi = 0
@@ -175,12 +175,12 @@ if (room = MENU_palette){
 				if (global.palettesports > 0){	
 					global.palettesports -= 1
 				}else{
-					global.palettesports = 3
+					global.palettesports = 4
 				}
 			}
 			if (keyboard_check_pressed(vk_down)){
 				palettesizeshift = 0.2
-				if (global.palettesports < 3){	
+				if (global.palettesports < 4){	
 					global.palettesports += 1
 				}else{
 					global.palettesports = 0
@@ -193,12 +193,12 @@ if (room = MENU_palette){
 				if (global.paletteava > 0){	
 					global.paletteava -= 1
 				}else{
-					global.paletteava = 3
+					global.paletteava = 4
 				}
 			}
 			if (keyboard_check_pressed(vk_down)){
 				palettesizeshift = 0.2
-				if (global.paletteava < 3){	
+				if (global.paletteava < 4){	
 					global.paletteava += 1
 				}else{
 					global.paletteava = 0
@@ -229,12 +229,12 @@ if (room = MENU_palette){
 				if (global.palettefather > 0){	
 					global.palettefather -= 1
 				}else{
-					global.palettefather = 3
+					global.palettefather = 4
 				}
 			}
 			if (keyboard_check_pressed(vk_down)){
 				palettesizeshift = 0.2
-				if (global.palettefather < 3){	
+				if (global.palettefather < 4){	
 					global.palettefather += 1
 				}else{
 					global.palettefather = 0
@@ -247,15 +247,141 @@ if (room = MENU_palette){
 				if (global.palettejoetube > 1){	
 					global.palettejoetube -= 1
 				}else{
-					global.palettejoetube = 4
+					global.palettejoetube = 5
 				}
 			}
 			if (keyboard_check_pressed(vk_down)){
 				palettesizeshift = 0.2
-				if (global.palettejoetube < 4){	
+				if (global.palettejoetube < 5){	
 					global.palettejoetube += 1
 				}else{
 					global.palettejoetube = 1
+				}
+			}
+		break;
+		case 10:
+			if (keyboard_check_pressed(vk_up)){
+				palettesizeshift = -0.2
+				if (global.palettea90 > 0){	
+					global.palettea90 -= 1
+				}else{
+					global.palettea90 = 4
+				}
+			}
+			if (keyboard_check_pressed(vk_down)){
+				palettesizeshift = 0.2
+				if (global.palettea90 < 4){	
+					global.palettea90 += 1
+				}else{
+					global.palettea90 = 0
+				}
+			}
+		break;
+		case 11:
+			if (keyboard_check_pressed(vk_up)){
+				palettesizeshift = -0.2
+				if (global.palettecoconut > 0){	
+					global.palettecoconut -= 1
+				}else{
+					global.palettecoconut = 4
+				}
+			}
+			if (keyboard_check_pressed(vk_down)){
+				palettesizeshift = 0.2
+				if (global.palettecoconut < 4){	
+					global.palettecoconut += 1
+				}else{
+					global.palettecoconut = 0
+				}
+			}
+		break;
+		case 12:
+			if (keyboard_check_pressed(vk_up)){
+				palettesizeshift = -0.2
+				if (global.palettefusion > 0){	
+					global.palettefusion -= 1
+				}else{
+					global.palettefusion = 4
+				}
+			}
+			if (keyboard_check_pressed(vk_down)){
+				palettesizeshift = 0.2
+				if (global.palettefusion < 4){	
+					global.palettefusion += 1
+				}else{
+					global.palettefusion = 0
+				}
+			}
+		break;
+		case 13:
+			if (keyboard_check_pressed(vk_up)){
+				palettesizeshift = -0.2
+				if (global.palettecriminal > 0){	
+					global.palettecriminal -= 1
+				}else{
+					global.palettecriminal = 4
+				}
+			}
+			if (keyboard_check_pressed(vk_down)){
+				palettesizeshift = 0.2
+				if (global.palettecriminal < 4){	
+					global.palettecriminal += 1
+				}else{
+					global.palettecriminal = 0
+				}
+			}
+		break;
+		case 14:
+			if (keyboard_check_pressed(vk_up)){
+				palettesizeshift = -0.2
+				if (global.palettewarriordan > 0){	
+					global.palettewarriordan -= 1
+				}else{
+					global.palettewarriordan = 4
+				}
+			}
+			if (keyboard_check_pressed(vk_down)){
+				palettesizeshift = 0.2
+				if (global.palettewarriordan < 4){	
+					global.palettewarriordan += 1
+				}else{
+					global.palettewarriordan = 0
+				}
+			}
+		break;
+		case 15:
+			if (keyboard_check_pressed(vk_up)){
+				palettesizeshift = -0.2
+				if (global.paletteroachy > 0){	
+					global.paletteroachy -= 1
+				}else{
+					global.paletteroachy = 4
+				}
+			}
+			if (keyboard_check_pressed(vk_down)){
+				palettesizeshift = 0.2
+				if (global.paletteroachy < 4){	
+					global.paletteroachy += 1
+				}else{
+					global.paletteroachy = 0
+				}
+			}
+		break;
+		case 16:
+			if (keyboard_check_pressed(vk_up)){
+				palettesizeshift = -0.2
+				if (global.palettelydia > 0){	
+					global.palettelydia -= 1
+				}else{
+					global.palettelydia = 4
+				}
+			}
+			if (keyboard_check_pressed(vk_down)){
+				palettesizeshift = 0.2
+				if (global.palettelydia < 4){	
+					global.palettelydia += 1
+				}else{
+					global.palettelydia = 0
 				}
 			}
 		break;

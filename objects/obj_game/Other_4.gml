@@ -15,6 +15,10 @@ mp_grid_add_instances(global.mp_gridcrouch, obj_solidcorn, false)
 mp_grid_add_instances(global.mp_gridcorn, obj_solid, false)
 mp_grid_add_instances(global.mp_gridcorn, obj_solid_crouch, false)
 
+if (room = MENU_main){
+	audio_play_sound(mus_crunked_up_man, 1, true)
+}
+
 if (room = MENU_achieve){
 	achievescroll = 0
 	np_setpresence("Looking at achievements", "Idling", "icon", "")

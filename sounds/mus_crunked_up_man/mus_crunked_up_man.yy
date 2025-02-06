@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_crunked_up_man",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":70.0,
+  "name":"mus_crunked_up_man",
+  "parent":{
+    "name":"music",
+    "path":"folders/Sounds/music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_crunked_up_man.wav",
+  "type":0,
+  "volume":1.0,
+}

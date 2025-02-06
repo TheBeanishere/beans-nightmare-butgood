@@ -15,6 +15,7 @@ if (global.screentype != submenu){
 if (collision_point(mouse_x, mouse_y, self, false, false)){
 	if (mouse_check_button_pressed(mb_left)){
 		if (menuchange = "palette"){
+			audio_stop_all()
 			global.screentype = menuchange
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 				roomdes = MENU_palette

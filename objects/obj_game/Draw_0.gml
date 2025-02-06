@@ -43,6 +43,27 @@ if (room = MENU_palette){
 		case 9:
 			pal_swap_set(spr_palette_joetube, global.palettejoetube, false)
 		break;
+		case 10:
+			pal_swap_set(spr_palette_a90, global.palettea90, false)
+		break;
+		case 11:
+			pal_swap_set(spr_palette_coconut, global.palettecoconut, false)
+		break;
+		case 12:
+			pal_swap_set(spr_palette_fusion, global.palettefusion, false)
+		break;
+		case 13:
+			pal_swap_set(spr_palette_criminal, global.palettecriminal, false)
+		break;
+		case 14:
+			pal_swap_set(spr_palette_warriordan, global.palettewarriordan, false)
+		break;
+		case 15:
+			pal_swap_set(spr_palette_roachy, global.paletteroachy, false)
+		break;
+		case 16:
+			pal_swap_set(spr_palette_lydia, global.palettelydia, false)
+		break;
 	}
 	draw_sprite_ext(spr_palette_choose, palettechoose, 925, 565, 1, 1, 0, c_white, 1)
 	pal_swap_reset()
@@ -229,7 +250,7 @@ if (room = MENU_palette){
 				case 35:
 					draw_text(320, 330, "Fusion-esqe paint job")
 					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Crumper munchers, smh\n\nUnlocked by dying to Fusion/The Doll", 25, 250)
+					draw_text_ext(320, 360, "Crumpet munchers, smh\n\nUnlocked by dying to Fusion/The Doll", 25, 250)
 				break;
 				case 36:
 					draw_text(320, 330, "Inverse")
@@ -260,114 +281,138 @@ if (room = MENU_palette){
 			if (global.palettemanimo = 0){
 				draw_text(320, 330, "Manimo skin")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Stolen", 25, 250)
+				draw_text_ext(320, 360, "Stolen\n\nUnlocked by being a mimic", 25, 250)
 			}else if (global.palettemanimo = 1){
 				draw_text(320, 330, "Beanie's Clothes")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Pilfered from her corpse", 25, 250)
+				draw_text_ext(320, 360, "Pilfered from her corpse\n\nUnlocked by dying to The Mimic/Manimo", 25, 250)
 			}else if (global.palettemanimo = 2){
 				draw_text(320, 330, "Strange Alien")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Holy shit is that fucking Xnorbyl Glleegneegalk!?", 25, 250)
+				draw_text_ext(320, 360, "Holy shit is that fucking Xnorbyl Glleegneegalk!?\n\nUnlocked by finding every single plushie", 25, 250)
 			}else if (global.palettemanimo = 3){
 				draw_text(320, 330, "County Creature")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Nothing's worth this risk", 25, 250)
+				draw_text_ext(320, 360, "Nothing's worth this risk\n\nUnlocked by dying more than you should", 25, 250)
+			}else if (global.palettemanimo = 4){
+				draw_text(320, 330, "Mythic Manimo")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "1/100000!!!!\n\nUnlocked by getting an [H] Rank", 25, 250)
 			}
 		break;
 		case 6:
 			if (global.palettevalerix = 0){
 				draw_text(320, 330, "Cannibal Horse")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Woah there girl", 25, 250)
+				draw_text_ext(320, 360, "Woah there girl\n\nUnlocked by being a cannibal horse", 25, 250)
 			}else if (global.palettevalerix = 1){
 				draw_text(320, 330, "Beanie's Skin Suit")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Skin's unhealthy", 25, 250)
+				draw_text_ext(320, 360, "Skin's unhealthy\n\nUnlocked by dying to The Equine/Valerix", 25, 250)
 			}else if (global.palettevalerix = 2){
 				draw_text(320, 330, "Sussed Out")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Green saboteur", 25, 250)
+				draw_text_ext(320, 360, "Green saboteur\n\nUnlocked by completing The Forest", 25, 250)
 			}else if (global.palettevalerix = 3){
 				draw_text(320, 330, "Chester")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Chester from Brawlstars by Supercell", 25, 250)
+				draw_text_ext(320, 360, "Chester from Brawlstars by Supercell\n\nUnlocked by beating The Wheatfield with all modifiers enabled", 25, 250)
+			}else if (global.palettevalerix = 4){
+				draw_text(320, 330, "Stotchhold")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "You're grounded!\n\nUnlocked by getting an [F] Rank", 25, 250)
 			}
 		break;
 		case 2:
 			if (global.palettemathi = 0){
 				draw_text(320, 330, "Orange")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Feeling glad!!", 25, 250)
+				draw_text_ext(320, 360, "Feeling glad!!\n\nUnlocked by being german", 25, 250)
 			}else if (global.palettemathi = 1){
 				draw_text(320, 330, "Beanie paint")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Not much to change", 25, 250)
+				draw_text_ext(320, 360, "Not much to change\n\nUnlocked by dying to Mathi/The Brute", 25, 250)
 			}else if (global.palettemathi = 2){
 				draw_text(320, 330, "Ball Brother")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Brother's in arms(or lack there of for pravi)", 25, 250)
+				draw_text_ext(320, 360, "Brother's in arms(or lack there of for pravi)\n\nUnlocked by beating The Stronghold", 25, 250)
 			}else if (global.palettemathi = 3){
 				draw_text(320, 330, "Blue Guy")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "A prototype that can't really be named.", 25, 250)
+				draw_text_ext(320, 360, "A prototype that can't really be named.\n\nUnlocked by beating The Hotel", 25, 250)
+			}else if (global.palettemathi = 4){
+				draw_text(320, 330, "PURPLE GUY??")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "He always comes back\nthe prick.\n\nUnlocked by dying to Fusion/The Doll", 25, 250)
 			}
 		break;
 		case 3:
 			if (global.palettepravi = 0){
 				draw_text(320, 330, "Pink Ball")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Volatile, musically inclined, and a bit cancerous", 25, 250)
+				draw_text_ext(320, 360, "Volatile, musically inclined, and a bit cancerous\n\nUnlocked by being not Indonesian", 25, 250)
 			}else if (global.palettepravi = 1){
 				draw_text(320, 330, "Beanie Ball")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Snugged up in her stolen, charred hair", 25, 250)
+				draw_text_ext(320, 360, "Snugged up in her stolen, charred hair\n\nUnlocked by dying to Pravi/The Pawn", 25, 250)
 			}else if (global.palettepravi = 3){
 				draw_text(320, 330, "Radioactive")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Cancer premium", 25, 250)
+				draw_text_ext(320, 360, "Cancer premium\n\nUnlocked by beating the Stronghold", 25, 250)
 			}else if (global.palettepravi = 2){
 				draw_text(320, 330, "Furniture")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Comes with instructions on reassembly", 25, 250)
+				draw_text_ext(320, 360, "Comes with instructions on reassembly\n\nUnlocked by dying after completing every objective in a level", 25, 250)
+			}else if (global.palettepravi = 4){
+				draw_text(320, 330, "Meet your troyd")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Comes from Space\n\nUnlocked by beating Repressed mode", 25, 250)
 			}
 		break;
 		case 4:
 			if (global.palettesports = 0){
 				draw_text(320, 330, "Fancy Suit")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Snazzy!", 25, 250)
+				draw_text_ext(320, 360, "Snazzy!\n\nUnlocked by being a football", 25, 250)
 			}else if (global.palettesports = 1){
 				draw_text(320, 330, "Beanie Suit")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Golden perfection", 25, 250)
+				draw_text_ext(320, 360, "Golden perfection\n\nUnlocked by dying to Sports/The Umpire", 25, 250)
 			}else if (global.palettesports = 2){
 				draw_text(320, 330, "Warriordan's Threads")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Hater of generators and enjoyer of Yakuza", 25, 250)
+				draw_text_ext(320, 360, "Hater of generators and enjoyer of Yakuza\n\nUnlocked by dying to Warriordan/The Shroud", 25, 250)
 			}else if (global.palettesports = 3){
 				draw_text(320, 330, "In his prime")
 				draw_set_color(c_grey)
 				draw_text_ext(320, 360, "Thy gore shall GLISTEN before the temples of Man", 25, 250)
+			}else if (global.palettesports = 4){
+				draw_text(320, 330, "Blue ball'd")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Got fucked up last friday night\n\nUnlocked by dying more than you really should", 25, 250)
 			}
 		break;
 		case 5:
 			if (global.paletteava = 0){
 				draw_text(320, 330, "Lunyan")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "An alien from a far off planet \nI think.", 25, 250)
+				draw_text_ext(320, 360, "An alien from a far off planet \nI think.\n\nUnlocked by being an alien cat", 25, 250)
 			}else if (global.paletteava = 1){
 				draw_text(320, 330, "Beanie fursuit")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Someone pissed in this, too.", 25, 250)
+				draw_text_ext(320, 360, "Someone pissed in this, too.\n\nUnlocked by dying to Ava/The Lookout", 25, 250)
 			}else if (global.paletteava = 2){
 				draw_text(320, 330, "Mirror self")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Does this one ring a bell?", 25, 250)
+				draw_text_ext(320, 360, "Does this one ring a bell?\n\nUnlocked by dying to Yourself/The Doubt", 25, 250)
 			}else if (global.paletteava = 3){
 				draw_text(320, 330, "Perfect Species")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Gnarp gnarp", 25, 250)
+				draw_text_ext(320, 360, "Gnarp gnarp\n\nUnlocked by beating all levels with all modifiers enabled", 25, 250)
+			}else if (global.paletteava = 4){
+				draw_text(320, 330, "Anxious one")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "His name fucking sucks to spell\n\nUnlocked by beating level without using the flashlight", 25, 250)
 			}
 		break;
 		case 7:
@@ -397,38 +442,207 @@ if (room = MENU_palette){
 			if (global.palettefather = 0){
 				draw_text(320, 330, "Casual wear")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "An asshole often wears these while making really rude jokes", 25, 250)
+				draw_text_ext(320, 360, "An asshole often wears these while making really rude jokes\n\nUnlocked by being a dad", 25, 250)
 			}else if (global.palettefather = 1){
 				draw_text(320, 330, "Yellow Mockery")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Stop fucking mumbling", 25, 250)
+				draw_text_ext(320, 360, "Stop fucking mumbling\n\nUnlocked by dying to your Father/The Maestro", 25, 250)
 			}else if (global.palettefather = 2){
 				draw_text(320, 330, "Hardcore")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Often confused for a lad named Calvin", 25, 250)
+				draw_text_ext(320, 360, "Often confused for a lad named Calvin\n\nUnlocked by beating all levels with all modifiers enabled", 25, 250)
 			}else if (global.palettefather = 3){
 				draw_text(320, 330, "Black knight")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Worse than a flesh wound", 25, 250)
+				draw_text_ext(320, 360, "Worse than a flesh wound\n\nUnlocked by dying in every way possible", 25, 250)
+			}else if (global.palettefather = 4){
+				draw_text(320, 330, "Able bodied")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Steak lover and first person game\n\nUnlocked by dying to Sports/The Umpire", 25, 250)
 			}
 		break;
 		case 9:
 			if (global.palettejoetube = 4){
-				draw_text(320, 330, "Destruction Worker")
+				draw_text(320, 330, "Giza Glass")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "HE'S GONNA BLAST THEM INTO TEENY TINY LITTLE PIECES!!", 25, 250)
+				draw_text_ext(320, 360, "Watch your head and neck, if you'd kindly\n\nUnlocked by beating a level without using the flashlight", 25, 250)
 			}else if (global.palettejoetube = 1){
 				draw_text(320, 330, "Pocket Monster")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Weak to Fire, Fighting and Ground", 25, 250)
+				draw_text_ext(320, 360, "Weak to Fire, Fighting and Ground\n\nUnlocked by being a blue pocket monster", 25, 250)
 			}else if (global.palettejoetube = 2){
 				draw_text(320, 330, "Beanie Fur")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "I'm running out of ideas for descriptions lmao", 25, 250)
+				draw_text_ext(320, 360, "I'm running out of ideas for descriptions lmao\n\nUnlocked by dying to Joetube/The Monster", 25, 250)
 			}else if (global.palettejoetube = 3){
 				draw_text(320, 330, "V1")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Watch out! \nHe might ultra kill you!", 25, 250)
+				draw_text_ext(320, 360, "Watch out! \nHe might ultra kill you!\n\nUnlocked by getting a [P]- I mean [H] Rank", 25, 250)
+			}else if (global.palettejoetube = 5){
+				draw_text(320, 330, "Satanic Panic")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "You're that BLASTed devil that stole my spirits!!\n\nUnlocked by beating the game faster than fast", 25, 250)
+			}
+		break;
+		case 10:
+			if (global.palettea90 = 0){
+				draw_text(320, 330, "HEART STOPPER")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "FOUND IN SOME ROOMS\n\nUNLOCKED BY NOT BEING REAL", 25, 250)
+			}else if (global.palettea90 = 1){
+				draw_text(320, 330, "STOPPED THE BOPPER")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "BEANIE BLOCKER\n\nUNLOCKED BY DYING TO A-90/THE FAULTER", 25, 250)
+			}else if (global.palettea90 = 2){
+				draw_text(320, 330, "BLUE STOPSIGN")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "WELCOME TO THE UNDERGROUND\n\nUNLOCKED BY BEATING REPRESSED MODE", 25, 250)
+			}else if (global.palettea90 = 3){
+				draw_text(320, 330, "INVERTED")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "MUSCLE MEMORY WILL DESTROY YOU\n\nUNLOCKED BY", 25, 250)
+			}else if (global.palettea90 = 4){
+				draw_text(320, 330, "OBNOXIOUS")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "FUCK YOUR EYES\n\nUNLOCKED BY BEATING ALL MODIFIER REPRESSED MODE", 25, 250)
+			}
+		break;
+		case 11:
+			if (global.palettecoconut = 0){
+				draw_text(320, 330, "Tropical Chef")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "He's coconuts\n\nUnlocked by being a tropical guy", 25, 250)
+			}else if (global.palettecoconut = 1){
+				draw_text(320, 330, "Legume attire")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Baking some beans\n\nUnlocked by dying to Coconut/The Chef", 25, 250)
+			}else if (global.palettecoconut = 2){
+				draw_text(320, 330, "Im-pear'd")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Hates oranges\n\nUnlocked by beating a level with all modifiers enabled", 25, 250)
+			}else if (global.palettecoconut = 3){
+				draw_text(320, 330, "Flame grilled")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Frost and fire\n\nUnlocked by getting an [F] Rank", 25, 250)
+			}else if (global.palettecoconut = 4){
+				draw_text(320, 330, "Skinned")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "FUCKING OW\n\nUnlocked by dying in every way possible", 25, 250)
+			}
+		break;
+		case 12:
+			if (global.palettefusion = 0){
+				draw_text(320, 330, "purple puppet")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "no strings attached\n\nunlocked by being a purple doll", 25, 250)
+			}else if (global.palettefusion = 1){
+				draw_text(320, 330, "beanie baby")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "actually a plushie, not a puppet\n\nunlocked by dying to Fusion/The Doll", 25, 250)
+			}else if (global.palettefusion = 2){
+				draw_text(320, 330, "coloorful crew")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "space dweller\n\nunlocked by beating the forest", 25, 250)
+			}else if (global.palettefusion = 3){
+				draw_text(320, 330, "neon genesis")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "virtual-like reality\n\nunlocked by ", 25, 250)
+			}else if (global.palettefusion = 4){
+				draw_text(320, 330, "bloodshot body")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "not her's\n\nunlocked by completing a lucid dream with all monsters active with more to do, runner, and persistence enabled", 25, 250)
+			}
+		break;
+		case 13:
+			if (global.palettecriminal = 0){
+				draw_text(320, 330, "Rotted meat")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Disgusting!\n\nUnlocked by being a festering pile of flesh", 25, 250)
+			}else if (global.palettecriminal = 1){
+				draw_text(320, 330, "Bean mush")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Grinded up the beans\n\nUnlocked by dying to Criminal/The Rot", 25, 250)
+			}else if (global.palettecriminal = 2){
+				draw_text(320, 330, "Booger")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Nosepicker\n\nUnlocked by taunting too much", 25, 250)
+			}else if (global.palettecriminal = 3){
+				draw_text(320, 330, "Mathi's nightmare")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Blocks doors!!\n\nUnlocked by dying to Mathi/The Brute", 25, 250)
+			}else if (global.palettecriminal = 4){
+				draw_text(320, 330, "MANIMO SLOP")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "MANIMO SLOP\n\nUnlocked by dying to Manimo/The Mimic", 25, 250)
+			}
+		break;
+		case 14:
+			if (global.palettewarriordan = 0){
+				draw_text(320, 330, "Shadow")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Spooky\n\nUnlocked by ", 25, 250)
+			}else if (global.palettewarriordan = 1){
+				draw_text(320, 330, "Beanie blotter")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Famous streamer personality Beanie Bopper!\n\nUnlocked by dying to Warriordan/The Shroud", 25, 250)
+			}else if (global.palettewarriordan = 2){
+				draw_text(320, 330, "Crystal clear")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "It's very apparent\nTRANSPARENT\n\nUnlocked by beating The Storage Facility", 25, 250)
+			}else if (global.palettewarriordan = 3){
+				draw_text(320, 330, "Deep hue")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Queries and questions, how quirky\n\nUnlocked by taunting more than you should", 25, 250)
+			}else if (global.palettewarriordan = 4){
+				draw_text(320, 330, "Pure dark")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "True fear will be known\n\nUnlocked by beating all levels with all modifiers enabled", 25, 250)
+			}
+		break;
+		case 15:
+			if (global.paletteroachy = 0){
+				draw_text(320, 330, "Virus")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Deleting system32\n\nUnlocked by being a virus", 25, 250)
+			}else if (global.paletteroachy = 1){
+				draw_text(320, 330, "Bloatware")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "If you don't get the name, you never will\n\nUnlocked by dying to Roachy/The Malware", 25, 250)
+			}else if (global.paletteroachy = 2){
+				draw_text(320, 330, "EXEcutable")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Bloodied eyes\n\nUnlocked by dying in every way possible", 25, 250)
+			}else if (global.paletteroachy = 3){
+				draw_text(320, 330, "Morris' worm")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Maggot filled too!\n\nUnlocked by dying to Criminal/The Rot", 25, 250)
+			}else if (global.paletteroachy = 4){
+				draw_text(320, 330, "Idiot")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "That's what you are\n\nUnlocked by dying after completing all objectives in a level", 25, 250)
+			}
+		break;
+		case 16:
+			if (global.palettelydia = 0){
+				draw_text(320, 330, "Pride")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "As expected.\n\nUnlocked by being her", 25, 250)
+			}else if (global.palettelydia = 1){
+				draw_text(320, 330, "Greed")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Greed takes and takes and leaves nothing.\n\nUnlocked by dying to yourself/The Doubt", 25, 250)
+			}else if (global.palettelydia = 2){
+				draw_text(320, 330, "Envy")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Enny denies yourself joy from within.\n\nUnlocked by dying to Ava/The Lookout", 25, 250)
+			}else if (global.palettelydia = 4){
+				draw_text(320, 330, "Sloth")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Sloth kills ambition before it can bloom.\n\nUnlocked by dying to Mathi/The Brute or Pravi/The Pawn", 25, 250)
+			}else if (global.palettelydia = 3){
+				draw_text(320, 330, "Wrath")
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, "Wrath blurs friend to foe.\n\nUnlocked by dying to your Father/The Maestro", 25, 250)
 			}
 		break;
 	}

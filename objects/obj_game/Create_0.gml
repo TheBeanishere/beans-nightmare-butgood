@@ -44,6 +44,13 @@ global.paletteava = 0
 global.palettedj = 1
 global.palettejoetube = 1
 global.palettefather = 0
+global.palettea90 = 0
+global.palettecoconut = 0
+global.palettefusion = 0
+global.palettecriminal = 0
+global.palettewarriordan = 0
+global.paletteroachy = 0
+global.palettelydia = 0
 
 mp_grid_add_instances(global.mp_grid, obj_solid, false)
 mp_grid_add_instances(global.mp_gridcrouch, obj_solid, false)

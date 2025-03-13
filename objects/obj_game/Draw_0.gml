@@ -588,9 +588,9 @@ if (room = MENU_palette){
 				draw_set_color(c_grey)
 				draw_text_ext(320, 360, "It's very apparent\nTRANSPARENT\n\nUnlocked by beating The Storage Facility", 25, 250)
 			}else if (global.palettewarriordan = 3){
-				draw_text(320, 330, "Deep hue")
+				draw_text(320, 330, "Transtar Attire")
 				draw_set_color(c_grey)
-				draw_text_ext(320, 360, "Queries and questions, how quirky\n\nUnlocked by taunting more than you should", 25, 250)
+				draw_text_ext(320, 360, "Suited up, and ready to beat the mind games!\n\nUnlocked by taunting more than you should", 25, 250)
 			}else if (global.palettewarriordan = 4){
 				draw_text(320, 330, "Pure dark")
 				draw_set_color(c_grey)

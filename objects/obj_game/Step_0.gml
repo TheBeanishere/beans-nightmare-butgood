@@ -85,12 +85,12 @@ if (room = MENU_palette){
 				if (global.palettebeanie > 0){	
 					global.palettebeanie -= 1
 				}else{
-					global.palettebeanie = 39
+					global.palettebeanie = 42
 				}
 			}
 			if (keyboard_check_pressed(vk_down)){
 				palettesizeshift = 0.2
-				if (global.palettebeanie < 39){	
+				if (global.palettebeanie < 42){	
 					global.palettebeanie += 1
 				}else{
 					global.palettebeanie = 0

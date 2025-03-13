@@ -71,211 +71,209 @@ if (room = MENU_palette){
 	draw_set_font(Big)
 	switch (palettechoose){
 		case 0:
-			switch (global.palettebeanie){
-				case 0:
-					draw_text(320, 330, "Normal Clothes")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "As Expected\n\nUnlocked by default", 25, 250)
-				break;
-				case 1:
-					draw_text(320, 330, "Trans")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Pride comes before the fall, but atleast you'll look good on your way to hell, right?\n\nUnlocked by being Transgender", 25, 250)
-				break;
-				case 2:
-					draw_text(320, 330, "Eddhead")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Lover of Dr. Pepper, not Cola\n\nUnlocked by completing the Attic", 25, 250)
-				break;
-				case 3:
-					draw_text(320, 330, "Nevadian")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Don't let her near blenders while she's wearing this\n\nUnlocked by completing the Stronghold", 25, 250)
-				break;
-				case 4:
-					draw_text(320, 330, "Some Schmo")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Generic, but disliked by greed\n\nUnlocked by completing the Storage Facility", 25, 250)
-				break;
-				case 5:
-					draw_text(320, 330, "Submarine Bean")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "She's a Pisces, afterall\n\nUnlocked by completing the Wheatfield", 25, 250)
-				break;
-				case 6:
-					draw_text(320, 330, "Eyebleeding")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "OW MY EYES\n\nUnlocked by completing the Halls", 25, 250)
-				break;
-				case 7:
-					draw_text(320, 330, "Technicolour")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Don't deal with the devil!\n\nUnlocked by completing the Hotel", 25, 250)
-				break;
-				case 8:
-					draw_text(320, 330, "Cotton Candy")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Better than Neon pink, I guess\n\nUnlocked by completing the Forest", 25, 250)
-				break;
-				case 9:
-					draw_text(320, 330, "Motherly Dress")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "She's why you're named Beanie!\n\nUnlocked by completing a level with all modifiers enabled", 25, 250)
-				break;
-				case 10:
-					draw_text(320, 330, "Pants' Pants")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Kinda stinks\n\nUnlocked by completing all levels with all modifiers enabled", 25, 250)
-				break;
-				case 11:
-					draw_text(320, 330, "White")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "You fucking yankee\n\nUnlocked by dying in a level after having completed all objectives", 25, 250)
-				break;
-				case 12:
-					draw_text(320, 330, "Goopy")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "What a silly little lemon dog\n\nUnlocked by beating the game", 25, 250)
-				break;
-				case 13:
-					draw_text(320, 330, "A True Bops")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Brag about it, you earned it!\nStrangely see-through\n\nUnlocked by getting an [H] rank", 25, 250)
-				break;
-				case 14:
-					draw_text(320, 330, "Timothy")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Only he would intentionally get this bad of a rank\n\nUnlocked by getting an [F] rank", 25, 250)
-				break;
-				case 15:
-					draw_text(320, 330, "Strange plushie")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "She's a bit of a klutz and a blockhead\n\nUnlocked by collecting all plushies", 25, 250)
-				break;
-				case 16:
-					draw_text(320, 330, "Weird mascot")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Har har har har har har\n\nUnlocked by collecting all cereal boxes", 25, 250)
-				break;
-				case 17:
-					draw_text(320, 330, "Fastest Bitch")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Gets cancer and rabies, and eat their own babies\n\nUnlocked by beating the game faster than fast", 25, 250)
-				break;
-				case 18:
-					draw_text(320, 330, "Logan Watkins")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Your antithesis\n\nUnlocked by taunting TOO MUCH", 25, 250)
-				break;
-				case 19:
-					draw_text(320, 330, "Extra Normal")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "There's nothing wrong with me\n\nUnlocked by beating Repressed mode", 25, 250)
-				break;
-				case 20:
-					draw_text(320, 330, "Tree hugging, Rock kisser")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "USE YOUR BRAKES\n\nUnlocked by beating all modifier Repressed mode", 25, 250)
-				break;
-				case 21:
-					draw_text(320, 330, "Wolf in Sheep's clothing")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Strawberry lemonade\n\nUnlocked by getting a Fae-rie", 25, 250)
-				break;
-				case 22:
-					draw_text(320, 330, "Pastel Perfection")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Easy on the eyes\n\nUnlocked by beating Repressed mode without using a single Fae-rie", 25, 250)
-				break;
-				case 23:
-					draw_text(320, 330, "Bloodied")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "That fucking sucked\n\nUnlocked by completing a lucid dream with all monsters active with More to do, Runner, and Persistence enabled", 25, 250)
-				break;
-				case 24:
-					draw_text(320, 330, "Manimo's fit")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Smells like bad humour\n\nUnlocked by dying to Manimo/The Mimic", 25, 250)
-				break;
-				case 25:
-					draw_text(320, 330, "Mathi Zentai")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Orange-tastic!\n\nUnlocked by dying to Mathi/The Brute", 25, 250)
-				break;
-				case 26:
-					draw_text(320, 330, "Pravi Paint")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Saxophone talent not included\n\nUnlocked by dying to Pravi/The Pawn", 25, 250)
-				break;
-				case 27:
-					draw_text(320, 330, "Sports' Tux")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Anyone home?\n\nUnlocked by dying to Sports/The Umpire", 25, 250)
-				break;
-				case 28:
-					draw_text(320, 330, "Ava fursuit")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Someone pissed in this.\n\nUnlocked by dying to Ava/The Lookout", 25, 250)
-				break;
-				case 29:
-					draw_text(320, 330, "Valerix skin suit")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Italian leather\n\nUnlocked by dying to Valerix/The Equine", 25, 250)
-				break;
-				case 30:
-					draw_text(320, 330, "DJ's Mist")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Shhh...\n\nUnlocked by dying to DJ/The Seer", 25, 250)
-				break;
-				case 31:
-					draw_text(320, 330, "Fatherly suit")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "He's the reason you could make this game\n\nUnlocked by dying to your Father/The Maestro", 25, 250)
-				break;
-				case 32:
-					draw_text(320, 330, "Joetube jeans")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Ignore the white stains\n\nUnlocked by dying to Joetube/The Monster", 25, 250)
-				break;
-				case 33:
-					draw_text(320, 330, "STOPSIGN")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "bzzt\nNOOOOO\n\nUnlocked by dying to A-90/The Faulter", 25, 250)
-				break;
-				case 34:
-					draw_text(320, 330, "Coconut's Apron")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "A top tier chef\n\nUnlocked by dying to Coconut/The Chef", 25, 250)
-				break;
-				case 35:
-					draw_text(320, 330, "Fusion-esqe paint job")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Crumpet munchers, smh\n\nUnlocked by dying to Fusion/The Doll", 25, 250)
-				break;
-				case 36:
-					draw_text(320, 330, "Inverse")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "It's you, but not really\n\nUnlocked by dying to yourself/The Doubt", 25, 250)
-				break;
-				case 37:
-					draw_text(320, 330, "Monochrome")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "I'm dead\n\nUnlocked by dying in everyway possible", 25, 250)
-				break;
-				case 38:
-					draw_text(320, 330, "Zombean")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Grrg...Brainz\n\nUnlocked by dying more than you really should", 25, 250)
-				break;
-				case 39:
-					draw_text(320, 330, "Genuine DJ")
-					draw_set_color(c_grey)
-					draw_text_ext(320, 360, "Thank you :]\n\nUnlocked by 100%'ing the game or by being DJ", 25, 250)
-				break;
-				default:
+				ini_open("lang.txt")
+				draw_text(320, 330, ini_read_string("palettes", "beanpal" + string(global.palettebeanie), "ERROR"))
+				draw_set_color(c_grey)
+				draw_text_ext(320, 360, ini_read_string("palettes", "beanpaldesc" + string(global.palettebeanie), "Error") + "\n\n" + ini_read_string("palettes", "beanpalunlock" + string(global.palettebeanie), "Error"), 25, 250)
+				ini_close()
+				//case 1:
+				//	draw_text(320, 330, "Trans")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Pride comes before the fall, but atleast you'll look good on your way to hell, right?\n\nUnlocked by being Transgender", 25, 250)
+				//break;
+				//case 2:
+				//	draw_text(320, 330, "Eddhead")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Lover of Dr. Pepper, not Cola\n\nUnlocked by completing the Attic", 25, 250)
+				//break;
+				//case 3:
+				//	draw_text(320, 330, "Nevadian")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Don't let her near blenders while she's wearing this\n\nUnlocked by completing the Stronghold", 25, 250)
+				//break;
+				//case 4:
+				//	draw_text(320, 330, "Some Schmo")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Generic, but disliked by greed\n\nUnlocked by completing the Storage Facility", 25, 250)
+				//break;
+				//case 5:
+				//	draw_text(320, 330, "Submarine Bean")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "She's a Pisces, afterall\n\nUnlocked by completing the Wheatfield", 25, 250)
+				//break;
+				//case 6:
+				//	draw_text(320, 330, "Eyebleeding")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "OW MY EYES\n\nUnlocked by completing the Halls", 25, 250)
+				//break;
+				//case 7:
+				//	draw_text(320, 330, "Technicolour")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Don't deal with the devil!\n\nUnlocked by completing the Hotel", 25, 250)
+				//break;
+				//case 8:
+				//	draw_text(320, 330, "Cotton Candy")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Better than Neon pink, I guess\n\nUnlocked by completing the Forest", 25, 250)
+				//break;
+				//case 9:
+				//	draw_text(320, 330, "Motherly Dress")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "She's why you're named Beanie!\n\nUnlocked by completing a level with all modifiers enabled", 25, 250)
+				//break;
+				//case 10:
+				//	draw_text(320, 330, "Pants' Pants")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Kinda stinks\n\nUnlocked by completing all levels with all modifiers enabled", 25, 250)
+				//break;
+				//case 11:
+				//	draw_text(320, 330, "White")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "You fucking yankee\n\nUnlocked by dying in a level after having completed all objectives", 25, 250)
+				//break;
+				//case 12:
+				//	draw_text(320, 330, "Goopy")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "What a silly little lemon dog\n\nUnlocked by beating the game", 25, 250)
+				//break;
+				//case 13:
+				//	draw_text(320, 330, "A True Bops")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Brag about it, you earned it!\nStrangely see-through\n\nUnlocked by getting an [H] rank", 25, 250)
+				//break;
+				//case 14:
+				//	draw_text(320, 330, "Timothy")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Only he would intentionally get this bad of a rank\n\nUnlocked by getting an [F] rank", 25, 250)
+				//break;
+				//case 15:
+				//	draw_text(320, 330, "Strange plushie")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "She's a bit of a klutz and a blockhead\n\nUnlocked by collecting all plushies", 25, 250)
+				//break;
+				//case 16:
+				//	draw_text(320, 330, "Weird mascot")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Har har har har har har\n\nUnlocked by collecting all cereal boxes", 25, 250)
+				//break;
+				//case 17:
+				//	draw_text(320, 330, "Fastest Bitch")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Gets cancer and rabies, and eat their own babies\n\nUnlocked by beating the game faster than fast", 25, 250)
+				//break;
+				//case 18:
+				//	draw_text(320, 330, "Logan Watkins")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Your antithesis\n\nUnlocked by taunting TOO MUCH", 25, 250)
+				//break;
+				//case 19:
+				//	draw_text(320, 330, "Extra Normal")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "There's nothing wrong with me\n\nUnlocked by beating Repressed mode", 25, 250)
+				//break;
+				//case 20:
+				//	draw_text(320, 330, "Tree hugging, Rock kisser")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "USE YOUR BRAKES\n\nUnlocked by beating all modifier Repressed mode", 25, 250)
+				//break;
+				//case 21:
+				//	draw_text(320, 330, "Wolf in Sheep's clothing")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Strawberry lemonade\n\nUnlocked by getting a Fae-rie", 25, 250)
+				//break;
+				//case 22:
+				//	draw_text(320, 330, "Pastel Perfection")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Easy on the eyes\n\nUnlocked by beating Repressed mode without using a single Fae-rie", 25, 250)
+				//break;
+				//case 23:
+				//	draw_text(320, 330, "Bloodied")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "That fucking sucked\n\nUnlocked by completing a lucid dream with all monsters active with More to do, Runner, and Persistence enabled", 25, 250)
+				//break;
+				//case 24:
+				//	draw_text(320, 330, "Manimo's fit")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Smells like bad humour\n\nUnlocked by dying to Manimo/The Mimic", 25, 250)
+				//break;
+				//case 25:
+				//	draw_text(320, 330, "Mathi Zentai")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Orange-tastic!\n\nUnlocked by dying to Mathi/The Brute", 25, 250)
+				//break;
+				//case 26:
+				//	draw_text(320, 330, "Pravi Paint")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Saxophone talent not included\n\nUnlocked by dying to Pravi/The Pawn", 25, 250)
+				//break;
+				//case 27:
+				//	draw_text(320, 330, "Sports' Tux")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Anyone home?\n\nUnlocked by dying to Sports/The Umpire", 25, 250)
+				//break;
+				//case 28:
+				//	draw_text(320, 330, "Ava fursuit")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Someone pissed in this.\n\nUnlocked by dying to Ava/The Lookout", 25, 250)
+				//break;
+				//case 29:
+				//	draw_text(320, 330, "Valerix skin suit")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Italian leather\n\nUnlocked by dying to Valerix/The Equine", 25, 250)
+				//break;
+				//case 30:
+				//	draw_text(320, 330, "DJ's Mist")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Shhh...\n\nUnlocked by dying to DJ/The Seer", 25, 250)
+				//break;
+				//case 31:
+				//	draw_text(320, 330, "Fatherly suit")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "He's the reason you could make this game\n\nUnlocked by dying to your Father/The Maestro", 25, 250)
+				//break;
+				//case 32:
+				//	draw_text(320, 330, "Joetube jeans")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Ignore the white stains\n\nUnlocked by dying to Joetube/The Monster", 25, 250)
+				//break;
+				//case 33:
+				//	draw_text(320, 330, "STOPSIGN")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "bzzt\nNOOOOO\n\nUnlocked by dying to A-90/The Faulter", 25, 250)
+				//break;
+				//case 34:
+				//	draw_text(320, 330, "Coconut's Apron")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "A top tier chef\n\nUnlocked by dying to Coconut/The Chef", 25, 250)
+				//break;
+				//case 35:
+				//	draw_text(320, 330, "Fusion-esqe paint job")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Crumpet munchers, smh\n\nUnlocked by dying to Fusion/The Doll", 25, 250)
+				//break;
+				//case 36:
+				//	draw_text(320, 330, "Inverse")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "It's you, but not really\n\nUnlocked by dying to yourself/The Doubt", 25, 250)
+				//break;
+				//case 37:
+				//	draw_text(320, 330, "Monochrome")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "I'm dead\n\nUnlocked by dying in everyway possible", 25, 250)
+				//break;
+				//case 38:
+				//	draw_text(320, 330, "Zombean")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Grrg...Brainz\n\nUnlocked by dying more than you really should", 25, 250)
+				//break;
+				//case 39:
+				//	draw_text(320, 330, "Genuine DJ")
+				//	draw_set_color(c_grey)
+				//	draw_text_ext(320, 360, "Thank you :]\n\nUnlocked by 100%'ing the game or by being DJ", 25, 250)
+				//break;
+				//default:
 					
-				break;
-			}
+				//break;
 		break;
 		case 1:
 			if (global.palettemanimo = 0){

@@ -8,6 +8,12 @@ var _h = ceil(room_height/TS)
 nekowait = 0
 nekofail = false
 
+boottime = 0
+ini_open("lang.txt")
+randomize()
+bootmessage = ini_read_string("bootmessages", string(irandom_range(0, 58)), "Error")
+ini_close()
+
 killedby = noone
 achievescroll = 0
 palettechoose = 0
@@ -34,12 +40,13 @@ global.level = noone
 global.mp_grid = mp_grid_create(0, 0, _w, _h, TS, TS)
 global.mp_gridcrouch = mp_grid_create(0, 0, _w, _h, TS, TS)
 global.screentype = "main"
+
 global.palettebeanie = 0
 global.palettemanimo = 0
 global.palettevalerix = 0
 global.palettemathi = 0
 global.palettepravi = 0
-global.palettesports = 0
+global.palettesports = 1
 global.paletteava = 0
 global.palettedj = 1
 global.palettejoetube = 1

@@ -6,6 +6,20 @@ if (keyboard_check_pressed(vk_f11)){
 	window_set_fullscreen(!window_get_fullscreen())
 }
 
+if (room = bootroom){
+	boottime += 1
+	if (keyboard_check_pressed(vk_enter)){
+		if (boottime < 300){
+			boottime = 300
+		}else{
+			boottime += 150
+		}
+	}
+	if (boottime > 599){
+		room_goto(MENU_main)
+	}
+}
+
 if (room = MENU_main){
 	if (keyboard_check_pressed(ord("1"))){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
@@ -172,18 +186,18 @@ if (room = MENU_palette){
 		case 4:
 			if (keyboard_check_pressed(vk_up)){
 				palettesizeshift = -0.2
-				if (global.palettesports > 0){	
+				if (global.palettesports > 1){	
 					global.palettesports -= 1
 				}else{
-					global.palettesports = 4
+					global.palettesports = 5
 				}
 			}
 			if (keyboard_check_pressed(vk_down)){
 				palettesizeshift = 0.2
-				if (global.palettesports < 4){	
+				if (global.palettesports < 5){	
 					global.palettesports += 1
 				}else{
-					global.palettesports = 0
+					global.palettesports = 1
 				}
 			}
 		break;
@@ -408,12 +422,12 @@ if (room = MENU_achieve){
 }
 if (room = initroom && objNekoPresenceDemo.ready){
 	show_debug_message("Main menu")
-	room_goto(MENU_main)
+	room_goto(bootroom)
 }
 if (room = initroom){
 	nekowait += 1
 	if (nekofail && keyboard_check_pressed(vk_enter)){
-		room_goto(MENU_main)
+		room_goto(bootroom)
 	}
 	if (nekowait >= 450){
 		nekofail = true

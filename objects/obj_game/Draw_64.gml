@@ -7,7 +7,7 @@ if (global.screentype = "ingame"){
 if (room = initroom && nekofail){
 	draw_set_font(Big)
 	draw_set_alpha(1)
-	draw_text(320, 360, "NekoPresence failed. \nContinue without Discord presence?\nEnter to continue")
+	draw_text(320, 360, "NekoPresence failed. \nContinue without Discord presence?\nEnter to continue\nOr you could just wait here to see if Discord connects, your call")
 }
 
 if (room = MENU_palette){

@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"6f3da311-7cdc-4233-be96-3553b7f8462b","name":"6f3da311-7cdc-4233-be96-3553b7f8462b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"e93347bc-3561-4ac2-b24a-0bbb669a3d66","name":"e93347bc-3561-4ac2-b24a-0bbb669a3d66","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":5,
+  "height":7,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"3cc1d158-4d35-4978-b58e-b33a5b5342de","blendMode":0,"displayName":"default","isLocked":false,"name":"3cc1d158-4d35-4978-b58e-b33a5b5342de","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"effeee17-471b-4a81-a527-a1247d2103fa","blendMode":0,"displayName":"default","isLocked":false,"name":"effeee17-471b-4a81-a527-a1247d2103fa","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_palette_sports",
   "nineSlice":null,
@@ -69,14 +69,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6f3da311-7cdc-4233-be96-3553b7f8462b","path":"sprites/spr_palette_sports/spr_palette_sports.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f20b838a-96c8-4d03-aa9f-64d25cf076c1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e93347bc-3561-4ac2-b24a-0bbb669a3d66","path":"sprites/spr_palette_sports/spr_palette_sports.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"90d6284c-dd09-4578-a1e8-0a1349a7013b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
     "xorigin":0,
-    "yorigin":2,
+    "yorigin":3,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":5,
+  "width":6,
 }

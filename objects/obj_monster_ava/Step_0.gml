@@ -8,24 +8,22 @@ if (pathdelay = 0){
 		x_target = poi.x
 		y_target = poi.y
 	}
-	if (!collision_line(x, y, obj_player.x, obj_player.y + 32, obj_solid, false, true)){
-		var _x1 = lengthdir_x(eyesight, direction - 65)
-		var _x2 = lengthdir_x(eyesight, direction + 65)
-		var _y1 = lengthdir_y(eyesight, direction - 65)
-		var _y2 = lengthdir_y(eyesight, direction + 65)
-		if (point_in_triangle(obj_player.x, obj_player.y, x, y - 145, x + _x1, y + _y1, x + _x2, y + _y2)){
-			x_target = obj_player.x
-			y_target = obj_player.y + 65
-			attention = aggrotime
-			if (state != "aggro"){
-				global.danger += 1.5
-				randomize()
-				audio_play_sound(mus_chasetrans, 1, false)
-				voice = choose(sfx_monster_ava_aggro_1, sfx_monster_ava_aggro_2, sfx_monster_ava_aggro_3)
-				audio_play_sound_at(voice, x, y, 0, 1000, 2000, 1, false, 1, 0.7)	
-			}
-			state = "aggro"
+	var _x1 = lengthdir_x(eyesight, direction - 65)
+	var _x2 = lengthdir_x(eyesight, direction + 65)
+	var _y1 = lengthdir_y(eyesight, direction - 65)
+	var _y2 = lengthdir_y(eyesight, direction + 65)
+	if (point_in_triangle(obj_player.x, obj_player.y, x, y - 145, x + _x1, y + _y1, x + _x2, y + _y2)){
+		x_target = obj_player.x
+		y_target = obj_player.y + 65
+		attention = aggrotime
+		if (state != "aggro"){
+			global.danger += 1.5
+			randomize()
+			audio_play_sound(mus_chasetrans, 1, false)
+			voice = choose(sfx_monster_ava_aggro_1, sfx_monster_ava_aggro_2, sfx_monster_ava_aggro_3)
+			audio_play_sound_at(voice, x, y, 0, 1000, 2000, 1, false, 1, 0.7)	
 		}
+		state = "aggro"
 	}
 	if (state = "aggro"){
 		path_start(path, chasespeed, path_action_stop, false)
@@ -129,7 +127,9 @@ if (collision_circle(x, y - 45, 60, obj_player, false, true) && state = "aggro")
 	global.screentype = "gameover"
 	obj_game.killedby = "Ava"
 	randomize()
-	global.deathline = choose("","")
+	ini_open(lang)
+	global.deathline = ini_read_string("advice", "ava" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
+	ini_close()
 	global.level = room
 	var _choose = irandom_range(0, 999)
 	if (_choose = 0){

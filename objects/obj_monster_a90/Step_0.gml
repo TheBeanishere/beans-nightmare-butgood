@@ -81,6 +81,9 @@ if (kill && timer = 120){
 		global.screentype = "gameover"
 		obj_game.killedby = "A-90"
 		randomize()
+		ini_open(lang)
+		global.deathline = ini_read_string("advice", "a90" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
+		ini_close()
 		global.deathline = choose("Listen to it's command when it's face appears", "It'll stop the other monsters too, don't worry about them.", "He gives you 1 chance if you're at full health, don't waste it.")
 		global.level = room
 		room_goto(KILL_a90)

@@ -82,7 +82,9 @@ if (state = "wind"){
 			//}
 			global.screentype = "gameover"
 			obj_game.killedby = "Mathi"
-			global.deathline = choose("Run away when he stops to ready his charge.", "He loses interest quickly, break line of sight as fast as you can.", "Listen for his loud footsteps to avoid him ever seeing you.")
+			ini_open(lang)
+			global.deathline = ini_read_string("advice", "mathi" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
+			ini_close()
 			global.level = room
 			room_goto(KILL_mathi)
 		}
@@ -185,7 +187,9 @@ if (collision_circle(x, y, 75, obj_player, false, true) && state = "charge"){
 	global.screentype = "gameover"
 	obj_game.killedby = "Mathi"
 	randomize()
-	global.deathline = choose("Run away when he stops to ready his charge.", "He loses interest quickly, break line of sight as fast as you can.", "Listen for his loud footsteps to avoid him ever seeing you.")
+	ini_open(lang)
+	global.deathline = ini_read_string("advice", "mathi" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
+	ini_close()
 	global.level = room
 	room_goto(KILL_mathi)
 }

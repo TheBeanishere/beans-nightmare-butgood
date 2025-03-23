@@ -52,7 +52,9 @@ if (state = "explode"){
 				global.screentype = "gameover"
 				obj_game.killedby = "Pravi"
 				randomize()
-				global.deathline = choose("Book it from him if he chases, he'll eventually go back to his original spot.", "Maybe try to bait out his fuse.", "His explosion is very loud, try to avoid having him explode.")
+				ini_open(lang)
+				global.deathline = ini_read_string("advice", "pravi" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
+				ini_close()
 				global.level = room
 				room_goto(KILL_pravi)
 			}else{

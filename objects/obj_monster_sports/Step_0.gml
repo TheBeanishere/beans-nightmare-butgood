@@ -96,15 +96,23 @@ if (alerted){
 		}
 		state = "aggro"
 	}
-	if (state != "aggro"){
+	if (state != "aggro" && state != "investigate"){
 		randomize()
 		voice = choose(sfx_monster_sports_invest_1, sfx_monster_sports_invest_2, sfx_monster_sports_invest_3)
 		audio_play_sound_at(voice, x, y, 0, 1000, 2000, 1, false, 1, 0.7)	
 		alerted = false
-		poi.x = obj_player.x
-		poi.y = obj_player.y + 32
-		x_target = obj_player.x
-		y_target = obj_player.y + 32
+		if (collision_circle(x, y, 1000, obj_player, false, true)){
+			poi.x = obj_player.x
+			poi.y = obj_player.y + 32
+			x_target = obj_player.x
+			y_target = obj_player.y + 32
+		}else{
+			poi.x = global.alertx
+			poi.y = global.alerty + 32
+			x_target = global.alertx
+			y_target = global.alerty + 32
+		}
+			
 		state = "investigate"
 	}
 }

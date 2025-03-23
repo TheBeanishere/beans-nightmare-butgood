@@ -45,10 +45,10 @@ if (alerted){
 		voice = choose(sfx_monster_manimo_invest_1, sfx_monster_manimo_invest_2, sfx_monster_manimo_invest_3)
 		audio_play_sound_at(voice, x, y, 0, 1000, 2000, 1, false, 1, 0.7)	
 		alerted = false
-		poi.x = obj_player.x
-		poi.y = obj_player.y + 32
-		x_target = obj_player.x
-		y_target = obj_player.y + 32
+		poi.x = global.alertx
+		poi.y = global.alerty + 32
+		x_target = global.alertx
+		y_target = global.alerty + 32
 		state = "investigate"
 	}
 }
@@ -152,7 +152,9 @@ if (collision_circle(x, y - 45, 45, obj_player, false, true) && state = "aggro")
 	global.screentype = "gameover"
 	obj_game.killedby = "Manimo"
 	randomize()
-	global.deathline = choose("He can hear when you find an objective object.", "He runs much quicker when he hears something than when he's chasing you.", "Don't wind yourself, run in bursts.")
+	ini_open(lang)
+	global.deathline = ini_read_string("advice", "manimo" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
+	ini_close()
 	global.level = room
 	room_goto(KILL_manimo)
 }

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":5.142857,
+  "duration":3.428571,
   "name":"sfx_jokescare_1",
   "parent":{
     "name":"sfx",

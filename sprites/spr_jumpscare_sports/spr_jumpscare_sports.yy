@@ -13,9 +13,9 @@
   "For3D":false,
   "frames":[
     {"$GMSpriteFrame":"","%Name":"ee3407f3-4fd7-4a17-b823-de594cc231f5","name":"ee3407f3-4fd7-4a17-b823-de594cc231f5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"0db1a69a-8854-4461-959b-b883a15323cd","name":"0db1a69a-8854-4461-959b-b883a15323cd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2372b559-5e4c-4625-a77a-69f462abfc93","name":"2372b559-5e4c-4625-a77a-69f462abfc93","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"7fd1df86-d312-4c58-ab59-632625b36a35","name":"7fd1df86-d312-4c58-ab59-632625b36a35","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"48564c4f-77b0-418a-a54c-83410232dfc9","name":"48564c4f-77b0-418a-a54c-83410232dfc9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"d196d206-cef9-4a51-89aa-7dfcedc52d71","name":"d196d206-cef9-4a51-89aa-7dfcedc52d71","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"cc05f8ae-09f5-482d-8e4b-df028fb2eeaf","name":"cc05f8ae-09f5-482d-8e4b-df028fb2eeaf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"581dedf6-9219-4d14-a782-c1ea298bc5e0","name":"581dedf6-9219-4d14-a782-c1ea298bc5e0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"fe5a1c00-5271-4e9c-a0fd-8d690257808d","name":"fe5a1c00-5271-4e9c-a0fd-8d690257808d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"5c194c56-8976-48a7-b9b5-7022566607d5","name":"5c194c56-8976-48a7-b9b5-7022566607d5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
@@ -91,14 +91,14 @@
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ee3407f3-4fd7-4a17-b823-de594cc231f5","path":"sprites/spr_jumpscare_sports/spr_jumpscare_sports.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"3c24b4ec-cca8-4a06-9577-110ba72225cf","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0db1a69a-8854-4461-959b-b883a15323cd","path":"sprites/spr_jumpscare_sports/spr_jumpscare_sports.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e0605d2c-9868-4d06-b527-e53adf6cbc51","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"48564c4f-77b0-418a-a54c-83410232dfc9","path":"sprites/spr_jumpscare_sports/spr_jumpscare_sports.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"590d4855-606b-43bc-909f-60af977c6b2a","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2372b559-5e4c-4625-a77a-69f462abfc93","path":"sprites/spr_jumpscare_sports/spr_jumpscare_sports.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8e6c52c4-b059-4b24-88ed-a40e6f85cd81","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d196d206-cef9-4a51-89aa-7dfcedc52d71","path":"sprites/spr_jumpscare_sports/spr_jumpscare_sports.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"d7c92744-024c-4eff-a8af-b7172040eb13","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7fd1df86-d312-4c58-ab59-632625b36a35","path":"sprites/spr_jumpscare_sports/spr_jumpscare_sports.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5f53f345-6c7c-4250-91aa-bd34e63648fe","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cc05f8ae-09f5-482d-8e4b-df028fb2eeaf","path":"sprites/spr_jumpscare_sports/spr_jumpscare_sports.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"1cc025f9-915c-4da8-8c41-058ebb652188","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"581dedf6-9219-4d14-a782-c1ea298bc5e0","path":"sprites/spr_jumpscare_sports/spr_jumpscare_sports.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"4e12b752-57b1-47f4-bf2d-353e1474e661","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
@@ -107,7 +107,7 @@
               },"Disabled":false,"id":"70a083a3-ae06-40ff-bb54-a9c9a91d28a9","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5c194c56-8976-48a7-b9b5-7022566607d5","path":"sprites/spr_jumpscare_sports/spr_jumpscare_sports.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f3862e99-e278-403f-84af-31acca41724a","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"33ca3277-f619-401b-abe5-f97407abddf5","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"30b92d42-b944-4eb3-8d45-61d72483c9d2","path":"sprites/spr_jumpscare_sports/spr_jumpscare_sports.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"ee05e256-5f13-412d-9560-3bba98c0adb7","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},

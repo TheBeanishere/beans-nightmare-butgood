@@ -3,8 +3,8 @@ audio_group_load(music)
 pal_swap_init_system(shd_pal_swapper)
 audio_falloff_set_model(audio_falloff_linear_distance)
 #macro TS 8
-bigfont =  font_add("english.otf", 22, true, true, 32, 128)
-mediumfont =  font_add("english.otf", 16, true, true, 32, 128)
+bigfont =  font_add("english.otf", 20, true, true, 32, 128)
+mediumfont =  font_add("english.otf", 14, true, true, 32, 128)
 ini_open("savedata.ini")
 language = ini_read_string("options", "language", "english") + ".txt"
 musicvolume = ini_read_real("options", "music", 1)

@@ -13,7 +13,7 @@ if (room = initroom && nekofail){
 if (room = MENU_palette){
 	draw_set_font(Medium)
 	draw_set_alpha(1)
-	draw_text_ext(80, 20, "[ESC.] for main menu \nUp and Down arrow keys to change palettes\nRight and Left arrows keys to change characters", 14, 450)
+	draw_text_ext(80, 20, "[ESC.] for main menu \nUp and Down arrow keys to change palettes\nRight and Left arrows keys to change characters", 16, 450)
 }
 
 if (showfps){

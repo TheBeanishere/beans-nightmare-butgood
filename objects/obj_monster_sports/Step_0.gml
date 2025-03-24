@@ -44,7 +44,9 @@ if (pathdelay = 0){
 		global.screentype = "gameover"
 		obj_game.killedby = "Sports"
 		randomize()
-		global.deathline = choose("He's the only one that can hear you walk and run, stay quiet", "He'll come sprinting to any noise he hears and doesn't know it's you", "Gain distance and then stop moving or crouch walk away")
+		ini_open(lang)
+		global.deathline = ini_read_string("advice", "sports" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
+		ini_close()
 		global.level = room
 		room_goto(KILL_sports)
 	}
@@ -79,7 +81,9 @@ if (alerted){
 		global.screentype = "gameover"
 		obj_game.killedby = "Sports"
 		randomize()
-		global.deathline = choose("He's the only one that can hear you walk and run, stay quiet", "He'll come sprinting to any noise he hears and doesn't know it's you", "Gain distance and then stop moving or crouch walk away")
+		ini_open(lang)
+		global.deathline = ini_read_string("advice", "sports" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
+		ini_close()
 		global.level = room
 		room_goto(KILL_sports)
 	}
@@ -214,7 +218,9 @@ if (collision_circle(x, y - 75, 80, obj_player, false, true) && state = "aggro")
 	global.screentype = "gameover"
 	obj_game.killedby = "Sports"
 	randomize()
-	global.deathline = choose("He's the only one that can hear you walk and run, stay quiet", "He'll come sprinting to any noise he hears and doesn't know it's you", "Gain distance and then stop moving or crouch walk away")
+	ini_open(lang)
+	global.deathline = ini_read_string("advice", "sports" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
+	ini_close()
 	global.level = room
 	room_goto(KILL_sports)
 }

@@ -116,7 +116,9 @@ if (place_meeting(x, y, obj_player) && state = "hunt"){
 	global.screentype = "gameover"
 	global.level = room
 	randomize()
-	global.deathline = choose("Scare him off before he outpaces you.", "Running won't work, he will eventually become faster than you", "Time your taunt, there's a cool down.")
+	ini_open(lang)
+	global.deathline = ini_read_string("advice", "valerix" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
+	ini_close()
 	obj_game.killedby = "Valerix"
 	room_goto(KILL_valerix)
 }

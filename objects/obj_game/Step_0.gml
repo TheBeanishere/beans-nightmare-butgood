@@ -23,7 +23,7 @@ if (room = bootroom){
 if (room = MENU_main){
 	if (keyboard_check_pressed(ord("1"))){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = LEVEL_test
+			roomdes = LEVEL_attic
 			screentypechange = "ingame"
 		}
 		killedby = noone

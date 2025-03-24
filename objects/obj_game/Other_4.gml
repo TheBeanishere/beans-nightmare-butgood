@@ -43,10 +43,9 @@ if (room = LEVEL_attic){
 	calmmusic = mus_repression_calm
 	audio_play_sound(calmmusic, 1, true, musicvolume)
 	audio_play_sound(chasemusic, 1, true, musicvolume)
-	global.objective = "Open the door"
-	if (MOD_switches){
-		global.objective = "Find all 9 Levers"
-	}
+	ini_open(lang)
+	global.objective = ini_read_string("gamestuff", "attic1", "ugh")
+	ini_close()
 }
 
 if (room = LEVEL_wheatfield){
@@ -60,7 +59,9 @@ if (room = LEVEL_wheatfield){
 		var _spawninteract = instance_find(obj_interactspawn, (irandom_range(0, instance_number(obj_interactspawn)-1)))
 		_spawninteract.spawned = true
 	}
-	global.objective = "Find a way through the gate."
+	ini_open(lang)
+	global.objective = ini_read_string("gamestuff", "wheatfield1", "ugh")
+	ini_close()
 }
 
 if (room = LEVEL_stronghold){
@@ -73,7 +74,9 @@ if (room = LEVEL_stronghold){
 		var _spawninteract = instance_find(obj_interactspawn, (irandom_range(0, instance_number(obj_interactspawn)-1)))
 		_spawninteract.spawned = true
 	}
-	global.objective = "Unlock the gate."
+	ini_open(lang)
+	global.objective = ini_read_string("gamestuff", "stronghold1", "ugh")
+	ini_close()
 }
 
 if (room = LEVEL_storagefacility){
@@ -82,7 +85,9 @@ if (room = LEVEL_storagefacility){
 	audio_play_sound(chasemusic, 1, true, musicvolume - 0.225)
 	audio_play_sound(calmmusic, 1, true, musicvolume - 0.225)
 	randomize()
-	global.objective = "Power the gate."
+	ini_open(lang)
+	global.objective = ini_read_string("gamestuff", "storage1", "ugh")
+	ini_close()
 }
 
 

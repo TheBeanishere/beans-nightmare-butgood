@@ -21,7 +21,9 @@ if (collision_circle(x, y, 50, obj_player, false, true)){
 		carrying = 0
 		image_index = progress
 		audio_play_sound(sfx_key_use, 1, false)
-		global.objective = "Find another key."
+		ini_open(lang)
+		global.objective = ini_read_string("gamestuff", "stronghold2", "ugh")
+		ini_close()
 		with (instance_create_layer(0, 0, "whitepain", obj_textpopup)){
 			textsay = string(other.progress) + "/5"+ " Keys"
 		}

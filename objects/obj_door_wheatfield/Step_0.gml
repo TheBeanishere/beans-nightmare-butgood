@@ -13,16 +13,22 @@ if (progress < 6){
 if (collision_circle(x, y, 50, obj_player, false, true)){
 	if (!touched && progress < 6 && !carrying){
 		with (instance_create_layer(0, 0, "whitepain", obj_textpopup)){
-		textsay = "The gate won't budge."
+		ini_open(lang)
+		textsay = ini_read_string("gamestuff", "wheatfield2", "ugh")
+		ini_close()
 		}
 	}else if (!touched && progress < 6){
 		progress += 1
 		carrying = false
 		image_index = progress
 		audio_play_sound(sfx_firewood_place, 1, false)
-		global.objective = "Find more fireworks."
+		ini_open(lang)
+		global.objective = ini_read_string("gamestuff", "wheatfield4", "ugh")
+		ini_close()
 		with (instance_create_layer(0, 0, "whitepain", obj_textpopup)){
-			textsay = string(other.progress) + "/6"+ " Fireworks"
+			ini_open(lang)
+			textsay = string(other.progress) + "/6 " + ini_read_string("gamestuff", "wheatfield3", "ugh")
+			ini_close()
 		}
 	}
 	touched = true

@@ -14,7 +14,9 @@ if (collision_circle(x, y, 50, obj_player, false, true) && !touched){
 if (collision_circle(x, y, 50, obj_player, false, true)){
 	if (!touched && progress < 4){
 		with (instance_create_layer(0, 0, "whitepain", obj_textpopup)){
-			textsay = "The gate needs power."
+			ini_open(lang)
+			textsay = string(obj_door_storagefacility.progress) + "/4 " + ini_read_string("gamestuff", "storage3", "ugh")
+			ini_close()
 		}
 	}
 	touched = true

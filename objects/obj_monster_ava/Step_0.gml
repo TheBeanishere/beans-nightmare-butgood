@@ -117,7 +117,7 @@ if (state != "idle"){
 	sprite_index = spr_monster_ava_idle
 }
 
-if (collision_circle(x, y - 45, 60, obj_player, false, true) && state = "aggro"){
+if (collision_circle(x, y - 45, 80, obj_player, false, true) && state = "aggro"){
 	//if (!obj_game.ACHIEVE_death_ava){
 	//	ini_open("savedata.ini")
 	//	ini_write_real("achieves", "death_ava", 1)

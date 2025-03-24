@@ -6,16 +6,20 @@ if (room = MENU_gameover){
 	draw_set_color(c_grey)
 	draw_text_ext(640, 320, global.deathline, 28, 600)
 	draw_set_color(c_white)
-	draw_text(640, 280, "You died to " + killedby)
-	draw_text(640, 410, "Enter to retry")
-	draw_text(640, 440, "Escape to return to menu")
+	ini_open(lang)
+	draw_text(640, 280, ini_read_string("gamestuff", "death1", "ugh") + killedby)
+	draw_text(640, 410, ini_read_string("gamestuff", "death2", "ugh"))
+	draw_text(640, 440, ini_read_string("gamestuff", "death3", "ugh"))
+	ini_close()
 }
 if (room = bootroom){
 	if (boottime < 299){
 		draw_set_halign(fa_center)
 		draw_set_valign(fa_middle)
 		draw_set_font(Big)
-		draw_text_ext(640, 360, "WARNING:\nThis game contains gore, jumpscares, loud noises, bright flashing lights, and disorientating music!\nPlay at your OWN discretion!", 28, 480)
+		ini_open(lang)
+		draw_text_ext(640, 360, ini_read_string("gamestuff", "disclaimer1", "ugh") + "\n" + ini_read_string("gamestuff", "disclaimer2", "ugh") + "\n" + ini_read_string("gamestuff", "disclaimer3", "ugh"), 28, 480)
+		ini_close()
 		draw_set_valign(fa_top)
 		draw_set_halign(fa_left)
 	}else if (boottime > 300 && boottime < 449){
@@ -90,11 +94,11 @@ if (room = MENU_palette){
 	draw_set_font(Big)
 	switch (palettechoose){
 		case 0:
-				ini_open(lang)
-				draw_text(320, 330, ini_read_string("palettes", "beanpal" + string(global.palettebeanie), "ERROR"))
-				draw_set_color(c_grey)
-				draw_text_ext(320, 360, ini_read_string("palettes", "beanpaldesc" + string(global.palettebeanie), "Error") + "\n\n" + ini_read_string("palettes", "beanpalunlock" + string(global.palettebeanie), "Error"), 25, 250)
-				ini_close()
+			ini_open(lang)
+			draw_text(320, 330, ini_read_string("palettes", "beanpal" + string(global.palettebeanie), "ERROR"))
+			draw_set_color(c_grey)
+			draw_text_ext(320, 360, ini_read_string("palettes", "beanpaldesc" + string(global.palettebeanie), "Error") + "\n\n" + ini_read_string("palettes", "beanpalunlock" + string(global.palettebeanie), "Error"), 25, 250)
+			ini_close()
 		break;
 		case 1:
 			ini_open(lang)

@@ -1,7 +1,7 @@
 pathdelay -= 1
+audio_emitter_position(soundemitter, x, y, 0)
 
 if (pathdelay = 0){
-	audio_emitter_position(soundemitter, x, y, 0)
 	mp_grid_path(global.mp_gridcrouch, path, x, y, x_target, y_target, true)
 	randomize()
 	pathdelay = 4 + irandom_range(-2, 2)

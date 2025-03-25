@@ -1,0 +1,1 @@
+audio_play_sound_on(soundemitter, sfx_father_approach, true, 0.6, 1, 0, 0.45 )	

@@ -120,7 +120,7 @@ if (sprite_index != asset_get_index("spr_monster_valerix_" + facedir + "_idle"))
 			stepped = true
 			randomize()
 			foot = sfx_monster_valerix_step
-			audio_play_sound_at(foot, x, y, 0, 600, 1200, 1, false, 1, 0.7)
+			audio_play_sound_at(foot, x, y, 0, 900, 1800, 1, false, 1, 0.7)
 		}
 	}else{
 		stepped = false

@@ -51,6 +51,13 @@ if (room = MENU_main){
 		}
 		killedby = noone
 	}
+	if (keyboard_check_pressed(ord("0"))){
+		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+			roomdes = LEVEL_test
+			screentypechange = "ingame"
+		}
+		killedby = noone
+	}
 	
 }
 

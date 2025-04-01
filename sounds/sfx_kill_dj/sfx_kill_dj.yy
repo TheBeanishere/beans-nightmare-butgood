@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"sfx_monster_joetube_aggro_1",
+  "%Name":"sfx_kill_dj",
   "audioGroupId":{
     "name":"sfx",
     "path":"audiogroups/sfx",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":8.0,
-  "name":"sfx_monster_joetube_aggro_1",
+  "duration":0.857143,
+  "name":"sfx_kill_dj",
   "parent":{
     "name":"sfx",
     "path":"folders/Sounds/sfx.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfx_monster_joetube_aggro_1.wav",
+  "soundFile":"sfx_kill_dj.wav",
   "type":1,
   "volume":1.0,
 }

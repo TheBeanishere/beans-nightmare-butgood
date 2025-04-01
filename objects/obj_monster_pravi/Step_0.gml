@@ -8,21 +8,23 @@ if (pathdelay = 0){
 		x_target = x
 		y_target = y
 	}
-	if (state != "explode" && state != "respawn"){
-		if (!collision_line(x, y, obj_player.x, obj_player.y + 32, obj_solid, false, true)){
-			if (collision_circle(x, y, 250, obj_player, false, true)){
-				x_target = obj_player.x
-				y_target = obj_player.y + 32
-				attention = aggrotime
-				if (state != "aggro"){
-					global.danger += 1.5
-					randomize()
-					audio_stop_sound(voice)
-					audio_play_sound(mus_chasetrans, 1, false)
-					voice = choose(sfx_monster_pravi_aggro_1, sfx_monster_pravi_aggro_2, sfx_monster_pravi_aggro_3)
-					audio_play_sound_at(voice, x, y, 0, 1000, 2000, 1, false, 1, 0.7)	
+	if (!respawnanim){
+		if (state != "explode" && state != "respawn"){
+			if (!collision_line(x, y, obj_player.x, obj_player.y + 32, obj_solid, false, true)){
+				if (collision_circle(x, y, 250, obj_player, false, true)){
+					x_target = obj_player.x
+					y_target = obj_player.y + 32
+					attention = aggrotime
+					if (state != "aggro"){
+						global.danger += 1.5
+						randomize()
+						audio_stop_sound(voice)
+						audio_play_sound(mus_chasetrans, 1, false)
+						voice = choose(sfx_monster_pravi_aggro_1, sfx_monster_pravi_aggro_2, sfx_monster_pravi_aggro_3)
+						audio_play_sound_at(voice, x, y, 0, 1000, 2000, 1, false, 1, 0.7)	
+					}
+					state = "aggro"
 				}
-				state = "aggro"
 			}
 		}
 	}
@@ -101,6 +103,8 @@ if (state = "respawn"){
 	respawntime -= 1
 	if (respawntime <= 0){
 		state = "idle"
+		respawnanim = true
+		image_index = 0
 		image_alpha = 1
 		randomize()
 		audio_stop_sound(voice)
@@ -161,7 +165,11 @@ if (!exploded){
 //	}
 //}
 
-if (state = "aggro"|| state = "return"){	
+if (respawnanim){
+	sprite_index = spr_monster_pravi_spawn
+}else if (state = "respawn"){
+	sprite_index = spr_monster_pravi_sprout
+}else if (state = "aggro"|| state = "return"){	
 	sprite_index = spr_monster_pravi_roll
 }else if (state = "explode"){	
 	sprite_index = spr_monster_pravi_explode

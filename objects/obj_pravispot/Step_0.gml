@@ -1,4 +1,4 @@
-if (obj_monster_pravi.state != "respawn" && obj_monster_pravi.state != "explode"){
+if (obj_monster_pravi.state != "respawn" && obj_monster_pravi.state != "explode" && !obj_monster_pravi.respawnanim){
 	if (!collision_line(x, y, obj_player.x, obj_player.y + 32, obj_solid, false, true)){
 		if (collision_circle(x, y, 250, obj_player, false, true)){
 			obj_monster_pravi.x_target = obj_player.x

@@ -1,6 +1,6 @@
 randomize()
-shakex = choose(-2, 2)
-shakey = choose(-2, 2)
+shakex = choose(-5, 5)
+shakey = choose(-5, 5)
 if (shake){
 	x = 640 + shakex
 	y = 360 + shakey

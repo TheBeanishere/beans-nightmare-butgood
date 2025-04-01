@@ -32,13 +32,13 @@ if (direction > 0 && direction < 181){
 }
 
 if (sprite_index != asset_get_index("spr_monster_father_" + facedir + "_idle")){
-	if (floor(image_index) = 0){	
+	if (floor(image_index) = 1||floor(image_index) = 3){	
 		if (!stepped){
 			stepped = true
 			randomize()
 			var _pitch = random_range(0.95, 1.05)
 			foot = sfx_father_footstep
-			audio_play_sound_at(foot, x, y, 0, 450, 900, 1, false, 1, 0.65, 0, _pitch)
+			audio_play_sound_at(foot, x, y, 0, 700, 1400, 1, false, 1, 0.65, 0, _pitch)
 		}
 	}else{
 		stepped = false

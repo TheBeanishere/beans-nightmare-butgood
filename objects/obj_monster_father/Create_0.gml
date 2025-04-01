@@ -8,7 +8,7 @@ x_target = 0
 y_target = 0
 
 soundemitter = audio_emitter_create()
-audio_emitter_falloff(soundemitter, 900, 1800, 1)
+audio_emitter_falloff(soundemitter, 400, 800, 1)
 
 stepped = false
 voice = sfx_monster_manimo_step_1

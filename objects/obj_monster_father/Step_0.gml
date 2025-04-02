@@ -1,6 +1,17 @@
 pathdelay -= 1
 audio_emitter_position(soundemitter, x, y, 0)
 
+if (distance_to_object(obj_player) < 700){
+	if (!close){
+		global.danger += 1.5
+		close = true
+		audio_play_sound(mus_chasetrans, 1, false)
+	}
+}else if (close){
+	global.danger -= 1.5
+	close = false
+}
+
 if (pathdelay = 0){
 	mp_grid_path(global.mp_gridcrouch, path, x, y, x_target, y_target, true)
 	randomize()

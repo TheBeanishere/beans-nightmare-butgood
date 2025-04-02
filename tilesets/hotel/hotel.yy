@@ -1,0 +1,43 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"hotel",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":8,
+    "SerialiseWidth":19,
+    "TileCompressedData":[
+      -15,0,15,13,14,15,16,1,2,0,3,4,0,5,6,0,7,8,-4,0,15,30,31,32,33,18,19,0,20,21,0,22,23,0,24,25,-4,0,4,
+      47,48,49,50,-9,0,2,41,42,-4,0,4,64,65,66,67,-9,0,2,58,59,-4,0,12,9,10,11,12,35,36,0,37,38,0,39,40,-7,
+      0,12,26,27,28,29,52,53,0,54,55,0,56,57,-7,0,4,43,44,45,46,-15,0,4,60,61,62,63,
+    ],
+    "TileDataFormat":1,
+  },
+  "name":"hotel",
+  "out_columns":8,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Tile Sets",
+    "path":"folders/Tile Sets.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"spr_hotel",
+    "path":"sprites/spr_hotel/spr_hotel.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":64,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":64,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":68,
+}

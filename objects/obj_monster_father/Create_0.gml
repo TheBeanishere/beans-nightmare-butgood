@@ -4,6 +4,8 @@ image_yscale = 0.25
 movespeed = 1
 path = path_add()
 
+close = false
+
 x_target = 0
 y_target = 0
 

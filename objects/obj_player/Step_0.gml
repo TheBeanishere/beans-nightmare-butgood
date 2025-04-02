@@ -108,7 +108,7 @@ if (key_taunt && !taunt){
 	scr_loudnoise()
 	instance_create_layer(x, y, "player", obj_tauntflash)
 	taunt = true
-	taunttime = 270
+	taunttime = 180
 	image_speed = 0
 	randomize()
 	image_index = irandom_range(0, 9)
@@ -121,7 +121,7 @@ if (taunttime <= 0){
 
 taunttime -= 1
 
-if (taunttime < 241){
+if (taunttime < 151){
 	image_speed = 1
 }
 
@@ -263,7 +263,7 @@ if (spdY > 0|| vspeed > 0){
 	facedir = "back"
 }
 
-if (taunttime > 240){
+if (taunttime > 150){
 	sprite_index = spr_beanie_taunt
 }else if ((spdX != 0) || (spdY != 0) || speed != 0){
 	if (crouched){	

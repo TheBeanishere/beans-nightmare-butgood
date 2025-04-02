@@ -1,3 +1,12 @@
+if ((place_meeting(x, y, obj_monster_dj) && !attacking) || (movetime <= 0 && active)){
+	randomize()
+	movetime = irandom_range(300, 450)
+	var _spot = instance_find(obj_djpoint, random(instance_number(obj_djpoint)))
+	originx = _spot.x
+	originy = _spot.y
+	x = _spot.x
+	y = _spot.y
+}
 if (active && attacking){
 	audio_emitter_position(soundemitter, x, y, 0)
 	if (obj_player.flashlight && obj_player.battery > 0){
@@ -27,24 +36,27 @@ if (active && attacking){
 			}
 		}else{
 			image_alpha = lerp(image_alpha, 1, 0.05)
-			speed = lerp(speed, 9, 0.2)
+			speed = lerp(speed, 9, 0.1)
 		}
 	}else{
 		image_alpha = lerp(image_alpha, 1, 0.05)
-		speed = lerp(speed, 9, 0.2)
+		speed = lerp(speed, 9, 0.1)
 	}
 }else{
 	if (!active){
 		spawntime -= 1
 		if (spawntime = 0){
 			image_alpha = 1
+			var _voice = choose(sfx_monster_dj_attack_1, sfx_monster_dj_attack_2, sfx_monster_dj_attack_3)
+			audio_play_sound_at(_voice, x, y, 0, 1000, 2000, 1, false, 1, 0.7, 0, 1.3)
 			transanim = spr_monster_dj_mature
 		}
 	}
 }
 
 if (active && !attacking){
-	if (collision_circle(x, y, 125, obj_player, false, true) && !collision_line(x, y, obj_player.x, obj_player.y, obj_solid, false, true)){
+	movetime -= 1
+	if (collision_circle(x, y, 200, obj_player, false, true) && !collision_line(x, y, obj_player.x, obj_player.y, obj_solid, false, true)){
 		attacking = true
 		global.danger += 1.5
 		audio_play_sound(mus_chasetrans, 1, false)
@@ -55,7 +67,7 @@ if (active && !attacking){
 
 if (instance_exists(obj_monster_a90)){
 	if (obj_monster_a90.timer > 30 && obj_monster_a90.move = 0){ 	
-		path_speed = 0
+		speed = 0
 		image_speed = 0
 	}
 }else{
@@ -81,7 +93,7 @@ if (transanim != noone){
 	sprite_index = spr_monster_dj_sprout
 }
 
-if (collision_circle(x, y + 45, 45, obj_player, false, true) && active){
+if (collision_circle(x, y + 45, 35, obj_player, false, true) && active){
 	speed = 0
 	if (obj_player.hp > 35){
 		obj_player.hp -= 35
@@ -96,6 +108,10 @@ if (collision_circle(x, y + 45, 45, obj_player, false, true) && active){
 		randomize()
 		var _voice = choose(sfx_monster_dj_attack_1, sfx_monster_dj_attack_2, sfx_monster_dj_attack_3)
 		audio_play_sound_at(_voice, x, y, 0, 1000, 2000, 1, false, 1, 0.7)
+		with (instance_create_layer(0, 0, "whitepain", obj_whiteflash)){
+			alpahreduce = 0.01
+			image_blend = c_purple
+		}
 	}else{
 		//if (!obj_game.ACHIEVE_death_manimo){
 		//	ini_open("savedata.ini")

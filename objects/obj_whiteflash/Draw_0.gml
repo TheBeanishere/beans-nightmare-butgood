@@ -1,5 +1,5 @@
 draw_set_alpha(1)
 draw_set_color(c_white)
 gpu_set_blendmode(bm_normal)
-draw_sprite_ext(spr_overlay_pain, 0, x, y, 1.1, 1.1, 0, c_white, drawalpha)
+draw_sprite_ext(spr_overlay_pain, 0, x, y, 1.1, 1.1, 0, image_blend, drawalpha)
 draw_self()

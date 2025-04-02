@@ -11,7 +11,9 @@ if (instance_exists(obj_monster_a90)){
 	}
 }
 if (global.debug){
-	draw_circle(x, y, 125, true)
+	draw_circle(x, y, 200, true)
+	draw_circle(x, y + 45, 35, true)
 	draw_text(x, y +32, string(speed))
 	draw_text(x, y +64, string(spawntime))
+	draw_text(x, y -32, string(movetime))
 }

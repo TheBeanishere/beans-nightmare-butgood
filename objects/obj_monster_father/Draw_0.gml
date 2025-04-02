@@ -1,7 +1,7 @@
 draw_set_alpha(1)
 draw_set_color(c_white)
 gpu_set_blendmode(bm_normal)
-pal_swap_set(spr_palette_manimo, global.palettemanimo, false);
+pal_swap_set(spr_palette_father, global.palettefather, false);
 draw_self()
 pal_swap_reset()
 if (instance_exists(obj_monster_a90)){

@@ -306,6 +306,7 @@
     {"id":{"name":"spr_black","path":"sprites/spr_black/spr_black.yy",},},
     {"id":{"name":"spr_crouch","path":"sprites/spr_crouch/spr_crouch.yy",},},
     {"id":{"name":"spr_crouchglow","path":"sprites/spr_crouchglow/spr_crouchglow.yy",},},
+    {"id":{"name":"spr_dj_scare","path":"sprites/spr_dj_scare/spr_dj_scare.yy",},},
     {"id":{"name":"spr_door_attic","path":"sprites/spr_door_attic/spr_door_attic.yy",},},
     {"id":{"name":"spr_door_storagefacility","path":"sprites/spr_door_storagefacility/spr_door_storagefacility.yy",},},
     {"id":{"name":"spr_door_stronghold","path":"sprites/spr_door_stronghold/spr_door_stronghold.yy",},},

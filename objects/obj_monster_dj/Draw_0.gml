@@ -1,7 +1,7 @@
 draw_set_alpha(1)
 draw_set_color(c_white)
 gpu_set_blendmode(bm_normal)
-pal_swap_set(spr_palette_manimo, global.palettemanimo, false);
+pal_swap_set(spr_palette_dj, global.palettedj, false);
 draw_self()
 pal_swap_reset()
 if (instance_exists(obj_monster_a90)){
@@ -11,16 +11,7 @@ if (instance_exists(obj_monster_a90)){
 	}
 }
 if (global.debug){
-	draw_text(x, y - 50, string(state))
-	draw_circle(x_target, y_target, 15, true)
-	draw_line(x_target, y_target, x_target + 64, y_target)
-	draw_line(x_target, y_target, x_target - 64, y_target)
-	draw_line(x_target, y_target, x_target, y_target + 64)
-	draw_line(x_target, y_target, x_target, y_target - 64)
-	draw_rectangle(bbox_right, bbox_top, bbox_left, bbox_bottom, true)
-	draw_path(path, x, y, true)
-	draw_circle(x, y - 45, 45, true)
-	var _x = lengthdir_x(eyesight, point_direction(x, y, obj_player.x, obj_player.y))
-	var _y = lengthdir_y(eyesight, point_direction(x, y, obj_player.x, obj_player.y))
-	draw_line(x, y, x + _x, y + _y)
+	draw_circle(x, y, 300, true)
+	draw_text(x, y +32, string(speed))
+	draw_text(x, y +64, string(spawntime))
 }

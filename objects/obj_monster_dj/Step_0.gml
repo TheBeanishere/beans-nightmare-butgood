@@ -1,101 +1,54 @@
-pathdelay -= 1
-
-if (pathdelay = 0){
-	mp_grid_path(global.mp_gridcrouch, path, x, y, x_target, y_target, true)
-	randomize()
-	pathdelay = 4 + irandom_range(-2, 2)
-	if (state !="aggro"){
-		x_target = poi.x
-		y_target = poi.y
-	}
-	if (!collision_line(x, y, obj_player.x, obj_player.y + 32, obj_solid, false, true)){
-		if (distance_to_object(obj_player) < eyesight){
-			x_target = obj_player.x
-			y_target = obj_player.y + 32
-			attention = aggrotime
-			if (state != "aggro"){
-				global.danger += 1.5
+if (active && attacking){
+	audio_emitter_position(soundemitter, x, y, 0)
+	if (obj_player.flashlight && obj_player.battery > 0){
+		var _x = obj_player.x
+		var _y = obj_player.y
+		var _dir = point_direction(_x, _y, mouse_x, mouse_y)
+		var _x1 = lengthdir_x(750, _dir + 45)
+		var _x2 = lengthdir_x(750, _dir - 45)
+		var _y1 = lengthdir_y(750, _dir + 45)
+		var _y2 = lengthdir_y(750, _dir - 45)
+		if (point_in_triangle(x, y, _x, _y, _x + _x1, _y + _y1, _x + _x2, _y + _y2)){
+			speed = lerp(speed, 0, 0.05)
+			image_alpha -= 0.015
+			if (image_alpha <= 0){
+				image_alpha = 1
 				randomize()
-				audio_play_sound(mus_chasetrans, 1, false)
-				voice = choose(sfx_monster_manimo_aggro_1, sfx_monster_manimo_aggro_2, sfx_monster_manimo_aggro_3)
-				audio_play_sound_at(voice, x, y, 0, 1000, 2000, 1, false, 1, 0.7)	
+				global.danger -= 1.5
+				audio_stop_sound(sfx_monster_dj_chase)
+				var _voice = choose(sfx_monster_dj_attack_1, sfx_monster_dj_attack_2, sfx_monster_dj_attack_3)
+				audio_play_sound_at(_voice, x, y, 0, 1000, 2000, 1, false, 1, 0.7, 0, 0.7)
+				active = false
+				attacking = false
+				x = originx
+				y = originy
+				spawntime = irandom_range(420, 840)
 			}
-			state = "aggro"
+		}else{
+			image_alpha = lerp(image_alpha, 1, 0.05)
+			speed = lerp(speed, 9, 0.2)
+		}
+	}else{
+		image_alpha = lerp(image_alpha, 1, 0.05)
+		speed = lerp(speed, 9, 0.2)
+	}
+}else{
+	if (!active){
+		spawntime -= 1
+		if (spawntime = 0){
+			image_alpha = 1
+			transanim = spr_monster_dj_mature
 		}
 	}
-	if (state = "aggro"){
-		path_start(path, chasespeed, path_action_stop, false)
-	}else if (state = "investigate"){
-		path_start(path, investspeed, path_action_stop, false)
-	}else if (state = "wander"){
-		path_start(path, movespeed, path_action_stop, false)
-	}
 }
 
-if (place_meeting(obj_player.x, obj_player.y, obj_enemyunreachable) && (state = "investigate"||state = "aggro")){
-	state = "wander"
-	poi.touched = true
-	x_target = poi.x
-	y_target = poi.y
-}
-
-if (alerted){
-	if (state != "aggro"){
-		randomize()
-		voice = choose(sfx_monster_manimo_invest_1, sfx_monster_manimo_invest_2, sfx_monster_manimo_invest_3)
-		audio_play_sound_at(voice, x, y, 0, 1000, 2000, 1, false, 1, 0.7)	
-		alerted = false
-		poi.x = global.alertx
-		poi.y = global.alerty + 32
-		x_target = global.alertx
-		y_target = global.alerty + 32
-		state = "investigate"
-	}
-}
-
-if (state = "aggro"){
-	attention -= 1
-	x_target = obj_player.x
-	y_target = obj_player.y + 32
-	if (attention <= 0 || collision_circle(x_target, y_target, 5, self, false, false)){
-		global.danger -= 1.5
-		randomize()
-		voice = choose(sfx_monster_manimo_deaggro_1, sfx_monster_manimo_deaggro_2, sfx_monster_manimo_deaggro_3)
-		audio_play_sound_at(voice, x, y, 0, 1000, 2000, 1, false, 1, 0.7)	
-		state = "wander"
-		poi.x = x_target
-		poi.y = y_target
-	}
-}
-
-if (state = "investigate"){
-	if (point_in_circle(x, y, x_target, y_target, 5)){
-		state = "idle"
-		randomize()
-		idletime = irandom_range(120, 180)
-		poi.touched = true
-		facedir = "front"
-	}
-}
-
-if (state = "wander"){
-	if (collision_circle(x_target, y_target, 5, self, false, false)){
-		state = "idle"
-		randomize()
-		idletime = irandom_range(90, 160)
-		poi.touched = true
-		facedir = "front"
-	}
-}
-
-if (state = "idle"){
-	path_end()
-	idletime -= 1
-	if (idletime <= 0){
-		state = "wander"
-		poi.touched = true
-		x_target = poi.x
-		y_target = poi.y
+if (active && !attacking){
+	if (collision_circle(x, y, 300, obj_player, false, true) && !collision_line(x, y, obj_player.x, obj_player.y, obj_solid, false, true)){
+		attacking = true
+		global.danger += 1.5
+		audio_play_sound(mus_chasetrans, 1, false)
+		var _voice = sfx_monster_dj_chase
+		audio_play_sound_on(soundemitter, _voice, true, 1, 1, 0)
 	}
 }
 
@@ -108,53 +61,49 @@ if (instance_exists(obj_monster_a90)){
 	image_speed = 1
 }
 
+direction = point_direction(x, y, obj_player.x, obj_player.y)
+
 if (direction > 89 && direction < 271){
 	image_xscale = -0.25
 }else{
 	image_xscale = 0.25
 }
 
-if (direction > 0 && direction < 181){
-	facedir = "back"
+if (transanim != noone){
+	sprite_index = transanim
+}else if (active){
+	sprite_index = spr_monster_dj_idle
 }else{
-	facedir = "front"
+	sprite_index = spr_monster_dj_sprout
 }
 
-if (sprite_index != asset_get_index("spr_monster_manimo_" + facedir + "_idle")){
-	if (floor(image_index) = 4||floor(image_index) = 1){	
-		if (!stepped){
-			stepped = true
-			randomize()
-			var _pitch = random_range(0.95, 1.05)
-			foot = choose(sfx_monster_manimo_step_1, sfx_monster_manimo_step_2, sfx_monster_manimo_step_3)
-			audio_play_sound_at(foot, x, y, 0, 600, 1200, 1, false, 1, 0.65, 0, _pitch)
-		}
+if (collision_circle(x, y + 45, 45, obj_player, false, true) && active){
+	speed = 0
+	if (obj_player.hp > 35){
+		obj_player.hp -= 35
+		active = false
+		scr_loudnoise()
+		attacking = false
+		global.danger -= 1.5
+		transanim = spr_monster_dj_attack
+		spawntime = irandom_range(420, 840)
+		randomize()
+		var _voice = choose(sfx_monster_dj_attack_1, sfx_monster_dj_attack_2, sfx_monster_dj_attack_3)
+		audio_play_sound_at(_voice, x, y, 0, 1000, 2000, 1, false, 1, 0.7)
 	}else{
-		stepped = false
+		//if (!obj_game.ACHIEVE_death_manimo){
+		//	ini_open("savedata.ini")
+		//	ini_write_real("achieves", "death_manimo", 1)
+		//	obj_game.ACHIEVE_death_manimo = ini_read_real("achieves", "death_manimo", 0)
+		//	ini_close()
+		//}
+		global.screentype = "gameover"
+		obj_game.killedby = "DJ"
+		randomize()
+		ini_open(lang)
+		global.deathline = ini_read_string("advice", "dj" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
+		ini_close()
+		global.level = room
+		room_goto(KILL_dj)
 	}
-}
-
-if (state = "aggro"){	
-	sprite_index = asset_get_index("spr_monster_manimo_" + facedir + "_chase")
-}else if (state = "wander"||state = "investigate"){	
-	sprite_index = asset_get_index("spr_monster_manimo_" + facedir + "_move")
-}else if (state = "idle"){	
-	sprite_index = asset_get_index("spr_monster_manimo_" + facedir + "_idle")
-}
-
-if (collision_circle(x, y - 45, 45, obj_player, false, true) && state = "aggro"){
-	//if (!obj_game.ACHIEVE_death_manimo){
-	//	ini_open("savedata.ini")
-	//	ini_write_real("achieves", "death_manimo", 1)
-	//	obj_game.ACHIEVE_death_manimo = ini_read_real("achieves", "death_manimo", 0)
-	//	ini_close()
-	//}
-	global.screentype = "gameover"
-	obj_game.killedby = "DJ"
-	randomize()
-	ini_open(lang)
-	global.deathline = ini_read_string("advice", "dj" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
-	ini_close()
-	global.level = room
-	room_goto(KILL_dj)
 }

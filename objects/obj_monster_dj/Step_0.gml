@@ -13,6 +13,7 @@ if (active && attacking){
 			image_alpha -= 0.015
 			if (image_alpha <= 0){
 				image_alpha = 1
+				speed = 0
 				randomize()
 				global.danger -= 1.5
 				audio_stop_sound(sfx_monster_dj_chase)
@@ -43,7 +44,7 @@ if (active && attacking){
 }
 
 if (active && !attacking){
-	if (collision_circle(x, y, 300, obj_player, false, true) && !collision_line(x, y, obj_player.x, obj_player.y, obj_solid, false, true)){
+	if (collision_circle(x, y, 125, obj_player, false, true) && !collision_line(x, y, obj_player.x, obj_player.y, obj_solid, false, true)){
 		attacking = true
 		global.danger += 1.5
 		audio_play_sound(mus_chasetrans, 1, false)
@@ -71,6 +72,9 @@ if (direction > 89 && direction < 271){
 
 if (transanim != noone){
 	sprite_index = transanim
+	if (sprite_index = spr_monster_dj_attack){
+		speed = 7.25
+	}
 }else if (active){
 	sprite_index = spr_monster_dj_idle
 }else{
@@ -81,8 +85,10 @@ if (collision_circle(x, y + 45, 45, obj_player, false, true) && active){
 	speed = 0
 	if (obj_player.hp > 35){
 		obj_player.hp -= 35
+		audio_stop_sound(sfx_monster_dj_chase)
 		active = false
 		scr_loudnoise()
+		obj_player.djness += 1
 		attacking = false
 		global.danger -= 1.5
 		transanim = spr_monster_dj_attack

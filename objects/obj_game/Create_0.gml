@@ -31,8 +31,8 @@ killedby = noone
 achievescroll = 0
 palettechoose = 0
 palettesizeshift = 0
-chasemusic = mus_repercussions_calm
-calmmusic = mus_repercussions_calm
+chasemusic = mus_calm_wheatfield_the_herd
+calmmusic = mus_calm_wheatfield_the_herd
 
 a90spawn = irandom_range(900, 1200)
 

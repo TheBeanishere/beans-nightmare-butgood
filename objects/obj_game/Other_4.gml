@@ -39,8 +39,8 @@ if (global.screentype = "win"){
 
 if (room = LEVEL_attic){
 	np_setpresence("In the Attic", "Sleeping", "icon", "")
-	chasemusic = mus_repression_chase
-	calmmusic = mus_repression_calm
+	chasemusic = mus_chase_attic_nothing_good_comes_from_a_house_fire
+	calmmusic = mus_calm_attic_above_board
 	audio_play_sound(calmmusic, 1, true, musicvolume)
 	audio_play_sound(chasemusic, 1, true, musicvolume)
 	ini_open(lang)
@@ -48,25 +48,9 @@ if (room = LEVEL_attic){
 	ini_close()
 }
 
-if (room = LEVEL_wheatfield){
-	np_setpresence("In the Wheatfield", "Sleeping", "icon", "")
-	chasemusic = mus_repercussions_chase
-	calmmusic = mus_repercussions_calm
-	audio_play_sound(chasemusic, 1, true, musicvolume - 0.225)
-	audio_play_sound(calmmusic, 1, true, musicvolume - 0.225)
-	randomize()
-	repeat (5) {
-		var _spawninteract = instance_find(obj_interactspawn, (irandom_range(0, instance_number(obj_interactspawn)-1)))
-		_spawninteract.spawned = true
-	}
-	ini_open(lang)
-	global.objective = ini_read_string("gamestuff", "wheatfield1", "ugh")
-	ini_close()
-}
-
 if (room = LEVEL_stronghold){
-	chasemusic = mus_repetition_chase
-	calmmusic = mus_repetition_calm
+	chasemusic = mus_chase_stronghold_ball_and_chain
+	calmmusic = mus_calm_stronghold_iron_bars
 	audio_play_sound(chasemusic, 1, true, musicvolume - 0.225)
 	audio_play_sound(calmmusic, 1, true, musicvolume - 0.225)
 	randomize()
@@ -80,8 +64,8 @@ if (room = LEVEL_stronghold){
 }
 
 if (room = LEVEL_storagefacility){
-	chasemusic = mus_rusting_chase
-	calmmusic = mus_rusting_calm
+	chasemusic = mus_chase_storage_deaf_and_angry
+	calmmusic = mus_calm_storage_blind_and_lonely
 	audio_play_sound(chasemusic, 1, true, musicvolume - 0.225)
 	audio_play_sound(calmmusic, 1, true, musicvolume - 0.225)
 	randomize()
@@ -90,6 +74,32 @@ if (room = LEVEL_storagefacility){
 	ini_close()
 }
 
+if (room = LEVEL_wheatfield){
+	np_setpresence("In the Wheatfield", "Sleeping", "icon", "")
+	chasemusic = mus_chase_wheatfield_stampede
+	calmmusic = mus_calm_wheatfield_the_herd
+	audio_play_sound(chasemusic, 1, true, musicvolume - 0.225)
+	audio_play_sound(calmmusic, 1, true, musicvolume - 0.225)
+	randomize()
+	repeat (5) {
+		var _spawninteract = instance_find(obj_interactspawn, (irandom_range(0, instance_number(obj_interactspawn)-1)))
+		_spawninteract.spawned = true
+	}
+	ini_open(lang)
+	global.objective = ini_read_string("gamestuff", "wheatfield1", "ugh")
+	ini_close()
+}
+
+if (room = LEVEL_hotel){
+	chasemusic = mus_chase_hotel_feverish
+	calmmusic = mus_calm_hotel_frigidity
+	audio_play_sound(chasemusic, 1, true, musicvolume - 0.225)
+	audio_play_sound(calmmusic, 1, true, musicvolume - 0.225)
+	randomize()
+	ini_open(lang)
+	global.objective = ini_read_string("gamestuff", "hotel1", "ugh")
+	ini_close()
+}
 
 if (instance_exists(obj_monsterspawner_1)){
 	randomize()

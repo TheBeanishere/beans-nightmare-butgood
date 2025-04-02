@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_calm_wheatfield_the_herd",
+  "audioGroupId":{
+    "name":"music",
+    "path":"audiogroups/music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":32.0,
+  "name":"mus_calm_wheatfield_the_herd",
+  "parent":{
+    "name":"music",
+    "path":"folders/Sounds/music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_calm_wheatfield_the_herd.wav",
+  "type":1,
+  "volume":1.0,
+}

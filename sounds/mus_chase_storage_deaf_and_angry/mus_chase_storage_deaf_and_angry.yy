@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_chase_storage_deaf_and_angry",
+  "audioGroupId":{
+    "name":"music",
+    "path":"audiogroups/music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":118.65,
+  "name":"mus_chase_storage_deaf_and_angry",
+  "parent":{
+    "name":"music",
+    "path":"folders/Sounds/music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_chase_storage_deaf_and_angry.wav",
+  "type":1,
+  "volume":0.72,
+}

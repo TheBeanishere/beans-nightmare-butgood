@@ -34,6 +34,8 @@ wheatfield4 = "Find another Firework."
 wheatfield5 = "Bring the Firework to the gate."
 wheatfieldnote1 = "If the cannibal horse attacks, scare him off, but be prepared for him to"
 wheatfieldnote2 = "try to run you down directly, scaring him off won't work then."
+hotel0 = "The Hotel"
+hotel1 = "
 
 [bootmessages]
 0 = "Vs. Wicked is never coming out"

@@ -87,12 +87,6 @@ if (room = MENU_gameover){
 }
 
 if (room = MENU_palette){
-	if (palettesizeshift > 0){
-		palettesizeshift -= 0.025
-	}
-	if (palettesizeshift < 0){
-		palettesizeshift += 0.025
-	}
 	if (keyboard_check_pressed(vk_escape)){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = MENU_main
@@ -110,314 +104,382 @@ if (room = MENU_palette){
 	switch (palettechoose){
 		case 0:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
 				if (global.palettebeanie > 0){	
 					global.palettebeanie -= 1
 				}else{
 					global.palettebeanie = 42
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "beanie", global.palettebeanie)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
 				if (global.palettebeanie < 42){	
 					global.palettebeanie += 1
 				}else{
 					global.palettebeanie = 0
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "beanie", global.palettebeanie)
+				ini_close()
 			}
 		break;
 		case 1:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
 				if (global.palettemanimo > 0){	
 					global.palettemanimo -= 1
 				}else{
 					global.palettemanimo = 4
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "manimo", global.palettemanimo)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
 				if (global.palettemanimo < 4){	
 					global.palettemanimo += 1
 				}else{
 					global.palettemanimo = 0
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "manimo", global.palettemanimo)
+				ini_close()
 			}
 		break;
 		case 6:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
 				if (global.palettevalerix > 0){	
 					global.palettevalerix -= 1
 				}else{
 					global.palettevalerix = 4
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "valerix", global.palettevalerix)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
 				if (global.palettevalerix < 4){	
 					global.palettevalerix += 1
 				}else{
 					global.palettevalerix = 0
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "valerix", global.palettevalerix)
+				ini_close()
 			}
 		break;
 		case 2:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
 				if (global.palettemathi > 0){	
 					global.palettemathi -= 1
 				}else{
 					global.palettemathi = 4
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "mathi", global.palettemathi)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
 				if (global.palettemathi < 4){	
 					global.palettemathi += 1
 				}else{
 					global.palettemathi = 0
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "mathi", global.palettemathi)
+				ini_close()
 			}
 		break;
 		case 3:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
 				if (global.palettepravi > 0){	
 					global.palettepravi -= 1
 				}else{
 					global.palettepravi = 4
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "pravi", global.palettepravi)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
 				if (global.palettepravi < 4){	
 					global.palettepravi += 1
 				}else{
 					global.palettepravi = 0
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "pravi", global.palettepravi)
+				ini_close()
 			}
 		break;
 		case 4:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
 				if (global.palettesports > 1){	
 					global.palettesports -= 1
 				}else{
 					global.palettesports = 5
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "sports", global.palettesports)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
 				if (global.palettesports < 5){	
 					global.palettesports += 1
 				}else{
 					global.palettesports = 1
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "sports", global.palettesports)
+				ini_close()
 			}
 		break;
 		case 5:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
 				if (global.paletteava > 0){	
 					global.paletteava -= 1
 				}else{
 					global.paletteava = 4
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "ava", global.paletteava)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
 				if (global.paletteava < 4){	
 					global.paletteava += 1
 				}else{
 					global.paletteava = 0
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "ava", global.paletteava)
+				ini_close()
 			}
 		break;
 		case 7:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
 				if (global.palettedj > 1){	
 					global.palettedj -= 1
 				}else{
 					global.palettedj = 5
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "dj", global.palettedj)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
 				if (global.palettedj < 5){	
 					global.palettedj += 1
 				}else{
 					global.palettedj = 1
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "dj", global.palettedj)
+				ini_close()
 			}
 		break;
 		case 8:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
 				if (global.palettefather > 0){	
 					global.palettefather -= 1
 				}else{
 					global.palettefather = 4
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "father", global.palettefather)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
 				if (global.palettefather < 4){	
 					global.palettefather += 1
 				}else{
 					global.palettefather = 0
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "father", global.palettefather)
+				ini_close()
 			}
 		break;
 		case 9:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
 				if (global.palettejoetube > 1){	
 					global.palettejoetube -= 1
 				}else{
 					global.palettejoetube = 5
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "joetube", global.palettejoetube)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
 				if (global.palettejoetube < 5){	
 					global.palettejoetube += 1
 				}else{
 					global.palettejoetube = 1
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "joetube", global.palettejoetube)
+				ini_close()
 			}
 		break;
 		case 10:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
 				if (global.palettea90 > 0){	
 					global.palettea90 -= 1
 				}else{
 					global.palettea90 = 4
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "a90", global.palettea90)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
 				if (global.palettea90 < 4){	
 					global.palettea90 += 1
 				}else{
 					global.palettea90 = 0
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "a90", global.palettea90)
+				ini_close()
 			}
 		break;
 		case 11:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
 				if (global.palettecoconut > 0){	
 					global.palettecoconut -= 1
 				}else{
 					global.palettecoconut = 4
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "coconut", global.palettecoconut)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
 				if (global.palettecoconut < 4){	
 					global.palettecoconut += 1
 				}else{
 					global.palettecoconut = 0
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "coconut", global.palettecoconut)
+				ini_close()
 			}
 		break;
 		case 12:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
 				if (global.palettefusion > 0){	
 					global.palettefusion -= 1
 				}else{
 					global.palettefusion = 4
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "fusion", global.palettefusion)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
 				if (global.palettefusion < 4){	
 					global.palettefusion += 1
 				}else{
 					global.palettefusion = 0
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "fusion", global.palettefusion)
+				ini_close()
 			}
 		break;
 		case 13:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
 				if (global.palettecriminal > 0){	
 					global.palettecriminal -= 1
 				}else{
 					global.palettecriminal = 4
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "criminal", global.palettecriminal)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
 				if (global.palettecriminal < 4){	
 					global.palettecriminal += 1
 				}else{
 					global.palettecriminal = 0
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "criminal", global.palettecriminal)
+				ini_close()
 			}
 		break;
 		case 14:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
-				if (global.palettewarriordan > 0){	
-					global.palettewarriordan -= 1
+				if (global.palettewillow > 0){	
+					global.palettewillow -= 1
 				}else{
-					global.palettewarriordan = 4
+					global.palettewillow = 4
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "willow", global.palettewillow)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
-				if (global.palettewarriordan < 4){	
-					global.palettewarriordan += 1
+				if (global.palettewillow < 4){	
+					global.palettewillow += 1
 				}else{
-					global.palettewarriordan = 0
+					global.palettewillow = 0
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "willow", global.palettewillow)
+				ini_close()
 			}
 		break;
 		case 15:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
 				if (global.paletteroachy > 0){	
 					global.paletteroachy -= 1
 				}else{
 					global.paletteroachy = 4
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "roachy", global.paletteroachy)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
 				if (global.paletteroachy < 4){	
 					global.paletteroachy += 1
 				}else{
 					global.paletteroachy = 0
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "roachy", global.paletteroachy)
+				ini_close()
 			}
 		break;
 		case 16:
 			if (keyboard_check_pressed(vk_up)){
-				palettesizeshift = -0.2
 				if (global.palettelydia > 0){	
 					global.palettelydia -= 1
 				}else{
 					global.palettelydia = 4
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "lydia", global.palettelydia)
+				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
-				palettesizeshift = 0.2
 				if (global.palettelydia < 4){	
 					global.palettelydia += 1
 				}else{
 					global.palettelydia = 0
 				}
+				ini_open("savedata.ini")
+				ini_write_real("palette", "lydia", global.palettelydia)
+				ini_close()
 			}
 		break;
 	}
 }
 
-if (global.screentype = "ingame" && MOD_a90){
+if (global.screentype = "ingame" && 1 = 2){
 	a90spawn -= 1
 	if (a90spawn <= 0 && global.screentype = "ingame"){
 		randomize()

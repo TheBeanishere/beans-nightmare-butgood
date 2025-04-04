@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_palette_warriordan",
+  "%Name":"spr_palette_willow",
   "bboxMode":2,
   "bbox_bottom":475,
   "bbox_left":200,
@@ -21,7 +21,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"f34a66e6-c7a2-4968-b505-2d9d4f5cad39","blendMode":0,"displayName":"default","isLocked":false,"name":"f34a66e6-c7a2-4968-b505-2d9d4f5cad39","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_palette_warriordan",
+  "name":"spr_palette_willow",
   "nineSlice":null,
   "origin":3,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_palette_warriordan",
+    "%Name":"spr_palette_willow",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_palette_warriordan",
+    "name":"spr_palette_willow",
     "playback":1,
     "playbackSpeed":9.0,
     "playbackSpeedType":0,
@@ -69,7 +69,7 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f421d4d2-01f4-4b9a-bf45-275ea97432bb","path":"sprites/spr_palette_warriordan/spr_palette_warriordan.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f421d4d2-01f4-4b9a-bf45-275ea97432bb","path":"sprites/spr_palette_willow/spr_palette_willow.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"a8a862c5-139a-488c-8d38-212082cbb9ed","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

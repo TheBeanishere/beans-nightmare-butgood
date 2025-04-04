@@ -79,7 +79,7 @@ if (room = MENU_palette){
 			pal_swap_set(spr_palette_criminal, global.palettecriminal, false)
 		break;
 		case 14:
-			pal_swap_set(spr_palette_warriordan, global.palettewarriordan, false)
+			pal_swap_set(spr_palette_willow, global.palettewillow, false)
 		break;
 		case 15:
 			pal_swap_set(spr_palette_roachy, global.paletteroachy, false)
@@ -193,9 +193,9 @@ if (room = MENU_palette){
 		break;
 		case 14:
 			ini_open(lang)
-			draw_text(320, 330, ini_read_string("palettes", "warriordanpal" + string(global.palettewarriordan), "ERROR"))
+			draw_text(320, 330, ini_read_string("palettes", "willowpal" + string(global.palettewillow), "ERROR"))
 			draw_set_color(c_grey)
-			draw_text_ext(320, 360, ini_read_string("palettes", "warriordanpaldesc" + string(global.palettewarriordan), "Error") + "\n\n" + ini_read_string("palettes", "warriordanpalunlock" + string(global.palettewarriordan), "Error"), 25, 250)
+			draw_text_ext(320, 360, ini_read_string("palettes", "willowpaldesc" + string(global.palettewillow), "Error") + "\n\n" + ini_read_string("palettes", "willowpalunlock" + string(global.palettewillow), "Error"), 25, 250)
 			ini_close()
 		break;
 		case 15:

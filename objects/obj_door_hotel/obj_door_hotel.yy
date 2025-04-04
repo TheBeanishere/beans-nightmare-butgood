@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_door_attic",
-    "path":"sprites/spr_door_attic/spr_door_attic.yy",
+    "name":"spr_door_hotel_1",
+    "path":"sprites/spr_door_hotel_1/spr_door_hotel_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

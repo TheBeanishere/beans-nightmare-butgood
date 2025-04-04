@@ -30,7 +30,6 @@ ini_close()
 killedby = noone
 achievescroll = 0
 palettechoose = 0
-palettesizeshift = 0
 chasemusic = mus_calm_wheatfield_the_herd
 calmmusic = mus_calm_wheatfield_the_herd
 
@@ -51,24 +50,30 @@ global.screentype = "main"
 global.alertx = 0
 global.alerty = 0
 
-global.palettebeanie = 0
-global.palettemanimo = 0
-global.palettevalerix = 0
-global.palettemathi = 0
-global.palettepravi = 0
-global.palettesports = 1
-global.paletteava = 0
-global.palettedj = 1
-global.palettejoetube = 1
-global.palettefather = 0
-global.palettea90 = 0
-global.palettecoconut = 0
-global.palettefusion = 0
-global.palettecriminal = 0
-global.palettewarriordan = 0
-global.paletteroachy = 0
-global.palettelydia = 0
+ini_open("savedata.ini")
+global.palettebeanie = ini_read_real("palette", "beanie", 0)
+global.palettemanimo = ini_read_real("palette", "manimo", 0)
+global.palettevalerix = ini_read_real("palette", "valerix", 0)
+global.palettemathi = ini_read_real("palette", "mathi", 0)
+global.palettepravi = ini_read_real("palette", "pravi", 0)
+global.palettesports = ini_read_real("palette", "sports", 1)
+global.paletteava = ini_read_real("palette", "ava", 0)
+global.palettedj = ini_read_real("palette", "dj", 1)
+global.palettejoetube = ini_read_real("palette", "joetube", 1)
+global.palettefather = ini_read_real("palette", "father", 0)
+global.palettea90 = ini_read_real("palette", "a90", 0)
+global.palettecoconut = ini_read_real("palette", "coconut", 0)
+global.palettefusion = ini_read_real("palette", "fusion", 0)
+global.palettecriminal = ini_read_real("palette", "criminal", 0)
+global.palettewillow = ini_read_real("palette", "willow", 0)
+global.paletteroachy = ini_read_real("palette", "roachy", 0)
+global.palettelydia = ini_read_real("palette", "lydia", 0)
+ini_close()
 
 mp_grid_add_instances(global.mp_grid, obj_solid, false)
 mp_grid_add_instances(global.mp_gridcrouch, obj_solid, false)
 mp_grid_add_instances(global.mp_gridcrouch, obj_solid_crouch, false)
+
+ini_open("savedata.ini")
+scr_gamedataget()
+ini_close()

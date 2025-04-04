@@ -36,6 +36,14 @@ if (room = MENU_main){
 		
 		killedby = noone
 	}
+	if (keyboard_check_pressed(ord("5"))){
+		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+			roomdes = LEVEL_hotel
+			screentypechange = "ingame"
+		}
+		
+		killedby = noone
+	}
 	if (keyboard_check_pressed(ord("4"))){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = LEVEL_wheatfield

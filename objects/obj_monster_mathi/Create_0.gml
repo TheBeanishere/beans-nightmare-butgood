@@ -1,9 +1,9 @@
 image_xscale = 0.25
 image_yscale = 0.25
 
-movespeed = 2
-chasespeed = 6
-chargespeed = 15
+movespeed = 4
+chasespeed = 8
+chargespeed = 13
 
 
 //states are idle, wander, charge, recover, wind, and aggro

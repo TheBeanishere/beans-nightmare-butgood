@@ -75,5 +75,7 @@ mp_grid_add_instances(global.mp_gridcrouch, obj_solid, false)
 mp_grid_add_instances(global.mp_gridcrouch, obj_solid_crouch, false)
 
 ini_open("savedata.ini")
-scr_gamedataget()
+scr_gamedataget("level")
+scr_gamedataget("collect")
+scr_gamedataget("achieve")
 ini_close()

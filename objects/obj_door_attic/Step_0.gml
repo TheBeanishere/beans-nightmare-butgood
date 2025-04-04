@@ -13,17 +13,16 @@ if (collision_circle(x, y, 150, obj_player, false, true)){
 }
 if (collision_circle(x, y, 70, obj_player, false, true)){	
 	if (progress >= 5){
-		ini_open("savadata.ini")
-		var _complete = ini_read_real("wins", "attic", 0)
-		ini_write_real("wins", "attic", 1)
-		scr_gamedataget("level")
-		ini_close()
-		if (_complete){
+		if (obj_game.WINattic){
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 				roomdes = MENU_main
 				screentypechange = "levelselect"
 			}
 		}else{
+			ini_open("savadata.ini")
+			ini_write_real("wins", "attic", 1)
+			scr_gamedataget("level")
+			ini_close()
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 				roomdes = COMIC_stronghold
 				screentypechange = "ingame"

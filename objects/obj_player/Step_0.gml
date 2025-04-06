@@ -226,7 +226,7 @@ if (crouched){
 			randomize()
 			var _pitch = random_range(0.95, 1.05)
 			foot = choose(sfx_beanie_step_1, sfx_beanie_step_2, sfx_beanie_step_3)
-			audio_play_sound_at(foot, x, y, 0, 600, 1200, 1, false, 1, 0.025, 0, _pitch)
+			audio_play_sound_at(foot, x, y, 0, 600, 1200, 1, false, 1, 0.1, 0, _pitch)
 		}
 	}else{
 		stepped = false
@@ -238,7 +238,7 @@ if (crouched){
 			randomize()
 			var _pitch = random_range(0.95, 1.05)
 			foot = choose(sfx_beanie_step_1, sfx_beanie_step_2, sfx_beanie_step_3)
-			audio_play_sound_at(foot, x, y, 0, 600, 1200, 1, false, 1, 0.075, 0, _pitch)
+			audio_play_sound_at(foot, x, y, 0, 600, 1200, 1, false, 1, 0.35, 0, _pitch)
 		}
 	}else{
 		stepped = false
@@ -250,7 +250,7 @@ if (crouched){
 			randomize()
 			var _pitch = random_range(0.95, 1.05)
 			foot = choose(sfx_beanie_step_1, sfx_beanie_step_2, sfx_beanie_step_3)
-			audio_play_sound_at(foot, x, y, 0, 600, 1200, 1, false, 1, 0.075, 0, _pitch)
+			audio_play_sound_at(foot, x, y, 0, 600, 1200, 1, false, 1, 0.25, 0, _pitch)
 		}
 	}else{
 		stepped = false

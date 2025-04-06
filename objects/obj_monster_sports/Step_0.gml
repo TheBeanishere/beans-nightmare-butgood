@@ -34,7 +34,7 @@ if (pathdelay = 0){
 		}
 		state = "aggro"
 	}
-	if (collision_circle(x, y, 90, obj_player, false, true) && (obj_player.spdX != 0 || obj_player.spdY != 0)){
+	if (collision_circle(x, y - 40, 90, obj_player, false, true) && (obj_player.spdX != 0 || obj_player.spdY != 0)){
 		//if (!obj_game.ACHIEVE_death_sports){
 		//	ini_open("savedata.ini")
 		//	ini_write_real("achieves", "death_sports", 1)

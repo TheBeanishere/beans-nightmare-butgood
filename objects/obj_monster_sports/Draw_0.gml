@@ -21,7 +21,7 @@ if (global.debug){
 	draw_path(path, x, y, true)
 	draw_circle(x, y, 650, true)
 	draw_circle(x, y, 350, true)
-	draw_circle(x, y, 90, true)
+	draw_circle(x, y - 40, 90, true)
 	draw_circle(x, y - 75, 80, true)
 	var _x = lengthdir_x(eyesight, point_direction(x, y, obj_player.x, obj_player.y))
 	var _y = lengthdir_y(eyesight, point_direction(x, y, obj_player.x, obj_player.y))

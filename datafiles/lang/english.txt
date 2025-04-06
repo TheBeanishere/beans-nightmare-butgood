@@ -58,6 +58,11 @@ hotel2 = "The door is frozen shut."
 hotel3 = "This furnace could probably heat up the entire Hotel."
 hotel4 = "Find tinder."
 hotel5 = "Bring the log to the furnace."
+forest0 = "The Forest"
+home0 = "Your Home"
+repressed0 = "Repressed Mode"
+endless0 = "Endless Mode"
+lucid0 = "Lucid Dream"
 
 [bootmessages]
 0 = "Vs. Wicked is never coming out"

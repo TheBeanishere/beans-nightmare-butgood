@@ -498,7 +498,6 @@ if (room = MENU_achieve){
 	achievescroll = clamp(achievescroll, -700, 0)
 }
 if (room = initroom && objNekoPresenceDemo.ready){
-	show_debug_message("Main menu")
 	room_goto(bootroom)
 }
 if (room = initroom){

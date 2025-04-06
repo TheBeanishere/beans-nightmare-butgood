@@ -8,11 +8,12 @@ if (obj_game.selectedlevel = 0){
 	draw_text(840, 40, ini_read_string("gamestuff", "attic0", "ugh"))
 	draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 1)
 }else if (obj_game.selectedlevel = 1){
-	if (atticwin = 1){
+	if (obj_game.WINattic = 1){
 		draw_text(840, 40, ini_read_string("gamestuff", "stronghold0", "ugh"))
 		draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 1)
 	}else{
 		draw_text(840, 40, ini_read_string("gamestuff", "levellock0", "ugh"))
+		draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 0.45)
 		draw_sprite_ext(spr_menu_levelselect, 11, x, y, image_xscale, image_yscale, 0, c_white, 1)
 	}
 }else if (obj_game.selectedlevel = 2){
@@ -21,6 +22,7 @@ if (obj_game.selectedlevel = 0){
 		draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 1)
 	}else{
 		draw_text(840, 40, ini_read_string("gamestuff", "levellock0", "ugh"))
+		draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 0.45)
 		draw_sprite_ext(spr_menu_levelselect, 11, x, y, image_xscale, image_yscale, 0, c_white, 1)
 	}
 }else if (obj_game.selectedlevel = 3){
@@ -29,6 +31,7 @@ if (obj_game.selectedlevel = 0){
 		draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 1)
 	}else{
 		draw_text(840, 40, ini_read_string("gamestuff", "levellock0", "ugh"))
+		draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 0.45)
 		draw_sprite_ext(spr_menu_levelselect, 11, x, y, image_xscale, image_yscale, 0, c_white, 1)
 	}
 }else if (obj_game.selectedlevel = 4){
@@ -37,6 +40,37 @@ if (obj_game.selectedlevel = 0){
 		draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 1)
 	}else{
 		draw_text(840, 40, ini_read_string("gamestuff", "levellock0", "ugh"))
+		draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 0.45)
 		draw_sprite_ext(spr_menu_levelselect, 11, x, y, image_xscale, image_yscale, 0, c_white, 1)
 	}
+}else if (obj_game.selectedlevel = 5){
+	if (obj_game.WINhotel = 1){
+		draw_text(840, 40, ini_read_string("gamestuff", "forest0", "ugh"))
+		draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 1)
+	}else{
+		draw_text(840, 40, ini_read_string("gamestuff", "levellock0", "ugh"))
+		draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 0.45)
+		draw_sprite_ext(spr_menu_levelselect, 11, x, y, image_xscale, image_yscale, 0, c_white, 1)
+	}
+}else if (obj_game.selectedlevel = 6){
+	if (obj_game.WINforest = 1){
+		draw_text(840, 40, ini_read_string("gamestuff", "home0", "ugh"))
+		draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 1)
+	}else{
+		draw_text(840, 40, ini_read_string("gamestuff", "levellock0", "ugh"))
+		draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 0.45)
+		draw_sprite_ext(spr_menu_levelselect, 11, x, y, image_xscale, image_yscale, 0, c_white, 1)
+	}
+}else if (obj_game.selectedlevel = 7){
+	draw_text(840, 40, ini_read_string("gamestuff", "levellock1", "ugh"))
+	draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 0.45)
+	draw_sprite_ext(spr_menu_levelselect, 11, x, y, image_xscale, image_yscale, 0, c_white, 1)
+}else if (obj_game.selectedlevel = 8){
+	draw_text(840, 40, ini_read_string("gamestuff", "levellock1", "ugh"))
+	draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 0.45)
+	draw_sprite_ext(spr_menu_levelselect, 11, x, y, image_xscale, image_yscale, 0, c_white, 1)
+}else if (obj_game.selectedlevel = 9){
+	draw_text(840, 40, ini_read_string("gamestuff", "levellock1", "ugh"))
+	draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 0.45)
+	draw_sprite_ext(spr_menu_levelselect, 11, x, y, image_xscale, image_yscale, 0, c_white, 1)
 }

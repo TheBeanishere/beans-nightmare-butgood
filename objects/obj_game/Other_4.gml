@@ -5,10 +5,6 @@ var _h = ceil(room_height/TS)
 
 global.objective = ""
 
-//ini_open("savedata.ini")
-//scr_gamedataget("level")
-//ini_close()
-
 global.mp_grid = mp_grid_create(0, 0, _w, _h, TS, TS)
 global.mp_gridcrouch = mp_grid_create(0, 0, _w, _h, TS, TS)
 global.mp_gridcorn = mp_grid_create(0, 0, _w, _h, TS, TS)

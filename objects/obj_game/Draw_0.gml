@@ -8,8 +8,8 @@ if (room = MENU_gameover){
 	draw_set_color(c_white)
 	ini_open(lang)
 	draw_text(640, 280, killedby)
-	draw_text(640, 410, ini_read_string("gamestuff", "death2", "ugh"))
-	draw_text(640, 440, ini_read_string("gamestuff", "death3", "ugh"))
+	draw_text_ext(640, 410, ini_read_string("gamestuff", "death2", "ugh"), 23, 300)
+	draw_text_ext(640, 440, ini_read_string("gamestuff", "death3", "ugh"), 23, 300)
 	ini_close()
 }
 if (room = bootroom){

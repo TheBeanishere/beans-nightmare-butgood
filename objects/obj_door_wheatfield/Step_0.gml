@@ -39,13 +39,16 @@ if (collision_circle(x, y - 32, 40, obj_player, false, true)){
 	if (progress >= 6 && exploded){
 		if (obj_game.WINwheatfield){
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-				roomdes = MENU_main
+				roomdes = MENU_level
 				screentypechange = "levelselect"
 			}
 			obj_game.selectedlevel = 3
 		}else{
-			ini_open("savadata.txt")
-			ini_write_real("wins", "wheatfield", 1)
+			obj_game.WINwheatfield = 1
+			ini_open("sava1.txt")
+			ini_write_real("wins", "wheatfield", obj_game.WINwheatfield)
+			ini_close()
+			ini_open("save1.txt")
 			scr_gamedataget("level")
 			ini_close()
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){

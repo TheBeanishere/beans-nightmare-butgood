@@ -1,1 +1,0 @@
-y = originy + obj_game.achievescroll

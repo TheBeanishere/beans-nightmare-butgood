@@ -20,7 +20,7 @@ if (collision_circle(x, y, 70, obj_player, false, true)){
 			}
 			obj_game.selectedlevel = 0
 		}else{
-			ini_open("savadata.ini")
+			ini_open("savadata.txt")
 			ini_write_real("wins", "attic", 1)
 			scr_gamedataget("level")
 			ini_close()

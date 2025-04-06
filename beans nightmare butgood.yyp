@@ -72,7 +72,6 @@
   "name":"beans nightmare butgood",
   "resources":[
     {"id":{"name":"NekoPresence","path":"extensions/NekoPresence/NekoPresence.yy",},},
-    {"id":{"name":"obj_achievement","path":"objects/obj_achievement/obj_achievement.yy",},},
     {"id":{"name":"obj_blackfade","path":"objects/obj_blackfade/obj_blackfade.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_comic","path":"objects/obj_comic/obj_comic.yy",},},

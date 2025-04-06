@@ -19,7 +19,7 @@ if (collision_circle(x, y, 130, obj_player, false, true)){
 			}
 			obj_game.selectedlevel = 4
 		}else{
-			ini_open("savadata.ini")
+			ini_open("savadata.txt")
 			ini_write_real("wins", "hotel", 1)
 			scr_gamedataget("level")
 			ini_close()

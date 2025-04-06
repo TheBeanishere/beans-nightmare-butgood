@@ -52,9 +52,9 @@ if (state = "explode"){
 				//	ini_close()
 				//}
 				global.screentype = "gameover"
-				obj_game.killedby = "Pravi"
 				randomize()
 				ini_open(lang)
+				obj_game.killedby = ini_read_string("gamestuff", "deathpravi", "ugh")
 				global.deathline = ini_read_string("advice", "pravi" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
 				ini_close()
 				global.level = room

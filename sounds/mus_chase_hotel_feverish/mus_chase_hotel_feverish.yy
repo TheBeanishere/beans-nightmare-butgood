@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"mus_chase_hotel_feverish.wav",
   "type":1,
-  "volume":1.0,
+  "volume":0.72,
 }

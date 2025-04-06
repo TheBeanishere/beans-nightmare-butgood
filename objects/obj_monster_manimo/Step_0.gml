@@ -150,9 +150,9 @@ if (collision_circle(x, y - 45, 45, obj_player, false, true) && state = "aggro")
 	//	ini_close()
 	//}
 	global.screentype = "gameover"
-	obj_game.killedby = "Manimo"
 	randomize()
 	ini_open(lang)
+	obj_game.killedby = ini_read_string("gamestuff", "deathmanimo", "ugh")
 	global.deathline = ini_read_string("advice", "manimo" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
 	ini_close()
 	global.level = room

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sfx_boiler_fire",
+  "audioGroupId":{
+    "name":"sfx",
+    "path":"audiogroups/sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":6.870544,
+  "name":"sfx_boiler_fire",
+  "parent":{
+    "name":"sfx",
+    "path":"folders/Sounds/sfx.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_boiler_fire.wav",
+  "type":1,
+  "volume":1.0,
+}

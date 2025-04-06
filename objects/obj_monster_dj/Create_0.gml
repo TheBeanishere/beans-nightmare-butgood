@@ -9,6 +9,7 @@ x = _spot.x
 y = _spot.y
 spawntime = irandom_range(840, 1680)
 movetime = irandom_range(300, 450)
+stuntimer = 0
 
 soundemitter = audio_emitter_create()
 audio_emitter_falloff(soundemitter, 500, 1000, 1)

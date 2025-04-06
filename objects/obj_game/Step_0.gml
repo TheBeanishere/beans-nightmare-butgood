@@ -23,7 +23,7 @@ if (room = bootroom){
 if (room = MENU_main){
 	if (keyboard_check_pressed(ord("1"))){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = LEVEL_attic
+			roomdes = COMIC_attic
 			screentypechange = "ingame"
 		}
 		killedby = noone
@@ -54,7 +54,7 @@ if (room = MENU_main){
 	}
 	if (keyboard_check_pressed(ord("2"))){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = LEVEL_stronghold
+			roomdes = COMIC_stronghold
 			screentypechange = "ingame"
 		}
 		killedby = noone
@@ -109,7 +109,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettebeanie = 42
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "beanie", global.palettebeanie)
 				ini_close()
 			}
@@ -119,7 +119,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettebeanie = 0
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "beanie", global.palettebeanie)
 				ini_close()
 			}
@@ -131,7 +131,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettemanimo = 4
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "manimo", global.palettemanimo)
 				ini_close()
 			}
@@ -141,7 +141,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettemanimo = 0
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "manimo", global.palettemanimo)
 				ini_close()
 			}
@@ -153,7 +153,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettevalerix = 4
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "valerix", global.palettevalerix)
 				ini_close()
 			}
@@ -163,7 +163,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettevalerix = 0
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "valerix", global.palettevalerix)
 				ini_close()
 			}
@@ -175,7 +175,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettemathi = 4
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "mathi", global.palettemathi)
 				ini_close()
 			}
@@ -185,7 +185,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettemathi = 0
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "mathi", global.palettemathi)
 				ini_close()
 			}
@@ -197,7 +197,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettepravi = 4
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "pravi", global.palettepravi)
 				ini_close()
 			}
@@ -207,7 +207,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettepravi = 0
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "pravi", global.palettepravi)
 				ini_close()
 			}
@@ -219,7 +219,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettesports = 5
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "sports", global.palettesports)
 				ini_close()
 			}
@@ -229,7 +229,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettesports = 1
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "sports", global.palettesports)
 				ini_close()
 			}
@@ -241,7 +241,7 @@ if (room = MENU_palette){
 				}else{
 					global.paletteava = 4
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "ava", global.paletteava)
 				ini_close()
 			}
@@ -251,7 +251,7 @@ if (room = MENU_palette){
 				}else{
 					global.paletteava = 0
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "ava", global.paletteava)
 				ini_close()
 			}
@@ -263,7 +263,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettedj = 5
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "dj", global.palettedj)
 				ini_close()
 			}
@@ -273,7 +273,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettedj = 1
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "dj", global.palettedj)
 				ini_close()
 			}
@@ -285,7 +285,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettefather = 4
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "father", global.palettefather)
 				ini_close()
 			}
@@ -295,7 +295,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettefather = 0
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "father", global.palettefather)
 				ini_close()
 			}
@@ -307,7 +307,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettejoetube = 5
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "joetube", global.palettejoetube)
 				ini_close()
 			}
@@ -317,7 +317,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettejoetube = 1
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "joetube", global.palettejoetube)
 				ini_close()
 			}
@@ -329,7 +329,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettea90 = 4
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "a90", global.palettea90)
 				ini_close()
 			}
@@ -339,7 +339,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettea90 = 0
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "a90", global.palettea90)
 				ini_close()
 			}
@@ -351,7 +351,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettecoconut = 4
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "coconut", global.palettecoconut)
 				ini_close()
 			}
@@ -361,7 +361,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettecoconut = 0
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "coconut", global.palettecoconut)
 				ini_close()
 			}
@@ -373,7 +373,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettefusion = 4
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "fusion", global.palettefusion)
 				ini_close()
 			}
@@ -383,7 +383,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettefusion = 0
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "fusion", global.palettefusion)
 				ini_close()
 			}
@@ -395,7 +395,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettecriminal = 4
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "criminal", global.palettecriminal)
 				ini_close()
 			}
@@ -405,7 +405,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettecriminal = 0
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "criminal", global.palettecriminal)
 				ini_close()
 			}
@@ -417,7 +417,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettewillow = 4
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "willow", global.palettewillow)
 				ini_close()
 			}
@@ -427,7 +427,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettewillow = 0
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "willow", global.palettewillow)
 				ini_close()
 			}
@@ -439,7 +439,7 @@ if (room = MENU_palette){
 				}else{
 					global.paletteroachy = 4
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "roachy", global.paletteroachy)
 				ini_close()
 			}
@@ -449,7 +449,7 @@ if (room = MENU_palette){
 				}else{
 					global.paletteroachy = 0
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "roachy", global.paletteroachy)
 				ini_close()
 			}
@@ -461,7 +461,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettelydia = 4
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "lydia", global.palettelydia)
 				ini_close()
 			}
@@ -471,7 +471,7 @@ if (room = MENU_palette){
 				}else{
 					global.palettelydia = 0
 				}
-				ini_open("savedata.ini")
+				ini_open("colourchoice.ini")
 				ini_write_real("palette", "lydia", global.palettelydia)
 				ini_close()
 			}

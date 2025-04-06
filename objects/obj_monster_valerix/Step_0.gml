@@ -117,8 +117,8 @@ if (place_meeting(x, y, obj_player) && state = "hunt"){
 	global.level = room
 	randomize()
 	ini_open(lang)
+	obj_game.killedby = ini_read_string("gamestuff", "deathvalerix", "ugh")
 	global.deathline = ini_read_string("advice", "valerix" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
 	ini_close()
-	obj_game.killedby = "Valerix"
 	room_goto(KILL_valerix)
 }

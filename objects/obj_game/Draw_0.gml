@@ -7,7 +7,7 @@ if (room = MENU_gameover){
 	draw_text_ext(640, 320, global.deathline, 28, 600)
 	draw_set_color(c_white)
 	ini_open(lang)
-	draw_text(640, 280, ini_read_string("gamestuff", "death1", "ugh") + killedby)
+	draw_text(640, 280, killedby)
 	draw_text(640, 410, ini_read_string("gamestuff", "death2", "ugh"))
 	draw_text(640, 440, ini_read_string("gamestuff", "death3", "ugh"))
 	ini_close()

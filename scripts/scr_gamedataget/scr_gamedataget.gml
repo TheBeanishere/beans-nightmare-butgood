@@ -3,8 +3,8 @@
 function scr_gamedataget(type){
 	if (type = "level"){
 		obj_game.WINattic = ini_read_real("wins", "attic", 0)
-		obj_game.WINdtronghold = ini_read_real("wins", "stronghold", 0)
-		obj_game.WINstorsge = ini_read_real("wins", "storage", 0)
+		obj_game.WINstronghold = ini_read_real("wins", "stronghold", 0)
+		obj_game.WINstorage = ini_read_real("wins", "storage", 0)
 		obj_game.WINwheatfield = ini_read_real("wins", "wheatfield", 0)
 		obj_game.WINhotel = ini_read_real("wins", "hotel", 0)
 		obj_game.WINforest = ini_read_real("wins", "forest", 0)

@@ -18,6 +18,7 @@ if (collision_circle(x, y, 70, obj_player, false, true)){
 				roomdes = MENU_main
 				screentypechange = "levelselect"
 			}
+			obj_game.selectedlevel = 0
 		}else{
 			ini_open("savadata.ini")
 			ini_write_real("wins", "attic", 1)

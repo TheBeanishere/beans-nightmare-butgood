@@ -1,13 +1,21 @@
 image_index = progress
 if (collision_circle(x, y, 50, obj_player, false, true) && !touched){
 	if (progress >= 5){
-		ini_open("playtestdata.ini")
-		ini_write_real("save", "stronghold", 1)
-		obj_game.VICTORY_stronghold = ini_read_real("save", "stronghold", 0)
-		ini_close()
-		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = WIN_valerix
-			screentypechange = "win"
+		if (obj_game.WINstronghold){
+			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+				roomdes = MENU_main
+				screentypechange = "levelselect"
+			}
+			obj_game.selectedlevel = 1
+		}else{
+			ini_open("savadata.ini")
+			ini_write_real("wins", "stronghold", 1)
+			scr_gamedataget("level")
+			ini_close()
+			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+				roomdes = COMIC_storage
+				screentypechange = "ingame"
+			}
 		}
 	}
 }

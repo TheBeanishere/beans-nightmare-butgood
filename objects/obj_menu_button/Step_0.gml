@@ -25,6 +25,11 @@ if (collision_point(mouse_x, mouse_y, self, false, false)){
 			audio_play_sound(mus_skibidistart, 1, false)
 			obj_game.killedby = noone
 			obj_game.palettechoose = 0
+		}else if (menuchange = "levelselect"){
+			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+				roomdes = MENU_level
+				screentypechange = "ingame"
+			}
 		}else if(menuchange = "gamekill"){
 			game_end()
 		}else{

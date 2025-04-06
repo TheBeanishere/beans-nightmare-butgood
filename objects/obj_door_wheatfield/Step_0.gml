@@ -37,13 +37,21 @@ if (collision_circle(x, y, 50, obj_player, false, true)){
 }
 if (collision_circle(x, y - 32, 40, obj_player, false, true)){
 	if (progress >= 6 && exploded){
-		ini_open("playtestdata.ini")
-		ini_write_real("save", "wheatfield", 1)
-		obj_game.VICTORY_wheatfield = ini_read_real("save", "wheatfield", 0)
-		ini_close()
-		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = WIN_valerix
-			screentypechange = "win"
+		if (obj_game.WINwheatfield){
+			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+				roomdes = MENU_main
+				screentypechange = "levelselect"
+			}
+			obj_game.selectedlevel = 3
+		}else{
+			ini_open("savadata.ini")
+			ini_write_real("wins", "wheatfield", 1)
+			scr_gamedataget("level")
+			ini_close()
+			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+				roomdes = COMIC_hotel
+				screentypechange = "ingame"
+			}
 		}
 	}
 }

@@ -21,14 +21,7 @@ if (pathdelay = 0){
 	path_start(path, movespeed, path_action_stop, false)
 }
 
-if (instance_exists(obj_monster_a90)){
-	if (obj_monster_a90.timer > 30 && obj_monster_a90.move = 0){ 	
-		path_speed = 0
-		image_speed = 0
-	}
-}else{
-	image_speed = 1
-}
+
 
 if (direction > 89 && direction < 271){
 	image_xscale = -0.25
@@ -66,9 +59,9 @@ if (collision_circle(x, y - 45, 45, obj_player, false, true)){
 	//	ini_close()
 	//}
 	global.screentype = "gameover"
-	obj_game.killedby = "your Father"
 	randomize()
 	ini_open(lang)
+	obj_game.killedby = ini_read_string("gamestuff", "deathfather", "ugh")
 	global.deathline = ini_read_string("advice", "father" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
 	ini_close()
 	global.level = room

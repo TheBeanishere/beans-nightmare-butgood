@@ -1,8 +1,8 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_loudnoise(){
-	global.alertx = self.x
-	global.alerty = self.y
+	global.alertx = obj_player.x
+	global.alerty = obj_player.y
 	if (instance_exists(obj_monster_manimo)){
 		obj_monster_manimo.alerted = true
 	}

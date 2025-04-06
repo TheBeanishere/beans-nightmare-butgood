@@ -4,9 +4,10 @@ pal_swap_init_system(shd_pal_swapper)
 audio_falloff_set_model(audio_falloff_linear_distance)
 #macro TS 8
 bigfont =  font_add("english.otf", 20, true, true, 32, 128)
+verybigfont =  font_add("english.otf", 30, true, true, 32, 128)
 mediumfont =  font_add("english.otf", 14, true, true, 32, 128)
 ini_open("savedata.ini")
-language = ini_read_string("options", "language", "english") + ".txt"
+language = "lang/" + ini_read_string("options", "language", "english") + ".txt"
 musicvolume = ini_read_real("options", "music", 1)
 sfxvolume = ini_read_real("options", "sfx", 1)
 showfps = ini_read_real("options", "showfps", 1)
@@ -14,6 +15,7 @@ ini_close()
 audio_group_set_gain(music, musicvolume, 1)
 audio_group_set_gain(sfx, sfxvolume, 1)
 #macro Big obj_game.bigfont
+#macro ReallyBig obj_game.verybigfont
 #macro Medium obj_game.mediumfont
 #macro lang obj_game.language
 var _w = ceil(room_width/TS)
@@ -27,6 +29,7 @@ randomize()
 bootmessage = ini_read_string("bootmessages", string(irandom_range(0, 58)), "Error")
 ini_close()
 
+selectedlevel = 0
 killedby = noone
 achievescroll = 0
 palettechoose = 0
@@ -50,7 +53,7 @@ global.screentype = "main"
 global.alertx = 0
 global.alerty = 0
 
-ini_open("savedata.ini")
+ini_open("colourchoice.ini")
 global.palettebeanie = ini_read_real("palette", "beanie", 0)
 global.palettemanimo = ini_read_real("palette", "manimo", 0)
 global.palettevalerix = ini_read_real("palette", "valerix", 0)

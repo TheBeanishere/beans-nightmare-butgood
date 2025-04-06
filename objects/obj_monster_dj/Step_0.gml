@@ -1,6 +1,7 @@
 if ((place_meeting(x, y, obj_monster_dj) && !attacking) || (movetime <= 0 && active)){
 	randomize()
 	movetime = irandom_range(300, 450)
+	stuntimer = 60
 	var _spot = instance_find(obj_djpoint, random(instance_number(obj_djpoint)))
 	originx = _spot.x
 	originy = _spot.y
@@ -54,7 +55,11 @@ if (active && attacking){
 	}
 }
 
-if (active && !attacking){
+if (stuntimer > 0){
+	stuntimer -= 1
+}
+
+if (active && !attacking && stuntimer <= 0){
 	movetime -= 1
 	if (collision_circle(x, y, 200, obj_player, false, true) && !collision_line(x, y, obj_player.x, obj_player.y, obj_solid, false, true)){
 		attacking = true
@@ -120,9 +125,9 @@ if (collision_circle(x, y + 45, 35, obj_player, false, true) && active){
 		//	ini_close()
 		//}
 		global.screentype = "gameover"
-		obj_game.killedby = "DJ"
 		randomize()
 		ini_open(lang)
+		obj_game.killedby = ini_read_string("gamestuff", "deathdj", "ugh")
 		global.deathline = ini_read_string("advice", "dj" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
 		ini_close()
 		global.level = room

@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"mus_crunked_up_man",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"music",
+    "path":"audiogroups/music",
   },
   "bitDepth":1,
   "bitRate":128,

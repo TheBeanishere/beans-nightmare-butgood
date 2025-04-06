@@ -3,22 +3,30 @@ global.danger = 0
 var _w = ceil(room_width/TS)
 var _h = ceil(room_height/TS)
 
-scr_gamedataget()
+global.objective = ""
+
+//ini_open("savedata.ini")
+//scr_gamedataget("level")
+//ini_close()
 
 global.mp_grid = mp_grid_create(0, 0, _w, _h, TS, TS)
 global.mp_gridcrouch = mp_grid_create(0, 0, _w, _h, TS, TS)
 global.mp_gridcorn = mp_grid_create(0, 0, _w, _h, TS, TS)
 
-mp_grid_add_instances(global.mp_grid, obj_solid, false)
-mp_grid_add_instances(global.mp_grid, obj_solidcorn, false)
-mp_grid_add_instances(global.mp_gridcrouch, obj_solid, false)
-mp_grid_add_instances(global.mp_gridcrouch, obj_solid_crouch, false)
-mp_grid_add_instances(global.mp_gridcrouch, obj_solidcorn, false)
-mp_grid_add_instances(global.mp_gridcorn, obj_solid, false)
-mp_grid_add_instances(global.mp_gridcorn, obj_solid_crouch, false)
+mp_grid_add_instances(global.mp_grid, obj_solid, true)
+mp_grid_add_instances(global.mp_grid, obj_solidcorn, true)
+mp_grid_add_instances(global.mp_gridcrouch, obj_solid, true)
+mp_grid_add_instances(global.mp_gridcrouch, obj_solid_crouch, true)
+mp_grid_add_instances(global.mp_gridcrouch, obj_solidcorn, true)
+mp_grid_add_instances(global.mp_gridcorn, obj_solid, true)
+mp_grid_add_instances(global.mp_gridcorn, obj_solid_crouch, true)
 
 if (room = MENU_main){
 	audio_play_sound(mus_crunked_up_man, 1, true)
+}
+
+if (room = MENU_level){
+	audio_play_sound(mus_win, 1, true)
 }
 
 if (room = MENU_achieve){
@@ -98,8 +106,12 @@ if (room = LEVEL_hotel){
 	audio_play_sound(chasemusic, 1, true, musicvolume - 0.225)
 	audio_play_sound(calmmusic, 1, true, musicvolume - 0.225)
 	randomize()
+	repeat (6) {
+		var _spawninteract = instance_find(obj_interactspawn, (irandom_range(0, instance_number(obj_interactspawn)-1)))
+		_spawninteract.spawned = true
+	}
 	ini_open(lang)
-	global.objective = ini_read_string("gamestuff", "hotel1", "ugh")
+	global.objective = ini_read_string("gamestuff", "hotel4", "ugh")
 	ini_close()
 }
 

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":118.65,
+  "duration":207.59373,
   "name":"mus_calm_hotel_frigidity",
   "parent":{
     "name":"music",

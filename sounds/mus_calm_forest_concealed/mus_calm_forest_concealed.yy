@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"mus_calm_forest_concealed.wav",
   "type":1,
-  "volume":1.0,
+  "volume":0.72,
 }

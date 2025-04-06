@@ -1,13 +1,21 @@
 image_index = progress
 if (collision_circle(x, y, 50, obj_player, false, true) && !touched){
 	if (progress >= 4){
-		ini_open("playtestdata.ini")
-		ini_write_real("save", "storagefacility", 1)
-		obj_game.VICTORY_storagefacility = ini_read_real("save", "storagefacility", 0)
-		ini_close()
-		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = WIN_valerix
-			screentypechange = "win"
+		if (obj_game.WINstorage){
+			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+				roomdes = MENU_main
+				screentypechange = "levelselect"
+			}
+			obj_game.selectedlevel = 2
+		}else{
+			ini_open("savadata.ini")
+			ini_write_real("wins", "storage", 1)
+			scr_gamedataget("level")
+			ini_close()
+			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+				roomdes = COMIC_wheatfield
+				screentypechange = "ingame"
+			}
 		}
 	}
 }

@@ -7,19 +7,53 @@ bigfont =  font_add("english.otf", 20, true, true, 32, 128)
 verybigfont =  font_add("english.otf", 30, true, true, 32, 128)
 mediumfont =  font_add("english.otf", 14, true, true, 32, 128)
 
-ini_open("save1.txt")
-WINattic = ini_read_real("wins", "attic", 0)
-WINstronghold = ini_read_real("wins", "stronghold", 0)
-WINstorage = ini_read_real("wins", "storage", 0)
-WINwheatfield = ini_read_real("wins", "wheatfield", 0)
-WINhotel = ini_read_real("wins", "hotel", 0)
-WINforest = ini_read_real("wins", "forest", 0)
-WINhome = ini_read_real("wins", "home", 0)
-language = "lang/" + ini_read_string("options", "language", "english") + ".txt"
-musicvolume = ini_read_real("options", "music", 1)
-sfxvolume = ini_read_real("options", "sfx", 1)
-showfps = ini_read_real("options", "showfps", 1)
-ini_close()
+global.palettebeanie = 0
+global.palettemanimo = 0
+global.palettevalerix = 0
+global.palettemathi = 0
+global.palettepravi = 0
+global.palettesports = 1
+global.paletteava = 0
+global.palettedj = 1
+global.palettejoetube = 1
+global.palettefather = 0
+global.palettea90 = 0
+global.palettecoconut = 0
+global.palettefusion = 0
+global.palettecriminal = 0
+global.palettewillow = 0
+global.paletteroachy = 0
+global.palettelydia = 0
+WINattic = false
+WINstronghold = false
+WINstorage = false
+WINwheatfield = false
+WINhotel = false
+WINforest = false
+WINhome = false
+language = "lang/english.txt"
+musicvolume = 1
+sfxvolume = 1
+showfps = true
+
+if (file_exists("savedata.sav")){
+	var _bufferload = buffer_load("savedata.sav")
+	var _stringbsload = buffer_read(_bufferload, buffer_string)
+	buffer_delete(_bufferload)
+	var _loadarray = json_parse(_stringbsload)
+	var _loadpalettedata = array_get(_loadarray, 0)
+	var _loadoptiondata = array_get(_loadarray, 1)
+	var _loadwindata = array_get(_loadarray, 2)
+	
+	obj_game.WINattic = _loadwindata.WINattic
+	obj_game.WINstronghold = _loadwindata.WINstronghold
+	obj_game.WINstorage = _loadwindata.WINstorage
+	obj_game.WINwheatfield = _loadwindata.WINwheatfield
+	
+	show_debug_message(json_stringify(_stringbsload, true))
+}else{
+	
+}
 
 audio_group_set_gain(music, musicvolume, 1)
 audio_group_set_gain(sfx, sfxvolume, 1)
@@ -63,25 +97,11 @@ global.alertx = 0
 global.alerty = 0
 
 ini_open("colourchoice.ini")
-global.palettebeanie = ini_read_real("palette", "beanie", 0)
-global.palettemanimo = ini_read_real("palette", "manimo", 0)
-global.palettevalerix = ini_read_real("palette", "valerix", 0)
-global.palettemathi = ini_read_real("palette", "mathi", 0)
-global.palettepravi = ini_read_real("palette", "pravi", 0)
-global.palettesports = ini_read_real("palette", "sports", 1)
-global.paletteava = ini_read_real("palette", "ava", 0)
-global.palettedj = ini_read_real("palette", "dj", 1)
-global.palettejoetube = ini_read_real("palette", "joetube", 1)
-global.palettefather = ini_read_real("palette", "father", 0)
-global.palettea90 = ini_read_real("palette", "a90", 0)
-global.palettecoconut = ini_read_real("palette", "coconut", 0)
-global.palettefusion = ini_read_real("palette", "fusion", 0)
-global.palettecriminal = ini_read_real("palette", "criminal", 0)
-global.palettewillow = ini_read_real("palette", "willow", 0)
-global.paletteroachy = ini_read_real("palette", "roachy", 0)
-global.palettelydia = ini_read_real("palette", "lydia", 0)
+
 ini_close()
 
 mp_grid_add_instances(global.mp_grid, obj_solid, false)
 mp_grid_add_instances(global.mp_gridcrouch, obj_solid, false)
 mp_grid_add_instances(global.mp_gridcrouch, obj_solid_crouch, false)
+
+scr_gamedataget()

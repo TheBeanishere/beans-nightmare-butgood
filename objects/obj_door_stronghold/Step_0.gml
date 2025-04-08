@@ -13,7 +13,7 @@ if (collision_circle(x, y, 50, obj_player, false, true) && !touched){
 			ini_write_real("wins", "stronghold", obj_game.WINstronghold)
 			ini_close()
 			ini_open("save1.txt")
-			scr_gamedataget("level")
+			scr_gamedataget()
 			ini_close()
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 				roomdes = COMIC_storage

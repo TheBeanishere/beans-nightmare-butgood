@@ -24,7 +24,7 @@ if (collision_circle(x, y, 130, obj_player, false, true)){
 			ini_write_real("wins", "hotel", obj_game.WINhotel)
 			ini_close()
 			ini_open("save1.txt")
-			scr_gamedataget("level")
+			scr_gamedataget()
 			ini_close()
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 				roomdes = COMIC_stronghold

@@ -479,14 +479,14 @@ if (room = MENU_palette){
 	}
 }
 
-if (global.screentype = "ingame" && 1 = 2){
-	a90spawn -= 1
-	if (a90spawn <= 0 && global.screentype = "ingame"){
-		randomize()
-		a90spawn = irandom_range(120, 120)
-		instance_create_layer(0, 0, "a90", obj_monster_a90)
-	}
-}
+//if (global.screentype = "ingame"){
+//	a90spawn -= 1
+//	if (a90spawn <= 0 && global.screentype = "ingame"){
+//		randomize()
+//		a90spawn = irandom_range(120, 120)
+//		instance_create_layer(0, 0, "a90", obj_monster_a90)
+//	}
+//}
 
 if (room = MENU_achieve){
 	if (mouse_wheel_down()){

@@ -21,7 +21,12 @@ if (pathdelay = 0){
 	path_start(path, movespeed, path_action_stop, false)
 }
 
-
+if (instance_exists(obj_blackfade)){
+	path_speed = 0
+	image_speed = 0
+}else{
+	image_speed = 1
+}
 
 if (direction > 89 && direction < 271){
 	image_xscale = -0.25

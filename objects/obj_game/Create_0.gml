@@ -31,7 +31,16 @@ WINwheatfield = false
 WINhotel = false
 WINforest = false
 WINhome = false
-language = "lang/english.txt"
+WINrepressed = false
+WINatticMOD = false
+WINstrongholdMOD = false
+WINstorageMOD = false
+WINwheatfieldMOD = false
+WINhotelMOD = false
+WINforestMOD = false
+WINhomeMOD = false
+WINrepressedMOD = false
+language = "english.txt"
 musicvolume = 1
 sfxvolume = 1
 showfps = true
@@ -42,17 +51,54 @@ if (file_exists("savedata.sav")){
 	buffer_delete(_bufferload)
 	var _loadarray = json_parse(_stringbsload)
 	var _loadpalettedata = array_get(_loadarray, 0)
+	
+	global.palettebeanie = _loadpalettedata.palbean
+	global.palettemanimo = _loadpalettedata.palmanimo
+	global.palettevalerix = _loadpalettedata.palvalerix
+	global.palettemathi = _loadpalettedata.palmathi 
+	global.palettepravi = _loadpalettedata.palpravi 
+	global.palettesports = _loadpalettedata.palsports 
+	global.paletteava = _loadpalettedata.palava 
+	global.palettedj = _loadpalettedata.paldj 
+	global.palettejoetube = _loadpalettedata.paljoetube 
+	global.palettefather = _loadpalettedata.palfather 
+	global.palettea90 = _loadpalettedata.pala90 
+	global.palettecoconut = _loadpalettedata.palcoconut 
+	global.palettefusion = _loadpalettedata.palfusion 
+	global.palettecriminal = _loadpalettedata.palcriminal 
+	global.palettewillow = _loadpalettedata.palwillow 
+	global.paletteroachy = _loadpalettedata.palroachy 
+	global.palettelydia = _loadpalettedata.pallydia
+	
 	var _loadoptiondata = array_get(_loadarray, 1)
+	
+	obj_game.language = _loadoptiondata.language
+	obj_game.musicvolume = _loadoptiondata.musicvolume
+	obj_game.sfxvolume = _loadoptiondata.sfxvolume
+	obj_game.showfps = _loadoptiondata.showfps
+	
 	var _loadwindata = array_get(_loadarray, 2)
 	
 	obj_game.WINattic = _loadwindata.WINattic
 	obj_game.WINstronghold = _loadwindata.WINstronghold
 	obj_game.WINstorage = _loadwindata.WINstorage
 	obj_game.WINwheatfield = _loadwindata.WINwheatfield
+	obj_game.WINhotel = _loadwindata.WINhotel
+	obj_game.WINforest = _loadwindata.WINforest
+	obj_game.WINhome = _loadwindata.WINhome
+	obj_game.WINrepressed = _loadwindata.WINrepressed
+	obj_game.WINatticMOD = _loadwindata.WINatticMOD
+	obj_game.WINstrongholdMOD = _loadwindata.WINstrongholdMOD
+	obj_game.WINstorageMOD = _loadwindata.WINstorageMOD
+	obj_game.WINwheatfieldMOD = _loadwindata.WINwheatfieldMOD
+	obj_game.WINhotelMOD = _loadwindata.WINhotelMOD
+	obj_game.WINforestMOD = _loadwindata.WINforestMOD
+	obj_game.WINhomeMOD = _loadwindata.WINhomeMOD
+	obj_game.WINrepressedMOD = _loadwindata.WINrepressedMOD
 	
 	show_debug_message(json_stringify(_stringbsload, true))
 }else{
-	
+	scr_gamedataget()
 }
 
 audio_group_set_gain(music, musicvolume, 1)
@@ -60,7 +106,8 @@ audio_group_set_gain(sfx, sfxvolume, 1)
 #macro Big obj_game.bigfont
 #macro ReallyBig obj_game.verybigfont
 #macro Medium obj_game.mediumfont
-#macro lang obj_game.language
+truelanguage = "lang/" + language
+#macro lang obj_game.truelanguage
 var _w = ceil(room_width/TS)
 var _h = ceil(room_height/TS)
 nekowait = 0

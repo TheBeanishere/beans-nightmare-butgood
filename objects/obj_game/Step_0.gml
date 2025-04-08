@@ -109,9 +109,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettebeanie = 42
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "beanie", global.palettebeanie)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.palettebeanie < 42){	
@@ -119,9 +116,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettebeanie = 0
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "beanie", global.palettebeanie)
-				ini_close()
 			}
 		break;
 		case 1:
@@ -131,9 +125,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettemanimo = 4
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "manimo", global.palettemanimo)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.palettemanimo < 4){	
@@ -141,9 +132,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettemanimo = 0
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "manimo", global.palettemanimo)
-				ini_close()
 			}
 		break;
 		case 6:
@@ -153,9 +141,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettevalerix = 4
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "valerix", global.palettevalerix)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.palettevalerix < 4){	
@@ -163,9 +148,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettevalerix = 0
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "valerix", global.palettevalerix)
-				ini_close()
 			}
 		break;
 		case 2:
@@ -175,9 +157,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettemathi = 4
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "mathi", global.palettemathi)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.palettemathi < 4){	
@@ -185,9 +164,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettemathi = 0
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "mathi", global.palettemathi)
-				ini_close()
 			}
 		break;
 		case 3:
@@ -197,9 +173,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettepravi = 4
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "pravi", global.palettepravi)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.palettepravi < 4){	
@@ -207,9 +180,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettepravi = 0
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "pravi", global.palettepravi)
-				ini_close()
 			}
 		break;
 		case 4:
@@ -219,9 +189,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettesports = 5
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "sports", global.palettesports)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.palettesports < 5){	
@@ -229,9 +196,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettesports = 1
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "sports", global.palettesports)
-				ini_close()
 			}
 		break;
 		case 5:
@@ -241,9 +205,6 @@ if (room = MENU_palette){
 				}else{
 					global.paletteava = 4
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "ava", global.paletteava)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.paletteava < 4){	
@@ -251,9 +212,6 @@ if (room = MENU_palette){
 				}else{
 					global.paletteava = 0
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "ava", global.paletteava)
-				ini_close()
 			}
 		break;
 		case 7:
@@ -263,9 +221,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettedj = 5
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "dj", global.palettedj)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.palettedj < 5){	
@@ -273,9 +228,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettedj = 1
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "dj", global.palettedj)
-				ini_close()
 			}
 		break;
 		case 8:
@@ -285,9 +237,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettefather = 4
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "father", global.palettefather)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.palettefather < 4){	
@@ -295,9 +244,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettefather = 0
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "father", global.palettefather)
-				ini_close()
 			}
 		break;
 		case 9:
@@ -307,9 +253,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettejoetube = 5
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "joetube", global.palettejoetube)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.palettejoetube < 5){	
@@ -317,9 +260,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettejoetube = 1
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "joetube", global.palettejoetube)
-				ini_close()
 			}
 		break;
 		case 10:
@@ -329,9 +269,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettea90 = 4
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "a90", global.palettea90)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.palettea90 < 4){	
@@ -339,9 +276,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettea90 = 0
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "a90", global.palettea90)
-				ini_close()
 			}
 		break;
 		case 11:
@@ -351,9 +285,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettecoconut = 4
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "coconut", global.palettecoconut)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.palettecoconut < 4){	
@@ -361,9 +292,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettecoconut = 0
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "coconut", global.palettecoconut)
-				ini_close()
 			}
 		break;
 		case 12:
@@ -373,9 +301,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettefusion = 4
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "fusion", global.palettefusion)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.palettefusion < 4){	
@@ -383,9 +308,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettefusion = 0
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "fusion", global.palettefusion)
-				ini_close()
 			}
 		break;
 		case 13:
@@ -395,9 +317,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettecriminal = 4
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "criminal", global.palettecriminal)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.palettecriminal < 4){	
@@ -405,9 +324,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettecriminal = 0
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "criminal", global.palettecriminal)
-				ini_close()
 			}
 		break;
 		case 14:
@@ -417,9 +333,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettewillow = 4
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "willow", global.palettewillow)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.palettewillow < 4){	
@@ -427,9 +340,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettewillow = 0
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "willow", global.palettewillow)
-				ini_close()
 			}
 		break;
 		case 15:
@@ -439,9 +349,6 @@ if (room = MENU_palette){
 				}else{
 					global.paletteroachy = 4
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "roachy", global.paletteroachy)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.paletteroachy < 4){	
@@ -449,9 +356,6 @@ if (room = MENU_palette){
 				}else{
 					global.paletteroachy = 0
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "roachy", global.paletteroachy)
-				ini_close()
 			}
 		break;
 		case 16:
@@ -461,9 +365,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettelydia = 4
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "lydia", global.palettelydia)
-				ini_close()
 			}
 			if (keyboard_check_pressed(vk_down)){
 				if (global.palettelydia < 4){	
@@ -471,9 +372,6 @@ if (room = MENU_palette){
 				}else{
 					global.palettelydia = 0
 				}
-				ini_open("colourchoice.ini")
-				ini_write_real("palette", "lydia", global.palettelydia)
-				ini_close()
 			}
 		break;
 	}

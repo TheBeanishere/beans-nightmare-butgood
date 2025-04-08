@@ -167,7 +167,10 @@ if (state = "idle"){
 	}
 }
 
-if (instance_exists(obj_monster_a90)){
+if (instance_exists(obj_blackfade)){
+	path_speed = 0
+	image_speed = 0
+}else if (instance_exists(obj_monster_a90)){
 	if (obj_monster_a90.timer > 30 && obj_monster_a90.move = 0){ 	
 		path_speed = 0
 		image_speed = 0

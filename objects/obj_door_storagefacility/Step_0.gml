@@ -8,13 +8,7 @@ if (collision_circle(x, y, 50, obj_player, false, true) && !touched){
 			}
 			obj_game.selectedlevel = 2
 		}else{
-			obj_game.WINstorage = 1
-			ini_open("sava1.txt")
-			ini_write_real("wins", "storage", obj_game.WINstorage)
-			ini_close()
-			ini_open("save1.txt")
-			scr_gamedataget()
-			ini_close()
+			obj_game.WINstorage = true
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 				roomdes = COMIC_wheatfield
 				screentypechange = "ingame"

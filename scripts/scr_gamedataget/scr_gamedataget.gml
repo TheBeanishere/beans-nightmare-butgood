@@ -3,8 +3,6 @@
 function scr_gamedataget(){
 	var _savedata = array_create(0)
 
-	randomize()
-	
 	var _palettechoice = {
 		palbean : global.palettebeanie,
 		palmanimo : global.palettemanimo,
@@ -37,7 +35,16 @@ function scr_gamedataget(){
 		WINwheatfield : obj_game.WINwheatfield,
 		WINhotel : obj_game.WINhotel,
 		WINforest : obj_game.WINforest,
-		WINhome : obj_game.WINhome
+		WINhome : obj_game.WINhome,
+		WINrepressed : obj_game.WINrepressed,
+		WINatticMOD : obj_game.WINatticMOD,
+		WINstrongholdMOD : obj_game.WINstrongholdMOD,
+		WINstorageMOD : obj_game.WINstorageMOD,
+		WINwheatfieldMOD : obj_game.WINwheatfieldMOD,
+		WINhotelMOD : obj_game.WINhotelMOD,
+		WINforestMOD : obj_game.WINforestMOD,
+		WINhomeMOD : obj_game.WINhomeMOD,
+		WINrepressedMOD : obj_game.WINrepressedMOD,
 	}
 	var _saveachieves = {
 		

@@ -10,7 +10,7 @@ if (collision_circle(x, y, 150, obj_player, false, true)){
 }else{
 	touched = false
 }
-if (collision_circle(x, y, 130, obj_player, false, true)){	
+if (collision_circle(x, y-32, 130, obj_player, false, true)){	
 	if (obj_door_hotel_boiler.progress >= 6){
 		if (obj_game.WINhotel){
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
@@ -19,13 +19,7 @@ if (collision_circle(x, y, 130, obj_player, false, true)){
 			}
 			obj_game.selectedlevel = 4
 		}else{
-			obj_game.WINhotel = 1
-			ini_open("sava1.txt")
-			ini_write_real("wins", "hotel", obj_game.WINhotel)
-			ini_close()
-			ini_open("save1.txt")
-			scr_gamedataget()
-			ini_close()
+			obj_game.WINhotel = true
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 				roomdes = COMIC_stronghold
 				screentypechange = "ingame"

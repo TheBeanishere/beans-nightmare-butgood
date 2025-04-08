@@ -20,13 +20,7 @@ if (collision_circle(x, y, 70, obj_player, false, true)){
 			}
 			obj_game.selectedlevel = 0
 		}else{
-			obj_game.WINattic = 1
-			ini_open("sava1.txt")
-			ini_write_real("wins", "attic", obj_game.WINattic)
-			ini_close()
-			ini_open("save1.txt")
-			scr_gamedataget()
-			ini_close()
+			obj_game.WINattic = true
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 				roomdes = COMIC_stronghold
 				screentypechange = "ingame"

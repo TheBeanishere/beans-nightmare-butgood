@@ -15,6 +15,7 @@
     {"name":"inst_126E9CBB","path":"rooms/MENU_main/MENU_main.yy",},
     {"name":"inst_341AECD8","path":"rooms/MENU_main/MENU_main.yy",},
     {"name":"inst_2A24B2E7","path":"rooms/MENU_main/MENU_main.yy",},
+    {"name":"inst_72B2B7A7","path":"rooms/MENU_main/MENU_main.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -57,6 +58,12 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_menu_button","path":"objects/obj_menu_button/obj_menu_button.yy",},"propertyId":{"name":"menuchange","path":"objects/obj_menu_button/obj_menu_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"levelselect\"",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_menu_button","path":"objects/obj_menu_button/obj_menu_button.yy",},"propertyId":{"name":"submenu","path":"objects/obj_menu_button/obj_menu_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"game\"",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.6,"scaleY":0.6,"x":-144.0,"y":368.0,},
+        {"$GMRInstance":"v1","%Name":"inst_72B2B7A7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_72B2B7A7","objectId":{"name":"obj_menu_button","path":"objects/obj_menu_button/obj_menu_button.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_menu_button","path":"objects/obj_menu_button/obj_menu_button.yy",},"propertyId":{"name":"buttonid","path":"objects/obj_menu_button/obj_menu_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"11",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_menu_button","path":"objects/obj_menu_button/obj_menu_button.yy",},"propertyId":{"name":"buttonname","path":"objects/obj_menu_button/obj_menu_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"ARE YOU SURE?\"",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_menu_button","path":"objects/obj_menu_button/obj_menu_button.yy",},"propertyId":{"name":"menuchange","path":"objects/obj_menu_button/obj_menu_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"newconfirm\"",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_menu_button","path":"objects/obj_menu_button/obj_menu_button.yy",},"propertyId":{"name":"submenu","path":"objects/obj_menu_button/obj_menu_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"new\"",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.6,"scaleY":0.6,"x":-144.0,"y":288.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":200,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

@@ -9,7 +9,7 @@ if (global.screentype != submenu){
 	if (submenu = "main"){
 		offsetx += (-(offsetx - 0))/15
 	}else{
-		offsetx += (-(offsetx - 256))/15
+	offsetx += (-(offsetx - 256))/15
 	}
 }
 if (collision_point(mouse_x, mouse_y, self, false, false)){
@@ -25,6 +25,27 @@ if (collision_point(mouse_x, mouse_y, self, false, false)){
 			audio_play_sound(mus_skibidistart, 1, false)
 			obj_game.killedby = noone
 			obj_game.palettechoose = 0
+		}else if (menuchange = "new"){
+			if (obj_game.WINattic){
+				global.screentype = menuchange
+			}else{
+				with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+					roomdes = LEVEL_attic
+					screentypechange = "ingame"
+				}
+			}
+		}else if (menuchange = "newconfirm"){
+			obj_game.WINattic = false
+			obj_game.WINstronghold = false
+			obj_game.WINstorage = false
+			obj_game.WINwheatfield = false
+			obj_game.WINhotel = false
+			obj_game.WINforest = false
+			obj_game.WINhome = false
+			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+				roomdes = LEVEL_attic
+				screentypechange = "ingame"
+			}
 		}else if (menuchange = "levelselect"){
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 				roomdes = MENU_level

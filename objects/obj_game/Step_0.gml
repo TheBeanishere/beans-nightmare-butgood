@@ -21,44 +21,44 @@ if (room = bootroom){
 }
 
 if (room = MENU_main){
-	if (keyboard_check_pressed(ord("1"))){
-		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = COMIC_attic
-			screentypechange = "ingame"
-		}
-		killedby = noone
-	}
-	if (keyboard_check_pressed(ord("3"))){
-		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = LEVEL_storagefacility
-			screentypechange = "ingame"
-		}
+	//if (keyboard_check_pressed(ord("1"))){
+	//	with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+	//		roomdes = COMIC_attic
+	//		screentypechange = "ingame"
+	//	}
+	//	killedby = noone
+	//}
+	//if (keyboard_check_pressed(ord("3"))){
+	//	with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+	//		roomdes = LEVEL_storagefacility
+	//		screentypechange = "ingame"
+	//	}
 		
-		killedby = noone
-	}
-	if (keyboard_check_pressed(ord("5"))){
-		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = LEVEL_hotel
-			screentypechange = "ingame"
-		}
+	//	killedby = noone
+	//}
+	//if (keyboard_check_pressed(ord("5"))){
+	//	with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+	//		roomdes = LEVEL_hotel
+	//		screentypechange = "ingame"
+	//	}
 		
-		killedby = noone
-	}
-	if (keyboard_check_pressed(ord("4"))){
-		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = LEVEL_wheatfield
-			screentypechange = "ingame"
-		}
+	//	killedby = noone
+	//}
+	//if (keyboard_check_pressed(ord("4"))){
+	//	with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+	//		roomdes = LEVEL_wheatfield
+	//		screentypechange = "ingame"
+	//	}
 		
-		killedby = noone
-	}
-	if (keyboard_check_pressed(ord("2"))){
-		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = COMIC_stronghold
-			screentypechange = "ingame"
-		}
-		killedby = noone
-	}
+	//	killedby = noone
+	//}
+	//if (keyboard_check_pressed(ord("2"))){
+	//	with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+	//		roomdes = COMIC_stronghold
+	//		screentypechange = "ingame"
+	//	}
+	//	killedby = noone
+	//}
 	if (keyboard_check_pressed(ord("0"))){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
 			roomdes = LEVEL_test

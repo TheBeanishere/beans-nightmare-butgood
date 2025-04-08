@@ -377,14 +377,35 @@ if (room = MENU_palette){
 	}
 }
 
-//if (global.screentype = "ingame"){
+if (global.screentype = "ingame"){
+	if (room = LEVEL_attic){
+		atticTIME += 1
+	}
+	if (room = LEVEL_stronghold){
+		strongholdTIME += 1
+	}
+	if (room = LEVEL_storagefacility){
+		storageTIME += 1
+	}
+	if (room = LEVEL_wheatfield){
+		wheatfieldTIME += 1
+	}
+	if (room = LEVEL_hotel){
+		hotelTIME += 1
+	}
+	if (room = LEVEL_forest){
+		forestTIME += 1
+	}
+	if (room = LEVEL_home){
+		homeTIME += 1
+	}
 //	a90spawn -= 1
 //	if (a90spawn <= 0 && global.screentype = "ingame"){
 //		randomize()
 //		a90spawn = irandom_range(120, 120)
 //		instance_create_layer(0, 0, "a90", obj_monster_a90)
 //	}
-//}
+}
 
 if (room = MENU_achieve){
 	if (mouse_wheel_down()){

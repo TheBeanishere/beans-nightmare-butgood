@@ -23,8 +23,8 @@
   ],
   "name":"KILL_mathi",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"kills",
+    "path":"folders/Rooms/kills.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -31,6 +31,7 @@ if (collision_point(mouse_x, mouse_y, self, false, false)){
 				screentypechange = "ingame"
 			}
 		}else if(menuchange = "gamekill"){
+			scr_gamedataget()
 			game_end()
 		}else{
 			global.screentype = menuchange

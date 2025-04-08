@@ -49,10 +49,20 @@ function scr_gamedataget(){
 	var _saveachieves = {
 		
 	}
+	var _savetimes = {
+		atticTIME : obj_game.atticTIME,
+		strongholdTIME : obj_game.strongholdTIME,
+		storageTIME : obj_game.storageTIME,
+		wheatfieldTIME : obj_game.wheatfieldTIME,
+		hotelTIME : obj_game.hotelTIME,
+		forestTIME : obj_game.forestTIME,
+		homeTIME : obj_game.homeTIME
+	}
 	array_push(_savedata, _palettechoice)
 	array_push(_savedata, _options)
 	array_push(_savedata, _savewins)
 	array_push(_savedata, _saveachieves)
+	array_push(_savedata, _savetimes)
 
 	var _stringbs = json_stringify(_savedata, true)
 

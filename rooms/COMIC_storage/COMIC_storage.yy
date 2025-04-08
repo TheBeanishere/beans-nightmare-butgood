@@ -27,8 +27,8 @@
   ],
   "name":"COMIC_storage",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"comics",
+    "path":"folders/Rooms/comics.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

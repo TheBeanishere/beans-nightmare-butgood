@@ -24,8 +24,8 @@
   ],
   "name":"COMIC_attic",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"comics",
+    "path":"folders/Rooms/comics.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

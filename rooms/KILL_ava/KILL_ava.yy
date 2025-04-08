@@ -23,8 +23,8 @@
   ],
   "name":"KILL_ava",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"kills",
+    "path":"folders/Rooms/kills.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

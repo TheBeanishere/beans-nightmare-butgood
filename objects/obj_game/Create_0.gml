@@ -40,6 +40,13 @@ WINhotelMOD = false
 WINforestMOD = false
 WINhomeMOD = false
 WINrepressedMOD = false
+atticTIME = 0
+strongholdTIME = 0
+storageTIME = 0
+wheatfieldTIME = 0
+hotelTIME = 0
+forestTIME = 0
+homeTIME = 0
 language = "english.txt"
 musicvolume = 1
 sfxvolume = 1
@@ -96,7 +103,18 @@ if (file_exists("savedata.sav")){
 	obj_game.WINhomeMOD = _loadwindata.WINhomeMOD
 	obj_game.WINrepressedMOD = _loadwindata.WINrepressedMOD
 	
-	show_debug_message(json_stringify(_stringbsload, true))
+	var _loadachievedata = array_get(_loadarray, 3)
+	
+	var _loadtimedata = array_get(_loadarray, 4)
+	
+	obj_game.atticTIME = _loadtimedata.atticTIME
+	obj_game.strongholdTIME = _loadtimedata.strongholdTIME
+	obj_game.storageTIME = _loadtimedata.storageTIME
+	obj_game.wheatfieldTIME = _loadtimedata.wheatfieldTIME
+	obj_game.hotelTIME = _loadtimedata.hotelTIME
+	obj_game.forestTIME = _loadtimedata.forestTIME
+	obj_game.homeTIME = _loadtimedata.homeTIME
+	
 }else{
 	scr_gamedataget()
 }

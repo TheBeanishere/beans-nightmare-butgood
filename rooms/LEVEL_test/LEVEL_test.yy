@@ -59,8 +59,8 @@
   ],
   "name":"LEVEL_test",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"levels",
+    "path":"folders/Rooms/levels.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -3,7 +3,7 @@ if (keyboard_check_pressed(vk_escape)){
 		roomdes = MENU_main
 		screentypechange = "main"
 	}
-	killedby = noone
+	obj_game.killedby = noone
 }
 if (keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"))){
 	if (obj_game.selectedlevel = 9){
@@ -23,41 +23,41 @@ if (keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))){
 if (keyboard_check_pressed(vk_enter)){
 	if (obj_game.selectedlevel = 0){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-			roomdes = LEVEL_attic
+			roomdes = COMIC_attic
 			screentypechange = "ingame"
 		}
-		killedby = noone
+		obj_game.killedby = noone
 	}else if (obj_game.selectedlevel = 1){
 		if (obj_game.WINattic){
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-				roomdes = LEVEL_stronghold
+				roomdes = COMIC_stronghold
 				screentypechange = "ingame"
 			}
-			killedby = noone
+			obj_game.killedby = noone
 		}
 	}else if (obj_game.selectedlevel = 2){
 		if (obj_game.WINstronghold){
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-				roomdes = LEVEL_storagefacility
+				roomdes = COMIC_storagefacility
 				screentypechange = "ingame"
 			}
-			killedby = noone
+			obj_game.killedby = noone
 		}
 	}else if (obj_game.selectedlevel = 3){
 		if (obj_game.WINstorage){
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-				roomdes = LEVEL_wheatfield
+				roomdes = COMIC_wheatfield
 				screentypechange = "ingame"
 			}
-			killedby = noone
+			obj_game.killedby = noone
 		}
 	}else if (obj_game.selectedlevel = 4){
 		if (obj_game.WINwheatfield){
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-				roomdes = LEVEL_hotel
+				roomdes = COMIC_hotel
 				screentypechange = "ingame"
 			}
-			killedby = noone
+			obj_game.killedby = noone
 		}
 	}
 }

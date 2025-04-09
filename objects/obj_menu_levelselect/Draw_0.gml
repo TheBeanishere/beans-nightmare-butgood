@@ -3,6 +3,7 @@ draw_set_color(c_white)
 gpu_set_blendmode(bm_normal)
 draw_self()
 draw_set_font(ReallyBig)
+ini_open(lang)
 if (obj_game.selectedlevel = 0){
 	ini_open(lang)
 	if (obj_game.atticTIME > 0){
@@ -124,3 +125,4 @@ if (obj_game.selectedlevel = 0){
 	draw_sprite_ext(spr_menu_levelselect, obj_game.selectedlevel + 1, x, y, image_xscale, image_yscale, 0, c_white, 0.45)
 	draw_sprite_ext(spr_menu_levelselect, 11, x, y, image_xscale, image_yscale, 0, c_white, 1)
 }
+ini_close()

@@ -30,7 +30,7 @@ if (collision_point(mouse_x, mouse_y, self, false, false)){
 				global.screentype = menuchange
 			}else{
 				with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-					roomdes = LEVEL_attic
+					roomdes = COMIC_attic
 					screentypechange = "ingame"
 				}
 			}

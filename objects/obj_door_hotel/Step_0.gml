@@ -12,19 +12,24 @@ if (collision_circle(x, y, 150, obj_player, false, true)){
 }
 if (collision_circle(x, y-32, 130, obj_player, false, true)){	
 	if (obj_door_hotel_boiler.progress >= 6){
-		if (obj_game.WINhotel){
-			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-				roomdes = MENU_level
-				screentypechange = "levelselect"
-			}
-			obj_game.selectedlevel = 4
-		}else{
-			obj_game.WINhotel = true
-			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-				roomdes = COMIC_stronghold
-				screentypechange = "ingame"
-			}
+		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+			roomdes = MENU_level
+			screentypechange = "levelselect"
 		}
+		obj_game.selectedlevel = 4
+		//if (obj_game.WINhotel){
+		//	with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+		//		roomdes = MENU_level
+		//		screentypechange = "levelselect"
+		//	}
+		//	obj_game.selectedlevel = 4
+		//}else{
+		//	obj_game.WINhotel = true
+		//	with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+		//		roomdes = COMIC_stronghold
+		//		screentypechange = "ingame"
+		//	}
+		//}
 	}
 }
 

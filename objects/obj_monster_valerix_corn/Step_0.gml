@@ -150,7 +150,7 @@ if (place_meeting(x, y, obj_player) && (state = "hunt"||state = "aggro")){
 	randomize()
 	ini_open(lang)
 	obj_game.killedby = ini_read_string("gamestuff", "deathvalerix", "ugh")
-	global.deathline = ini_read_string("advice", "corn" + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
+	global.deathline = ini_read_string("advice", choose("valerix", "corn") + string(irandom_range(1, 3)), "What, there's no reasonable way that this didn't load what the fuck")
 	ini_close()
 	room_goto(KILL_valerix)
 }

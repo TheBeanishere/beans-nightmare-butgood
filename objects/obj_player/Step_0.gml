@@ -43,6 +43,10 @@ if (battery <= 1450){
 	jammed = false
 }
 
+if (place_meeting(x, y, obj_enemyunreachable) || (obj_monster.state != "chase")){
+	global.danger = 0
+}
+
 battery = clamp(battery, 0, 1800)
 
 if (axis_horz = 0 && axis_vert = 0){

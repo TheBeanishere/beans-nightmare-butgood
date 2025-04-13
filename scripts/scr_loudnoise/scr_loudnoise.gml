@@ -2,7 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_loudnoise(){
 	global.alertx = self.x
-	global.alerty = self.y+128
+	if (object_index = obj_player){
+		global.alerty = self.y
+	}else{
+		global.alerty = self.y+128
+	}
 	if (instance_exists(obj_monster_manimo)){
 		obj_monster_manimo.alerted = true
 	}

@@ -26,6 +26,7 @@ if (room = MENU_level){
 }
 
 if (room = MENU_achieve){
+	audio_play_sound(mus_stuff_ADFJMMPSV, 1, true)
 	achievescroll = 0
 	np_setpresence("Looking at achievements", "Idling", "icon", "")
 }

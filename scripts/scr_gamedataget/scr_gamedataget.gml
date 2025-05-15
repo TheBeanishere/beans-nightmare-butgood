@@ -47,7 +47,31 @@ function scr_gamedataget(){
 		WINrepressedMOD : obj_game.WINrepressedMOD,
 	}
 	var _saveachieves = {
-		
+		achieve1 : obj_game.achieve1,
+		achieve2 : obj_game.achieve2,
+		achieve3 : obj_game.achieve3,
+		achieve4 : obj_game.achieve4,
+		achieve5 : obj_game.achieve5,
+		achieve6 : obj_game.achieve6,
+		achieve7 : obj_game.achieve7,
+		achieve8 : obj_game.achieve8,
+		achieve9 : obj_game.achieve9,
+		achieve10 : obj_game.achieve10,
+		achieve11 : obj_game.achieve11,
+		achieve12 : obj_game.achieve12,
+		achieve13 : obj_game.achieve13,
+		achieve14 : obj_game.achieve14,
+		achieve15 : obj_game.achieve15,
+		achieve16 : obj_game.achieve16,
+		achieve17 : obj_game.achieve17,
+		achieve18 : obj_game.achieve18,
+		achieve19 : obj_game.achieve19,
+		achieve20 : obj_game.achieve20,
+		achieve21 : obj_game.achieve21,
+		achieve22 : obj_game.achieve22,
+		achieve23 : obj_game.achieve23,
+		achieve24 : obj_game.achieve24,
+		achieve25 : obj_game.achieve25
 	}
 	var _savetimes = {
 		atticTIME : obj_game.atticTIME,

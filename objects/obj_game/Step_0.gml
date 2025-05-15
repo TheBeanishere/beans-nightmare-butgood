@@ -408,13 +408,19 @@ if (global.screentype = "ingame"){
 }
 
 if (room = MENU_achieve){
+	if (keyboard_check_pressed(vk_escape)){
+		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+			roomdes = MENU_main
+			screentypechange = "main"
+		}
+	}
 	if (mouse_wheel_down()){
-		achievescroll -= 30
+		achievescroll -= 60
 	}
 	if (mouse_wheel_up()){
-		achievescroll += 30
+		achievescroll += 60
 	}
-	achievescroll = clamp(achievescroll, -700, 0)
+	achievescroll = clamp(achievescroll, -2800, 0)
 }
 if (room = initroom && objNekoPresenceDemo.ready){
 	room_goto(bootroom)

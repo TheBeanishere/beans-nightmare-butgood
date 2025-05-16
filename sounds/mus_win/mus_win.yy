@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":14.783651,
+  "duration":14.78365,
   "name":"mus_win",
   "parent":{
     "name":"music",

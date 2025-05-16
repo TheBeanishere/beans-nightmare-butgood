@@ -407,6 +407,15 @@ if (global.screentype = "ingame"){
 //	}
 }
 
+if (room = MENU_custom){
+	if (customcombotime > -1){
+		customcombotime -= 1
+	}
+	if (customcombotime = 0){
+		customcombo = 0
+	}
+}
+
 if (room = MENU_achieve){
 	if (keyboard_check_pressed(vk_escape)){
 		with instance_create_layer(0, 0, "blackfade", obj_blackfade){

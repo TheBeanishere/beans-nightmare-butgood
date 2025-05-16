@@ -6,6 +6,7 @@ audio_falloff_set_model(audio_falloff_linear_distance)
 bigfont =  font_add("english.otf", 20, true, true, 32, 128)
 verybigfont =  font_add("english.otf", 30, true, true, 32, 128)
 mediumfont =  font_add("english.otf", 14, true, true, 32, 128)
+customfont = font_add_sprite_ext(spr_customfont, "BCMOX0123456789@", false, 1)
 
 global.palettebeanie = 0
 global.palettemanimo = 0
@@ -192,6 +193,9 @@ selectedlevel = 0
 killedby = noone
 achievescroll = 0
 palettechoose = 0
+customscroll = 0
+customcombo = 0
+customcombotime = 0
 chasemusic = mus_calm_wheatfield_the_herd
 calmmusic = mus_calm_wheatfield_the_herd
 

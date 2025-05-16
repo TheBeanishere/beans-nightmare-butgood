@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":6.870544,
+  "duration":6.8705444,
   "name":"sfx_boiler_CLANG",
   "parent":{
     "name":"sfx",

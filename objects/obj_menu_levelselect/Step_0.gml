@@ -59,5 +59,11 @@ if (keyboard_check_pressed(vk_enter)){
 			}
 			obj_game.killedby = noone
 		}
+	}else if (obj_game.selectedlevel = 9){
+		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+			roomdes = MENU_custom
+			screentypechange = "custommenu"
+		}
+		obj_game.killedby = noone
 	}
 }

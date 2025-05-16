@@ -414,6 +414,13 @@ if (room = MENU_custom){
 	if (customcombotime = 0){
 		customcombo = 0
 	}
+	if (mouse_wheel_down()){
+		customscroll -= 15
+	}
+	if (mouse_wheel_up()){
+		customscroll += 15
+	}
+	customscroll = clamp(customscroll, -200, 0)
 }
 
 if (room = MENU_achieve){

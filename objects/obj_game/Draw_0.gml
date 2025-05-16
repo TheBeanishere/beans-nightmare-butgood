@@ -34,6 +34,13 @@ if (room = bootroom){
 	}
 }
 
+if (room = MENU_custom){
+	if (customcombo > 1){
+		draw_set_font(customfont)
+		draw_text(0, 0, "COMBO X" + string(customcombo))
+	}
+}
+
 if (room = MENU_palette){
 	switch (palettechoose){
 		case 0:

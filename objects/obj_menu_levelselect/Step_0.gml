@@ -38,7 +38,7 @@ if (keyboard_check_pressed(vk_enter)){
 	}else if (obj_game.selectedlevel = 2){
 		if (obj_game.WINstronghold){
 			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
-				roomdes = COMIC_storagefacility
+				roomdes = COMIC_storage
 				screentypechange = "ingame"
 			}
 			obj_game.killedby = noone

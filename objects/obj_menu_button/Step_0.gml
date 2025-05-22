@@ -57,6 +57,12 @@ if (collision_point(mouse_x, mouse_y, self, false, false)){
 				roomdes = MENU_achieve
 				screentypechange = "menu"
 			}
+		}else if(menuchange = "dreamjournal"){
+			scr_gamedataget()
+			with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+				roomdes = MENU_journal
+				screentypechange = "menu"
+			}
 		}else if(menuchange = "gamekill"){
 			scr_gamedataget()
 			game_end()

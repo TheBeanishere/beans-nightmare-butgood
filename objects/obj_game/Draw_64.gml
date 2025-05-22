@@ -3,6 +3,12 @@ if (global.screentype = "ingame"){
 	draw_set_alpha(1)
 	draw_text(0, 0, global.objective)
 }
+if (room = MENU_journal){
+	draw_set_font(Big)
+	draw_sprite(spr_collectibles, 0, 0, 0)
+	draw_sprite_ext(spr_collectibles, choose(1, 2, 3, 2), 0, 0, 1, 1, 0, c_white, 0.6)
+	draw_text_ext(640, 90, "Collect the Memoir in The Attic", 20, 600)
+}
 
 if (room = initroom && nekofail){
 	draw_set_font(Big)

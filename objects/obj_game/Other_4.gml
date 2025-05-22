@@ -46,10 +46,10 @@ if (global.screentype = "win"){
 
 if (room = LEVEL_attic){
 	np_setpresence("In the Attic", "Sleeping", "icon", "")
-	chasemusic = mus_chase_attic_nothing_good_comes_from_a_house_fire
+	chasemusic = mus_chase_attic
 	calmmusic = mus_calm_attic_above_board
 	audio_play_sound(calmmusic, 1, true, musicvolume)
-	audio_play_sound(chasemusic, 1, true, musicvolume)
+	audio_play_sound(chasemusic, 1, true, 0)
 	ini_open(lang)
 	global.objective = ini_read_string("gamestuff", "attic1", "ugh")
 	ini_close()
@@ -58,7 +58,7 @@ if (room = LEVEL_attic){
 if (room = LEVEL_stronghold){
 	chasemusic = mus_chase_stronghold_ball_and_chain
 	calmmusic = mus_calm_stronghold_iron_bars
-	audio_play_sound(chasemusic, 1, true, musicvolume - 0.225)
+	audio_play_sound(chasemusic, 1, true, 0)
 	audio_play_sound(calmmusic, 1, true, musicvolume - 0.225)
 	randomize()
 	repeat (4) {
@@ -73,7 +73,7 @@ if (room = LEVEL_stronghold){
 if (room = LEVEL_storagefacility){
 	chasemusic = mus_chase_storage_deaf_and_angry
 	calmmusic = mus_calm_storage_blind_and_lonely
-	audio_play_sound(chasemusic, 1, true, musicvolume - 0.225)
+	audio_play_sound(chasemusic, 1, true, 0)
 	audio_play_sound(calmmusic, 1, true, musicvolume - 0.225)
 	randomize()
 	ini_open(lang)
@@ -85,7 +85,7 @@ if (room = LEVEL_wheatfield){
 	np_setpresence("In the Wheatfield", "Sleeping", "icon", "")
 	chasemusic = mus_chase_wheatfield_stampede
 	calmmusic = mus_calm_wheatfield_the_herd
-	audio_play_sound(chasemusic, 1, true, musicvolume - 0.225)
+	audio_play_sound(chasemusic, 1, true, 0)
 	audio_play_sound(calmmusic, 1, true, musicvolume - 0.225)
 	randomize()
 	repeat (5) {
@@ -100,7 +100,7 @@ if (room = LEVEL_wheatfield){
 if (room = LEVEL_hotel){
 	chasemusic = mus_chase_hotel_feverish
 	calmmusic = mus_calm_hotel_frigidity
-	audio_play_sound(chasemusic, 1, true, musicvolume - 0.225)
+	audio_play_sound(chasemusic, 1, true, 0)
 	audio_play_sound(calmmusic, 1, true, musicvolume - 0.225)
 	randomize()
 	repeat (6) {

@@ -6,6 +6,16 @@ if (keyboard_check_pressed(vk_f11)){
 	window_set_fullscreen(!window_get_fullscreen())
 }
 
+if (global.screentype = "ingame"){
+	if (global.danger > 0){
+		audio_sound_gain(chasemusic, musicvolume, 1)
+		audio_sound_gain(calmmusic, 0, 1)
+	}else{
+		audio_sound_gain(chasemusic, 0, 1)
+		audio_sound_gain(calmmusic, musicvolume, 1)
+	}
+}
+
 if (room = bootroom){
 	boottime += 1
 	if (keyboard_check_pressed(vk_enter)){
@@ -407,6 +417,16 @@ if (global.screentype = "ingame"){
 //	}
 }
 
+if (room = MENU_journal){
+	if (keyboard_check_pressed(vk_escape)){
+		with instance_create_layer(0, 0, "blackfade", obj_blackfade){
+			roomdes = MENU_main
+			screentypechange = "main"
+		}
+		killedby = noone
+	}
+}
+
 if (room = MENU_custom){
 	if (customcombotime > -1){
 		customcombotime -= 1
@@ -449,12 +469,4 @@ if (room = initroom){
 	if (nekowait >= 450){
 		nekofail = true
 	}
-}
-
-if (global.danger > 0){
-	audio_sound_gain(chasemusic, musicvolume, 0)
-	audio_sound_gain(calmmusic, 0, 0)
-}else{
-	audio_sound_gain(chasemusic, 0, 0)
-	audio_sound_gain(calmmusic, musicvolume, 0)
 }

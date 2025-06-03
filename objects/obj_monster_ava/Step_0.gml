@@ -138,6 +138,6 @@ if (collision_circle(x, y - 45, 80, obj_player, false, true) && state = "aggro")
 	if (_choose = 0){
 		room_goto(KILL_joke)
 	}else{
-		room_goto(KILL_ava)
+		room_goto(KILL_joke)
 	}
 }

@@ -427,6 +427,12 @@ if (room = MENU_journal){
 	}
 }
 
+if (keyboard_check_pressed(ord("P")) && global.screentype = "ingame"){
+	randomize()
+	a90spawn = irandom_range(120, 120)
+	instance_create_layer(0, 0, "a90", obj_monster_a90)
+}
+
 if (room = MENU_custom){
 	if (customcombotime > -1){
 		customcombotime -= 1
